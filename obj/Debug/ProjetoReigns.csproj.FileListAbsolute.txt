@@ -1,0 +1,14 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\bin\Debug\ProjetoReigns.exe.config
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\bin\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\bin\Debug\ProjetoReigns.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\obj\Debug\ProjetoReigns.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\obj\Debug\ProjetoReigns.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\obj\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoReigns\obj\Debug\ProjetoReigns.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\obj\Debug\ProjetoReigns.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\obj\Debug\ProjetoReigns.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\obj\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\obj\Debug\ProjetoReigns.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.exe.config
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.pdb
