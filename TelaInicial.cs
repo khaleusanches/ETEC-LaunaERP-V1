@@ -10,7 +10,8 @@ namespace ProjetoReigns
 {
     internal class TelaInicial : Form
     {
-        public TelaInicial() {
+        Program program;
+        public TelaInicial(Program program) {
             Width = 1000;
             Height = 760;
             StartPosition = FormStartPosition.CenterScreen;
@@ -33,16 +34,23 @@ namespace ProjetoReigns
             {
                 btn2.criarBTN(false, 150, 50, 420, 350, "imgs/img_btnProximo.png", "imgs/img_btnProximoClick.png");
             }
+
+            //fechar jogo
+            this.program = program;
+            this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
         }
         private void Btn1_Click(object sender, EventArgs e)
         {
             Dispose();
-            new EscolherRegiao().ShowDialog();
+            new MenuInicial().ShowDialog();
         }
         private void Btn2_Click(object sender, EventArgs e)
         {
         }
 
-
+        void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            program.fechar();
+        }
     }
 }

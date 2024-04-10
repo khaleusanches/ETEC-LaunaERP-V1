@@ -11,7 +11,17 @@ namespace ProjetoReigns
 {
     internal class kingdom : Form
     {
-        
+        Reino reino1 = new Reino();
+        public kingdom()
+        {
+            Width = 1000;
+            Height = 760;
+            StartPosition = FormStartPosition.CenterScreen;
+
+            reino1.Carregando();
+
+
+        }
 
 
     }

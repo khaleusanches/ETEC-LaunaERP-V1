@@ -1,2 +1,20 @@
-imgs/backgroundEscolha.png
+Nome:
+Cleber
+Region:
+0
+NomePersonagem:
+teste
+Level:
 1
+População:
+11
+Soldados:
+1
+Alimentos:
+100
+Slot 1:
+0
+Slot 2:
+0
+Slot 3:
+0

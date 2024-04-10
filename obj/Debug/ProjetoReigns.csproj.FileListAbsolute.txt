@@ -12,3 +12,10 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\obj\Debug\Pr
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.exe.config
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.exe
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\ProjetoKingdomSim\bin\Debug\ProjetoReigns.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\ProjetoReigns.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\ProjetoReigns.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\ProjetoReigns.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\ProjetoReigns.exe.config
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\ProjetoReigns.exe
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\ProjetoReigns.pdb

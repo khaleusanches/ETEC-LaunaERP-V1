@@ -18,7 +18,7 @@ namespace ProjetoReigns
         public Program()
         {
             StartPosition = FormStartPosition.CenterScreen;
-            new TelaInicial().ShowDialog();
+            new TelaInicial(this).ShowDialog();
             if (File.Exists("Stats.txt"))
             {
 
@@ -28,5 +28,11 @@ namespace ProjetoReigns
 
             }
         }
+
+        public void fechar()
+        {
+            Application.Exit();
+        }
+
     }
 }

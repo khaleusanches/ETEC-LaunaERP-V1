@@ -49,11 +49,10 @@
     <Compile Include="btnImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="EscolherRegiao.cs">
+    <Compile Include="kingdom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kingdom.cs">
+    <Compile Include="MenuInicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs">
