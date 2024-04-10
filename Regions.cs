@@ -20,25 +20,13 @@ namespace ProjetoReigns
             this.alimentos = alimentos;
             this.riquezas = riquezas;
         }
-        public void Mago()
-        {
-            int random = r.Next(0, 20);
-            if (random == 0)
-            {
 
-            }
-            else if (random < ((magia/10)*20)) { 
+        public void evento()
+        {
+            for(int i = 0; i < magia; i++)
+            {
                 
             }
-            else if (random < ((conflitos/10)*20))
-            {
-
-            }
-            else if (random < ((alimentos/10)*20)) {
-
-            }
-
-
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="btnImage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="EscolherRegiao.cs">
       <SubType>Form</SubType>
     </Compile>
