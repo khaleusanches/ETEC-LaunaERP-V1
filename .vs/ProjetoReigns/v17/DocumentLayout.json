@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\projetokingdomsim\\regions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:regions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\projetokingdomsim\\kingdom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:kingdom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\projetokingdomsim\\escolherregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:escolherregiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\projetokingdomsim\\reino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:reino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\btnimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:btnimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}|ProjetoReigns.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +38,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Reino.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\Reino.cs",
+              "RelativeDocumentMoniker": "Reino.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\Reino.cs",
+              "RelativeToolTip": "Reino.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:49:27.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "kingdom.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\kingdom.cs",
+              "RelativeDocumentMoniker": "kingdom.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\kingdom.cs",
+              "RelativeToolTip": "kingdom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:24:07.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Regions.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\Regions.cs",
+              "RelativeDocumentMoniker": "Regions.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\Regions.cs",
+              "RelativeToolTip": "Regions.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:21:27.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EscolherRegiao.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\EscolherRegiao.cs",
               "RelativeDocumentMoniker": "EscolherRegiao.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\EscolherRegiao.cs",
               "RelativeToolTip": "EscolherRegiao.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwDUAAAAcAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-09T01:02:53.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "btnImage.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\btnImage.cs",
               "RelativeDocumentMoniker": "btnImage.cs",
@@ -55,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "TelaInicial.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\TelaInicial.cs",
               "RelativeDocumentMoniker": "TelaInicial.cs",
@@ -67,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\ProjetoKingdomSim\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -75,7 +126,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAqwBMAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T13:54:19.772Z"
+              "WhenOpened": "2024-04-07T13:54:19.772Z",
+              "EditorCaption": ""
             }
           ]
         }

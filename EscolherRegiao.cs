@@ -49,8 +49,8 @@ namespace ProjetoReigns
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             StreamWriter criando = new StreamWriter("Region.txt");
-            criando.WriteLine(listRegion[cont]);
-            criando.WriteLine(cont);
+            criando.WriteLine(cont); //id da regiao
+            criando.WriteLine("teste"); 
             criando.Close();
             Dispose();
         }
