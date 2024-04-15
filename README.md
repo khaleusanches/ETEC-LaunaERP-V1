@@ -34,4 +34,3 @@ O jogo inicia-se com a opção de um novo jogo, e partindo disso, ocorrerá a cr
 ㅤㅤㅤ► Afim de tornar cada região diferente, cada uma das 4(Floresta de cogumelos, montanhas, pantano e planíces) tem bonûs na chance de certos acontecimentos, como as montanhas, com grande chance para aumentar a fortuna de seu reino, porém, com poucos lugares para produzir comida. <br/>
 ㅤㅤㅤ► Melhoramento do seu reino, através do investimento nas áreas como militar, populacional, agricultura e de minas. <br/>
 ㅤㅤㅤ► Se der, também implementaremos um sistema de guerras entre o reino do jogador com outros reinos controlados pelo programa. Usando das mecanicas pré-existentes da parte militar de poder dividir seu exército em grupos.
->>>>>>> 9f21c1817636590e6252ae5c31df4741de872e6e
