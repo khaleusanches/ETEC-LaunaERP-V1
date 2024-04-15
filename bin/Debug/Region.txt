@@ -1,5 +1,5 @@
 Nome:
-Cleber
+Digite o nome do seu reino
 Region:
 0
 NomePersonagem:
@@ -7,13 +7,13 @@ teste
 Level:
 1
 População:
-11
+24
 Soldados:
-1
+2
 Alimentos:
 100
 Slot 1:
-0
+2
 Slot 2:
 0
 Slot 3:

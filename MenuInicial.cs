@@ -23,12 +23,9 @@ namespace ProjetoReigns
             Height = 760;
             StartPosition = FormStartPosition.CenterScreen;
 
-            btnImage btn1 = new btnImage();
-            btnImage btn2 = new btnImage();
-            btnImage btn3 = new btnImage();
-            btn1.criarBTN(true, 72, 54, 290, 350, "imgs/img_btnAnterior.png", "imgs/img_btnAnteriorClick.png");
-            btn2.criarBTN(true, 72, 54, 590, 350, "imgs/img_btnProximo.png", "imgs/img_btnProximoClick.png");
-            btn3.criarBTN(true, 72, 54, 430, 550, "imgs/img_btn.png", "imgs/img_btnProximoClick.png");
+            btnImage btn1 = new btnImage(true, 72, 54, 290, 350, "imgs/img_btnAnterior.png", "imgs/img_btnAnteriorClick.png");
+            btnImage btn2 = new btnImage(true, 72, 54, 590, 350, "imgs/img_btnProximo.png", "imgs/img_btnProximoClick.png");
+            btnImage btn3 = new btnImage(true, 72, 54, 430, 550, "imgs/img_btn.png", "imgs/img_btnProximoClick.png");
             Controls.Add(btn1.btn);
             Controls.Add(btn2.btn);
             Controls.Add(btn3.btn);
@@ -61,6 +58,7 @@ namespace ProjetoReigns
             reino1.criarReino(nome.Text, cont, "teste");
             reino1.Salvando();
             Dispose();
+            new kingdom().ShowDialog();
         }
 
         private void btnProximo_Click(object sender, EventArgs e)

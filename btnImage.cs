@@ -14,7 +14,7 @@ namespace ProjetoReigns
         public Image imgPrinc;
         public Image imgClick;
 
-        public void criarBTN(bool ativado, int width, int height, int posX, int posY, string img_Principal, string img_Click) //meotodo criador do botão, define o tamanho, posição, e imagem
+        public btnImage(bool ativado, int width, int height, int posX, int posY, string img_Principal, string img_Click) //meotodo criador do botão, define o tamanho, posição, e imagem
         {
             btn.Width = width;
             btn.Height = height;

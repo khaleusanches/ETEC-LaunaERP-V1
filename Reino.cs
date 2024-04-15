@@ -13,14 +13,14 @@ namespace ProjetoReigns
         int region_id;
         string nome_personagem;
 
-        int level;  //in 1
+        public int level;  //in 1
         int populacao;  // in random 10-30
-        int total_soldados;  // in 1/10 populacao
+        public int total_soldados;  // in 1/10 populacao
         int alimentos;      
 
-        int slot1;
-        int slot2;
-        int slot3;
+        public int slot1;
+        public int slot2;
+        public int slot3;
 
         StreamReader leitor;
         StreamWriter salvar;
