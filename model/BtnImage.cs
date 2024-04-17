@@ -14,12 +14,12 @@ namespace Sistema.model
         private Image img;
         private Image img_click;
         private bool atv;
-        public BtnImage(bool atv, int width, int height, int top, int left, string img, string img_click, Form tela) { 
+        public BtnImage(bool atv, int width, int height, int top, string img, string img_click, Form tela) { 
             this.atv = atv;
             PB_btn.Width = width;
             PB_btn.Height = height;
             PB_btn.Top = top;
-            PB_btn.Left = left;
+            PB_btn.Left = (tela.Width/2)-width/2-8;
             this.img = new Bitmap(img);
             this.img = new Bitmap(this.img, width, height);
             this.img_click = new Bitmap(img_click);

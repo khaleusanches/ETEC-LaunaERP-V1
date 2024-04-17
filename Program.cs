@@ -18,13 +18,20 @@ namespace Sistema
         public Program()
         {
             StartPosition = FormStartPosition.CenterScreen;
-            Width = 1000;
-            Height = 750;
-            
-            BtnImage Login = new BtnImage(true, 100, 100, 50, 150, "imgs/img_btnProximo.png", "imgs/img_btnProximoClick.png", this);
-            
-            Login.PB_btn.Click += new EventHandler()
+            Width = 900;
+            Height = 680;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            TextBoxPerso TB_Username = new TextBoxPerso(100, 100, 50, "Username", 15, this);
+            TextBoxPerso TB_Password = new TextBoxPerso(100, 100, 100, "Password", 15, this);
+            BtnImage Login = new BtnImage(true, 100, 100, 175, "imgs/img_btnProximo.png", "imgs/img_btnProximoClick.png", this);
+
+            TB_Username.Click += new EventHandler(username_Click);
         }
-       
+
+        private void username_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

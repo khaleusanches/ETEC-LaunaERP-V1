@@ -5,3 +5,10 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\Sis
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\Sistema.exe
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\Sistema.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\Tecnico\Desktop\atividade1CSharp\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\Desktop\atividade1CSharp\obj\Debug\Sistema.exe
+C:\Users\Tecnico\Desktop\atividade1CSharp\obj\Debug\Sistema.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.exe.config
+C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.exe
+C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.pdb
