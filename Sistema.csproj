@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78EBBE9C-4BC5-40B3-97F3-25678E3FDAB0}</ProjectGuid>
+    <ProjectGuid>{217D5F55-7596-4ED6-B6C1-A744748FC24C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProjetoReigns</RootNamespace>
-    <AssemblyName>ProjetoReigns</AssemblyName>
+    <RootNamespace>Sistema</RootNamespace>
+    <AssemblyName>Sistema</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,27 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="btnImage.cs">
+    <Compile Include="model\BtnImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kingdom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuInicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Military.cs">
+    <Compile Include="model\TextBoxPerso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regions.cs" />
-    <Compile Include="Reino.cs" />
-    <Compile Include="TelaInicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
