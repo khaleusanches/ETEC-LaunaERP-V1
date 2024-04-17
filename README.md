@@ -1,4 +1,4 @@
-# :open_file_folder: Gerenciamento de Comércios
+# 7 :open_file_folder: Gerenciamento de Comércios
 <h4 align="center">🚧Em Desenvolvimento🚧</h4>
 
 ## :scroll: Sobre: 
@@ -23,3 +23,7 @@ frequencia de cada cliente, o cadastro de categorias de produtos, produtos, forn
 ## :computer: Tecnologias utilizadas: :computer:
 - [C#](https://learn.microsoft.com/pt-br/dotnet/csharp/)
 - [MySQL](https://dev.mysql.com/doc/)
+
+## Integrantes:
+- Clara Santana Araujo
+- Khaléu Sanches Mancini
