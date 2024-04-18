@@ -12,3 +12,10 @@ C:\Users\Tecnico\Desktop\atividade1CSharp\obj\Debug\Sistema.pdb
 C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.exe.config
 C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.exe
 C:\Users\Tecnico\Desktop\atividade1CSharp\bin\Debug\Sistema.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\CaixaFerramentas.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\obj\Debug\Sistema.csproj.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\bin\Debug\MySql.Data.xml

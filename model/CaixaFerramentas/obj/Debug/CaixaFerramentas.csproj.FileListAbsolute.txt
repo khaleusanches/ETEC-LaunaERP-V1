@@ -1,0 +1,6 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\bin\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\bin\Debug\CaixaFerramentas.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\obj\Debug\CaixaFerramentas.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\obj\Debug\CaixaFerramentas.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\obj\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\obj\Debug\CaixaFerramentas.pdb

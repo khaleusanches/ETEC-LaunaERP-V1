@@ -1,0 +1,9 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\bin\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\bin\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\obj\Debug\BancoDados.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\obj\Debug\BancoDados.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\obj\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\obj\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\bin\Debug\MySql.Data.xml
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\BancoDados\obj\Debug\BancoDados.csproj.Up2Date

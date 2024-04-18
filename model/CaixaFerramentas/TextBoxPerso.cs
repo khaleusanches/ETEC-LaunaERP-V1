@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema.model
+namespace CaixaFerramentas
 {
-    internal class TextBoxPerso : Form
+    public class TextBoxPerso : Form
     {
-        public TextBox tb =  new TextBox();
+        public TextBox tb = new TextBox();
         public TextBoxPerso(int width, int height, int top, string text, int maxTam, Form tela)
         {
-            
             tb.Width = width;
             tb.Height = height;
             tb.Top = top;
