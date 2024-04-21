@@ -9,6 +9,7 @@ using TL_Gerente;
 using TL_Principal;
 using CaixaFerramentas;
 using Funcionarios;
+using TL_Login;
 
 namespace Sistema
 {
@@ -21,7 +22,7 @@ namespace Sistema
         }
         public Program()
         {
-            Gerente gerente = new Gerente();
+            new TelaLogin().ShowDialog();
         }
     }
 }

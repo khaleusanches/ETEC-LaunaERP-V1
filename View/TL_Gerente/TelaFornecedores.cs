@@ -56,7 +56,6 @@ namespace TL_Gerente
             atualizar.btn.Click += new EventHandler(atualizar_Click);
 
             this.panel = new DataGridView();
-
             panel.DataSource = tela.gerente.exibirFornecedores();
             panel.BackColor = Color.DimGray;
             panel.Width = 500;
@@ -65,7 +64,6 @@ namespace TL_Gerente
             panel.Left = 350;
             panel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tela.Controls.Add(panel);
-
             panel.SelectionChanged += panel_SelectionChanged;
             panel.ReadOnly = true;
         }
@@ -80,18 +78,31 @@ namespace TL_Gerente
             if(panel.Rows.Count > 1 && panel.SelectedCells.Count > 0) { 
                 int i = int.Parse(panel.SelectedCells[0].Value.ToString());
                 tela.gerente.deletarFornecedor(i);
+
                 panel.DataSource = tela.gerente.exibirFornecedores();
                 panel.Refresh();
             }
         }
         private void atualizar_Click(object sender, EventArgs e)
         {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
+            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0 && panel.SelectedRows[0].Index < panel.Rows.Count-1)
             {
                 int i = int.Parse(panel.SelectedCells[0].Value.ToString());
                 tela.gerente.atualizarFornecedor(i, textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
+
                 panel.DataSource = tela.gerente.exibirFornecedores();
                 panel.Refresh();
+            }
+        }
+        private void panel_SelectionChanged(object sender, EventArgs e)
+        {
+            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
+            {
+                int i = panel.SelectedRows[0].Index;
+                textsboxs[0].tb.Text = panel[1, i].Value.ToString();
+                textsboxs[1].tb.Text = panel[2, i].Value.ToString();
+                textsboxs[2].tb.Text = panel[3, i].Value.ToString();
+                textsboxs[3].tb.Text = panel[4, i].Value.ToString();
             }
         }
         public void fechar()
@@ -105,18 +116,6 @@ namespace TL_Gerente
             tela.Controls.Remove(cadastrar.btn);
             tela.Controls.Remove(deletar.btn);
             tela.Controls.Remove(panel);
-        }
-
-        private void panel_SelectionChanged(object sender, EventArgs e)
-        {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
-            {
-                int i = panel.SelectedRows[0].Index;
-                textsboxs[0].tb.Text = panel[1, i].Value.ToString();
-                textsboxs[1].tb.Text = panel[2, i].Value.ToString();
-                textsboxs[2].tb.Text = panel[3, i].Value.ToString();
-                textsboxs[3].tb.Text = panel[4, i].Value.ToString();
-            }
         }
     }
 }
