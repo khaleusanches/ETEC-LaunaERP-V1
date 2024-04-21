@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAF72F43-A993-4CDF-B14E-8BA00B0780E4}|TL_Gerente\\TL_Gerente.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\tl_gerente\\telafornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAF72F43-A993-4CDF-B14E-8BA00B0780E4}|TL_Gerente\\TL_Gerente.csproj|solutionrelative:tl_gerente\\telafornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAF72F43-A993-4CDF-B14E-8BA00B0780E4}|TL_Gerente\\TL_Gerente.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\atividade1csharp\\view\\tl_gerente\\telagerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAF72F43-A993-4CDF-B14E-8BA00B0780E4}|TL_Gerente\\TL_Gerente.csproj|solutionrelative:tl_gerente\\telagerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40607502-94AA-4827-8902-BA3DDD6D920A}|TL_Principal\\TL_Principal.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\tl_principal\\telaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40607502-94AA-4827-8902-BA3DDD6D920A}|TL_Principal\\TL_Principal.csproj|solutionrelative:tl_principal\\telaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CE57A18-91CE-4611-8027-32B0599BDBDD}|Login\\TL_Login.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\login\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CE57A18-91CE-4611-8027-32B0599BDBDD}|Login\\TL_Login.csproj|solutionrelative:login\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelaFornecedores.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Gerente\\TelaFornecedores.cs",
+              "RelativeDocumentMoniker": "TL_Gerente\\TelaFornecedores.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Gerente\\TelaFornecedores.cs",
+              "RelativeToolTip": "TL_Gerente\\TelaFornecedores.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAADwv0UAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T15:47:13.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelaGerente.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Gerente\\TelaGerente.cs",
+              "RelativeDocumentMoniker": "TL_Gerente\\TelaGerente.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Gerente\\TelaGerente.cs",
+              "RelativeToolTip": "TL_Gerente\\TelaGerente.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:11:58.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TelaPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Principal\\TelaPrincipal.cs",
+              "RelativeDocumentMoniker": "TL_Principal\\TelaPrincipal.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\TL_Principal\\TelaPrincipal.cs",
+              "RelativeToolTip": "TL_Principal\\TelaPrincipal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T00:02:17.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TelaLogin.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\Login\\TelaLogin.cs",
+              "RelativeDocumentMoniker": "Login\\TelaLogin.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\View\\Login\\TelaLogin.cs",
+              "RelativeToolTip": "Login\\TelaLogin.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwA0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T23:49:21.14Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

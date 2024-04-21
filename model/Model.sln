@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaFerramentas", "CaixaFerramentas\CaixaFerramentas.csproj", "{1A4750AA-BCE4-4A1D-90D8-112DC2606F9E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{176E60E0-A376-40D1-9723-2C7DE839BC8D} = {176E60E0-A376-40D1-9723-2C7DE839BC8D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoDados", "BancoDados\BancoDados.csproj", "{176E60E0-A376-40D1-9723-2C7DE839BC8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionarios", "Funcionarios\Funcionarios.csproj", "{23C7AADE-F888-4A9A-B050-DD14F260E81D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{176E60E0-A376-40D1-9723-2C7DE839BC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{176E60E0-A376-40D1-9723-2C7DE839BC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{176E60E0-A376-40D1-9723-2C7DE839BC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23C7AADE-F888-4A9A-B050-DD14F260E81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C7AADE-F888-4A9A-B050-DD14F260E81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C7AADE-F888-4A9A-B050-DD14F260E81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C7AADE-F888-4A9A-B050-DD14F260E81D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

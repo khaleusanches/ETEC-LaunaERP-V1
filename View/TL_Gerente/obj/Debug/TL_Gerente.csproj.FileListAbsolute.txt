@@ -1,0 +1,17 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\TL_Gerente.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\CaixaFerramentas.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\TL_Principal.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\obj\Debug\TL_Gerente.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\obj\Debug\TL_Gerente.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\obj\Debug\TL_Gerente.csproj.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\obj\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\obj\Debug\TL_Gerente.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\TL_Principal.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\Funcionarios.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\Funcionarios.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Gerente\bin\Debug\MySql.Data.xml

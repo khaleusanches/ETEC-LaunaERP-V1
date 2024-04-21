@@ -1,0 +1,17 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\obj\Debug\Funcionarios.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\obj\Debug\Funcionarios.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\Funcionarios.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\Funcionarios.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\obj\Debug\Funcionarios.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\obj\Debug\Funcionarios.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\MySql.Data.xml
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\obj\Debug\Funciona.C5FF20D2.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\TL_Principal.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\TL_Gerente.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\CaixaFerramentas.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\Funcionarios\bin\Debug\TL_Principal.pdb

@@ -16,23 +16,29 @@ namespace BancoDados
         private MySqlConnection conection = new MySqlConnection("server=localhost;username=root;database=testeando");
         private MySqlDataAdapter adapter = new MySqlDataAdapter();
         private DataTable dt = new DataTable();
-        private DataSet bdDataSet = new DataSet();
+        public Banco()
+        {
+            conection.Open();
+        }
         public DataTable AllUsers()
         {
             MySqlDataAdapter adapter = null;
             adapter = new MySqlDataAdapter("Select * from usuarios", conection);
             dt.Rows.Add(adapter);
-            conection.Close();
             return dt;
         }
 
         public DataTable consultar(string sql)
         {
-            conection.Open();
             adapter = new MySqlDataAdapter(sql, conection);
             adapter.Fill(dt);
-            conection.Close();
             return dt;
+        }
+        public void comandar(string sql)
+        {
+            MySqlCommand comando = new MySqlCommand(sql, conection);
+            comando.ExecuteNonQuery();
+
         }
     }
 }
