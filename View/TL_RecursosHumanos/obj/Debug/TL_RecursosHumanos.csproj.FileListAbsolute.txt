@@ -9,3 +9,13 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Recur
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_Recur.5232279D.Up2Date
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\Funcionarios.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Estoque.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\BancoDados.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\Funcionarios.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Estoque.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Gerente.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\BancoDados.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\MySql.Data.xml

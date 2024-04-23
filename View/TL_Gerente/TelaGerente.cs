@@ -14,7 +14,6 @@ namespace TL_Gerente
     public class TelaGerente : TelaPrincipal
     {
         public Gerente gerente;
-        TelaFornecedores fornecedores;
         protected BtnImage cadasFornecedor;
         public TelaGerente(Gerente gerente) 
         {
@@ -32,12 +31,10 @@ namespace TL_Gerente
         private void cadasFornecedor_Click(object sender, EventArgs e)
         {
             if (cadasFornecedor.atv == true) {
-                fornecedores = new TelaFornecedores(this);
-                cadasFornecedor.atv = false;
+                
             }
             else
             {
-                fornecedores.fechar();
                 cadasFornecedor.atv = true;
             }
 

@@ -11,11 +11,12 @@ namespace TL_Principal
 {
     public class TelaPrincipal : Form
     {
+        public Panel panel = new Panel();
         public TelaPrincipal()
         {
             Width = 900;
             Height = 680;
-            Panel panel = new Panel();
+            
             panel.Width = 900;
             panel.Height = 50;
             panel.BackColor = Color.DarkSlateGray;

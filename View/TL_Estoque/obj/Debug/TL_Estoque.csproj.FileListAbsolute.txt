@@ -15,3 +15,7 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoq
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\Funcionarios.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\BancoDados.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\MySql.Data.xml
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\TL_Gerente.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\TL_RecursosHumanos.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Estoque\bin\Debug\TL_RecursosHumanos.pdb

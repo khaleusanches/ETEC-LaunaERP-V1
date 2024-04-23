@@ -12,6 +12,7 @@ namespace TL_Estoque
 {
     public class TelaPrincipalEstoque : TelaPrincipal
     {
+        TelaAcessoEstoque tela_acesso_estoque;
         protected BtnImage Estoque;
         public Gerente gerente = new Gerente();
         public TelaPrincipalEstoque(Funcionario funcionario) 
@@ -29,7 +30,15 @@ namespace TL_Estoque
 
         private void estoque_Click(object sender, EventArgs e)
         {
-            new TelaAcessoEstoque(this);
+            if(Estoque.atv == true) {
+                tela_acesso_estoque = new TelaAcessoEstoque(this);
+                Estoque.atv = false;
+            }
+            else
+            {
+                tela_acesso_estoque.fechar();
+                Estoque.atv = true;
+            }
         }
     }
 }

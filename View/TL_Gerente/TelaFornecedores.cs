@@ -9,12 +9,13 @@ using System.Windows.Forms;
 using CaixaFerramentas;
 using System.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TL_Estoque;
 
 namespace TL_Gerente
 {
     public class TelaFornecedores : Form
     {
-        TelaGerente tela;
+        TelaAcessoEstoque tela;
         BtnImage cadastrar;
         BtnImage deletar;
         BtnImage atualizar;
@@ -22,7 +23,7 @@ namespace TL_Gerente
 
         List<LabelPerso> labels = new List<LabelPerso>();
         List<TextBoxPerso> textsboxs = new List<TextBoxPerso>();
-        public TelaFornecedores(TelaGerente tela) 
+        public TelaFornecedores(TelaAcessoEstoque tela)
         {
             this.tela = tela;
 
@@ -74,7 +75,8 @@ namespace TL_Gerente
         }
         private void deletar_Click(object sender, EventArgs e)
         {
-            if(panel.Rows.Count > 1 && panel.SelectedCells.Count > 0) { 
+            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
+            {
                 int i = int.Parse(panel.SelectedCells[0].Value.ToString());
                 tela.gerente.deletarFornecedor(i);
 
@@ -84,7 +86,7 @@ namespace TL_Gerente
         }
         private void atualizar_Click(object sender, EventArgs e)
         {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0 && panel.SelectedRows[0].Index < panel.Rows.Count-1)
+            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0 && panel.SelectedRows[0].Index < panel.Rows.Count - 1)
             {
                 int i = int.Parse(panel.SelectedCells[0].Value.ToString());
                 tela.gerente.atualizarFornecedor(i, textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
