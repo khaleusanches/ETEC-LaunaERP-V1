@@ -38,7 +38,6 @@ namespace TL_Gerente
             LabelPerso LB_descricao = new LabelPerso(100, 25, 245, 20, "Descrição", tela);
             TextBoxPerso TB_descricao = new TextBoxPerso(150, 25, 245, 150, "", 100, tela);
 
-
             labels.Add(LB_nome_Fornecedor);
             labels.Add(LB_categoria_Fornecedor);
             labels.Add(LB_telefone);
@@ -116,6 +115,7 @@ namespace TL_Gerente
             tela.Controls.Remove(cadastrar.btn);
             tela.Controls.Remove(deletar.btn);
             tela.Controls.Remove(panel);
+            tela.Controls.Remove(atualizar.btn);
         }
     }
 }

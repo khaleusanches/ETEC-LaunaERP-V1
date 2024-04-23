@@ -10,7 +10,7 @@ namespace Funcionarios
     public class Funcionario : Form
     {
         int id;
-        int nv;
+        protected int nv;
         string nome;
         string cpf;
         string data_nascimento;
@@ -37,6 +37,10 @@ namespace Funcionarios
         public void exibir()
         {
             Console.WriteLine(id.ToString(), nv, nome, cpf, data_nascimento, endereco, data_adm, id_setor, func, salario, login, password, desconto);
+        }
+        public int getnv()
+        {
+            return nv;
         }
     }
 }

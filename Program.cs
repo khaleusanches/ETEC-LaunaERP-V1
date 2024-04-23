@@ -10,7 +10,7 @@ using TL_Principal;
 using CaixaFerramentas;
 using Funcionarios;
 using TL_Login;
-
+using TL_Estoque;
 namespace Sistema
 {
     internal class Program : Form
@@ -22,7 +22,8 @@ namespace Sistema
         }
         public Program()
         {
-            new TelaLogin().ShowDialog();
+            Gerente gerente = new Gerente();
+            gerente.criarTela();
         }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_RecursosHumanos.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_RecursosHumanos.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\CaixaFerramentas.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Principal.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\CaixaFerramentas.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\bin\Debug\TL_Principal.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_Recur.5232279D.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_RecursosHumanos\obj\Debug\TL_RecursosHumanos.pdb

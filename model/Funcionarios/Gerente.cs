@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BancoDados;
 using TL_Principal;
 using TL_Gerente;
+using TL_Estoque;
 
 namespace Funcionarios
 {
@@ -18,7 +19,11 @@ namespace Funcionarios
         DataTable DT_consultaID = new DataTable();
         public Gerente()
         {
-            new TelaGerente(this).ShowDialog();
+            nv = 5;
+        }
+        public void criarTela()
+        {
+            new TelaPrincipalEstoque(this).ShowDialog();
         }
         public DataTable exibirFornecedores() 
         {
@@ -39,6 +44,11 @@ namespace Funcionarios
         {
             banco.comandar("UPDATE fornecedores set Nome_Fornecedor='" + nome + "',Categoria_Fornecedor='" + categoria + "',Telefone_Fornecedor='" + telefone + "',Descrição='" + descricao + "' where ID_Fornecedor='" + i + "'");
             fechar();
+        }
+        public DataTable exibirProdutos()
+        {
+            dt = banco.consultar("select * from lotes");
+            return dt;
         }
         public void fechar()
         {

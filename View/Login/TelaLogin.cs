@@ -9,7 +9,6 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using CaixaFerramentas;
 using BancoDados;
-using TL_Gerente;
 using Funcionarios;
 using TL_Principal;
 

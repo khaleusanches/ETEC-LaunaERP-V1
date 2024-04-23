@@ -15,31 +15,18 @@ namespace TL_Gerente
     {
         public Gerente gerente;
         TelaFornecedores fornecedores;
-        BtnImage cadasFornecedor;
-        BtnImage Estoque;
-        BtnImage cadasFuncionario;
+        protected BtnImage cadasFornecedor;
         public TelaGerente(Gerente gerente) 
         {
             this.gerente = gerente;
-            Panel panel = new Panel();
-            panel.Width = 900;
-            panel.Height = 50;
-            panel.BackColor = Color.DarkGray;
-            Controls.Add(panel);
-
+            
+            
             cadasFornecedor = new BtnImage(true, 100, 50, 0, 0, null, null, "Fornecedores", this);
-            Estoque = new BtnImage(true, 100, 50, 0, 100, null, null, "Estoque", this); 
-            cadasFuncionario = new BtnImage(true, 100, 50, 0, 200, null, null, "Funcionarios", this);
+            cadasFornecedor.btn.Click += new EventHandler(cadasFornecedor_Click);
+            cadasFornecedor.btn.Visible = true;
             cadasFornecedor.btn.BackColor = Color.Blue;
             cadasFornecedor.btn.BringToFront();
-
-            Estoque.btn.BackColor = Color.Blue;
-            Estoque.btn.BringToFront();
-
-            cadasFuncionario.btn.BackColor = Color.Blue;
-            cadasFuncionario.btn.BringToFront();
-
-            cadasFornecedor.btn.Click += new EventHandler(cadasFornecedor_Click);
+            cadasFornecedor.btn.Visible = false;
         }
 
         private void cadasFornecedor_Click(object sender, EventArgs e)

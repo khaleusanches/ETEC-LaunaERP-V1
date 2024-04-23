@@ -6,12 +6,12 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFe
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\Model\CaixaFerramentas\obj\Debug\CaixaFerramentas.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\Funcionarios.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\BancoDados.dll
-C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Gerente.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\MySql.Data.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Principal.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\Funcionarios.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\BancoDados.pdb
-C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Gerente.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\MySql.Data.xml
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Principal.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\obj\Debug\CaixaFer.29D17D5C.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Estoque.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Estoque.pdb

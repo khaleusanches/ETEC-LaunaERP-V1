@@ -34,11 +34,16 @@
     <Reference Include="BancoDados">
       <HintPath>..\..\model\BancoDados\bin\Debug\BancoDados.dll</HintPath>
     </Reference>
+    <Reference Include="CaixaFerramentas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\model\CaixaFerramentas\bin\Debug\CaixaFerramentas.dll</HintPath>
+    </Reference>
     <Reference Include="Funcionarios">
       <HintPath>..\..\model\Funcionarios\bin\Debug\Funcionarios.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,9 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TelaLotes.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
