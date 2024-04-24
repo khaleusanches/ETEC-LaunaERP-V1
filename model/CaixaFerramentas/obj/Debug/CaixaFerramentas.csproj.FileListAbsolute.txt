@@ -15,3 +15,5 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFe
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\obj\Debug\CaixaFer.29D17D5C.Up2Date
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Estoque.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Estoque.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Gerente.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\model\CaixaFerramentas\bin\Debug\TL_Gerente.pdb

@@ -43,6 +43,18 @@ namespace TL_Login
                         Dispose();
                         Gerente gerente = new Gerente();
                         break;
+                    case 4:
+                        
+                        break;
+                    case 3:
+                        
+                        break;
+                    case 2:
+                        
+                        break;
+                    case 1: 
+                        
+                        break;
                 }
             }
             else

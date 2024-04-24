@@ -10,22 +10,25 @@ using CaixaFerramentas;
 using System.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TL_Estoque;
+using TL_Principal;
 
 namespace TL_Gerente
 {
-    public class TelaFornecedores : Form
+    public class TelaFornecedores : TelaPrincipal
     {
-        TelaAcessoEstoque tela;
+        TelaGerente tela;
         BtnImage cadastrar;
         BtnImage deletar;
         BtnImage atualizar;
-        DataGridView panel;
+        public DataGridView dtw_fornecedores;
+        Gerente gerente;
 
         List<LabelPerso> labels = new List<LabelPerso>();
         List<TextBoxPerso> textsboxs = new List<TextBoxPerso>();
-        public TelaFornecedores(TelaAcessoEstoque tela)
+        public TelaFornecedores(TelaGerente tela, Gerente gerente)
         {
             this.tela = tela;
+            this.gerente = gerente;
 
             LabelPerso LB_nome_Fornecedor = new LabelPerso(100, 25, 135, 20, "Nome do Fornecedor:", tela);
             TextBoxPerso TB_nome_Fornecedor = new TextBoxPerso(150, 25, 135, 150, "", 100, tela);
@@ -55,55 +58,55 @@ namespace TL_Gerente
             deletar.btn.Click += new EventHandler(deletar_Click);
             atualizar.btn.Click += new EventHandler(atualizar_Click);
 
-            this.panel = new DataGridView();
-            panel.DataSource = tela.gerente.exibirFornecedores();
-            panel.BackColor = Color.DimGray;
-            panel.Width = 500;
-            panel.Height = 400;
-            panel.Top = 135;
-            panel.Left = 350;
-            panel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tela.Controls.Add(panel);
-            panel.SelectionChanged += panel_SelectionChanged;
-            panel.ReadOnly = true;
+            this.dtw_fornecedores = new DataGridView();
+            dtw_fornecedores.DataSource = gerente.exibirFornecedores();
+            dtw_fornecedores.BackColor = Color.DimGray;
+            dtw_fornecedores.Width = 500;
+            dtw_fornecedores.Height = 400;
+            dtw_fornecedores.Top = 135;
+            dtw_fornecedores.Left = 350;
+            dtw_fornecedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tela.Controls.Add(dtw_fornecedores);
+            dtw_fornecedores.SelectionChanged += panel_SelectionChanged;
+            dtw_fornecedores.ReadOnly = true;
         }
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            tela.gerente.cadastrarFornecedores(textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
-            panel.DataSource = tela.gerente.exibirFornecedores();
+            gerente.cadastrarFornecedores(textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
+            dtw_fornecedores.DataSource = gerente.exibirFornecedores();
         }
         private void deletar_Click(object sender, EventArgs e)
         {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
+            if (dtw_fornecedores.Rows.Count > 1 && dtw_fornecedores.SelectedCells.Count > 0 && dtw_fornecedores.SelectedRows[0].Index < dtw_fornecedores.Rows.Count - 1)
             {
-                int i = int.Parse(panel.SelectedCells[0].Value.ToString());
-                tela.gerente.deletarFornecedor(i);
+                int i = int.Parse(dtw_fornecedores.SelectedCells[0].Value.ToString());
+                gerente.deletarFornecedor(i);
 
-                panel.DataSource = tela.gerente.exibirFornecedores();
-                panel.Refresh();
+                dtw_fornecedores.DataSource = gerente.exibirFornecedores();
+                dtw_fornecedores.Refresh();
             }
         }
         private void atualizar_Click(object sender, EventArgs e)
         {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0 && panel.SelectedRows[0].Index < panel.Rows.Count - 1)
+            if (dtw_fornecedores.Rows.Count > 1 && dtw_fornecedores.SelectedCells.Count > 0 && dtw_fornecedores.SelectedRows[0].Index < dtw_fornecedores.Rows.Count - 1)
             {
-                int i = int.Parse(panel.SelectedCells[0].Value.ToString());
-                tela.gerente.atualizarFornecedor(i, textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
+                int i = int.Parse(dtw_fornecedores.SelectedCells[0].Value.ToString());
+                gerente.atualizarFornecedor(i, textsboxs[0].tb.Text, textsboxs[1].tb.Text, textsboxs[2].tb.Text, textsboxs[3].tb.Text);
 
-                panel.DataSource = tela.gerente.exibirFornecedores();
-                panel.Refresh();
+                dtw_fornecedores.DataSource = gerente.exibirFornecedores();
+                dtw_fornecedores.Refresh();
             }
         }
         private void panel_SelectionChanged(object sender, EventArgs e)
         {
-            if (panel.Rows.Count > 1 && panel.SelectedCells.Count > 0)
+            if (dtw_fornecedores.Rows.Count > 1 && dtw_fornecedores.SelectedCells.Count > 0)
             {
-                int i = panel.SelectedRows[0].Index;
-                textsboxs[0].tb.Text = panel[1, i].Value.ToString();
-                textsboxs[1].tb.Text = panel[2, i].Value.ToString();
-                textsboxs[2].tb.Text = panel[3, i].Value.ToString();
-                textsboxs[3].tb.Text = panel[4, i].Value.ToString();
+                int i = dtw_fornecedores.SelectedRows[0].Index;
+                textsboxs[0].tb.Text = dtw_fornecedores[1, i].Value.ToString();
+                textsboxs[1].tb.Text = dtw_fornecedores[2, i].Value.ToString();
+                textsboxs[2].tb.Text = dtw_fornecedores[3, i].Value.ToString();
+                textsboxs[3].tb.Text = dtw_fornecedores[4, i].Value.ToString();
             }
         }
         public void fechar()
@@ -113,10 +116,10 @@ namespace TL_Gerente
                 tela.Controls.Remove(labels[i].txt);
                 tela.Controls.Remove(textsboxs[i].tb);
             }
-            tela.gerente.fechar();
+            gerente.fechar();
             tela.Controls.Remove(cadastrar.btn);
             tela.Controls.Remove(deletar.btn);
-            tela.Controls.Remove(panel);
+            tela.Controls.Remove(dtw_fornecedores);
             tela.Controls.Remove(atualizar.btn);
         }
     }

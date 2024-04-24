@@ -12,7 +12,7 @@ using TL_Estoque;
 
 namespace Funcionarios
 {
-    public class Gerente : Funcionario
+    public class Gerente : Repositor
     {
         DataTable dt = new DataTable();
         Banco banco = new Banco();
@@ -23,7 +23,7 @@ namespace Funcionarios
         }
         public void criarTela()
         {
-            new TelaPrincipalEstoque(this).ShowDialog();
+            new TelaGerente(this).ShowDialog();
         }
         public DataTable exibirFornecedores() 
         {
@@ -44,11 +44,6 @@ namespace Funcionarios
         {
             banco.comandar("UPDATE fornecedores set Nome_Fornecedor='" + nome + "',Categoria_Fornecedor='" + categoria + "',Telefone_Fornecedor='" + telefone + "',Descrição='" + descricao + "' where ID_Fornecedor='" + i + "'");
             fechar();
-        }
-        public DataTable exibirProdutos()
-        {
-            dt = banco.consultar("select * from lotes");
-            return dt;
         }
         public void fechar()
         {

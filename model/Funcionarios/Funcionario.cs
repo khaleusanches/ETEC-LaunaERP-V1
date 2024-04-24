@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Funcionarios
 {
-    public class Funcionario : Form
+    public class Funcionario
     {
         int id;
         protected int nv;
