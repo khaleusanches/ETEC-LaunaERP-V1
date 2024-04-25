@@ -11,7 +11,7 @@ using TL_Gerente;
 
 namespace TL_Estoque
 {
-    public class TelaAcessoEstoque : Form
+    public class TelaAcessoEstoque
     {
         LabelPerso Lote;
         BtnImage adicionarProduto;

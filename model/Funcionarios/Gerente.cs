@@ -45,6 +45,26 @@ namespace Funcionarios
             banco.comandar("UPDATE fornecedores set Nome_Fornecedor='" + nome + "',Categoria_Fornecedor='" + categoria + "',Telefone_Fornecedor='" + telefone + "',Descrição='" + descricao + "' where ID_Fornecedor='" + i + "'");
             fechar();
         }
+        public DataTable exibirFuncionarios()
+        {
+            dt = banco.consultar("select * from usuario");
+            return dt;
+        }
+
+        public void adicionarFuncionario(string nome, string senha, string setor)
+        {
+            banco.comandar("INSERT INTO usuario (Nome_Usuario, Senha_Usuario, Setor) values ('" + nome + "','" + senha + "','" + setor + "');");
+            fechar();
+        }
+        public void demitirFuncionario(int i)
+        {
+            banco.comandar("Delete from usuario where ID_Usuario =" + i + ";");
+            fechar();
+        }
+        public void atualizarFuncionario(int i, string nome, string senha, string setor)
+        {
+            banco.comandar("UPDATE usuario set Nome_Usuario='"+nome+"',Senha_Usuario='"+senha+"',Setor='"+setor+"' where ID_Usuario="+i+"");
+        }
         public void fechar()
         {
             dt.Clear();

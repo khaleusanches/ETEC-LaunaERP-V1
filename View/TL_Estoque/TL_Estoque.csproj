@@ -58,9 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TelaAcessoEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="TelaAcessoEstoque.cs" />
     <Compile Include="TelaPrincipalEstoque.cs">
       <SubType>Form</SubType>
     </Compile>

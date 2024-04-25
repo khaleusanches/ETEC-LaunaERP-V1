@@ -14,7 +14,7 @@ using TL_Principal;
 
 namespace TL_Gerente
 {
-    public class TelaFornecedores : TelaPrincipal
+    public class TelaFornecedores
     {
         TelaGerente tela;
         BtnImage cadastrar;
