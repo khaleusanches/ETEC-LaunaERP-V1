@@ -9,6 +9,7 @@ using TL_Gerente;
 using TL_Principal;
 using CaixaFerramentas;
 using Funcionarios;
+using TL_Caixa;
 using TL_Login;
 using TL_Estoque;
 namespace Sistema
@@ -22,8 +23,8 @@ namespace Sistema
         }
         public Program()
         {
-            Gerente gerente = new Gerente();
-            gerente.criarTela();
+            Caixa caixa = new Caixa();
+            new TelaPrincipalCaixa(caixa).ShowDialog();
         }
     }
 }
