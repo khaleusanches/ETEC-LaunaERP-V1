@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using BancoDados;
+using System.Collections.Generic;
 
 namespace Funcionarios
 {
@@ -9,16 +10,18 @@ namespace Funcionarios
     {
         DataTable dt = new DataTable();
         Banco banco = new Banco();
-        public DataTable exibirCaixa(int[] id)
+        public DataTable exibirCaixa(List<int> id)
         {
+            fechar();
             foreach (int idItem in id) { 
                 dt = banco.consultar("select Nome_Produto, preço from lotes  where ID_Lote ="+ idItem +";");
             }
             return dt;
+            
         }
-        private void teste()
+        public void fechar()
         {
-
+            dt.Clear();
         }
     }
 }

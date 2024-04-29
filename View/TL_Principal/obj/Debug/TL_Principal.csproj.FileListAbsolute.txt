@@ -13,9 +13,9 @@ C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Princ
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\CaixaFerramentas.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\Funcionarios.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\Funcionarios.pdb
-C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Gerente.dll
-C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Gerente.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Login.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Login.pdb
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Gerente.dll
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Estoque.dll
+C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Gerente.pdb
 C:\Users\khaleu\Desktop\Etec\DS\ProgramaçãoAlgo\atividade1CSharp\View\TL_Principal\bin\Debug\TL_Estoque.pdb
