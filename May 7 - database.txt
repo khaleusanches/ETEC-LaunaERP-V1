@@ -1,4 +1,4 @@
----------------------------------------
+--------------------------------------------
 
 create database Projeto;
 use Projeto;
@@ -6,14 +6,15 @@ use Projeto;
 --------------------------------------------
 
 create table fornecedores(
-idfunc int unique auto_increment,
+idfornecedor int unique auto_increment,
 nome varchar(64) unique not null,
 cnpj varchar(18) unique not null,
 endereco varchar(200),
 correioeletronico varchar(80) unique not null,
 tel1 varchar(16) unique not null,
-tel2 varchar(16) unique,
-primary key(idfunc)
+tel2 varchar(16) unique not null,
+tel3 varchar(16) unique not null,
+primary key(idfornecedor),
 );
 
 drop table fornecedores;
@@ -22,10 +23,11 @@ select * from fornecedores;
 --------------------------------------------
 
 create table produtos(
-idprod int unique auto_increment,
+idproduto int unique auto_increment,
 nome varchar(32) unique not null,
 descricao varchar(180),
-primary key(idprod)
+fornecedor varchar(64) not null,
+primary key(idproduto)
 );
 
 drop table produtos;
@@ -35,7 +37,7 @@ select * from fornecedores;
 
 create table lotes(
 idlote int unique auto_increment,
-idprod varchar(32) not null,
+idprodutofk int not null,
 fornecedor varchar(64) not null,
 aquisicao datetime not null,
 fabricacao datetime not null,
@@ -43,7 +45,7 @@ validade datetime not null,
 notafiscal int unique not null,
 localizacao varchar(32) not null,
 primary key(idlote),
-foreign key (idprod) references produtos (nome)
+foreign key (idprodutofk) references produtos (idproduto)
 );
 
 select * from lotes;
@@ -62,29 +64,43 @@ drop table setores;
 
 --------------------------------------------
 
+create table cargos(
+idcargo int unique auto_increment,
+nome varchar(32) unique not null,
+descricao varchar (80),
+nv int not null,
+primary key(idcargo)
+);
+
+select * from cargos;
+drop table setores;
+
+--------------------------------------------
+
 create table funcionarios(
 idfunc int unique auto_increment,
 nome varchar(64) not null,
-funcao varchar(32) not null,
-idsetor int not null,
-nv int not null,
 email varchar(64) unique not null,
 tel1 varchar(16) unique not null,
 tel2 varchar(16) unique,
-rg int unique not null,
-cpf int unique not null,
+rg varchar(9) unique not null,
+cpf varchar(11) unique not null,
 nascimento date not null,
+pis varchar(11) unique not null,
 endereco varchar(200) not null,
+idcargofk int not null,
+idsetorfk int not null,
 admissao date not null,
 salario decimal(10,2) not null,
 login varchar(32) unique not null,
 psswrd varchar(32) not null,
 desconto decimal(10,2),
 primary key(idfunc),
-foreign key (idsetor) references setores (idsetor)
+foreign key (idcargofk) references cargos (idcargo)
+foreign key (idsetorfk) references setores (idsetor)
 );
 
-select * from funcionários;
+select * from funcionarios;
 drop table funcionarios;
 
 --------------------------------------------
@@ -92,7 +108,7 @@ drop table funcionarios;
 create table clientes(
 idcliente int unique auto_increment,
 nome varchar(64) not null,
-cpf int unique not null,
+cpf varchar(11) unique not null,
 desconto decimal(10,2),
 primary key(idcliente)
 );
@@ -103,19 +119,17 @@ drop table clientes;
 --------------------------------------------
 
 create table operacoes(
-idopr int unique auto_increment,
+idoperacao int unique auto_increment,
 dataehora date not null,
 total decimal(10,2),
 troco decimal(10,2),
 desconto decimal(10,2),
-idcliente int,
-primary key(idopr),
+idclientefk int,
+primary key(idoperacao),
 foreign key (idcliente) references clientes (idcliente)
 );
 
+select * from operacoes;
 drop table operacoes;
 
 --------------------------------------------
-
-
-
