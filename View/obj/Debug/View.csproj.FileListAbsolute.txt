@@ -1,0 +1,6 @@
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\View.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\View.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.pdb

@@ -1,0 +1,9 @@
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\bin\Debug\Controller.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\bin\Debug\Controller.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\bin\Debug\MySql.Data.xml
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\obj\Debug\Controller.csproj.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\obj\Debug\Controller.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Controller\obj\Debug\Controller.pdb
