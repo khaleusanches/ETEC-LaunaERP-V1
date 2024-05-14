@@ -9,7 +9,7 @@ id int auto_increment unique not null,
 nome varchar(64) unique not null,
 cnpj varchar(18) unique not null,
 endereco varchar(200),
-correioeletronico varchar(80) unique not null,
+email varchar(80) unique not null,
 primary key(id)
 );
 
@@ -36,7 +36,6 @@ id int unique not null auto_increment,
 nome varchar(64) unique not null,
 valor decimal (10,2),
 estoque int,
-fornecedor varchar(64) not null,
 descricao varchar(180),
 primary key(id)
 );
@@ -49,6 +48,7 @@ drop table produtos;
 create table lotes(
 id int unique not null auto_increment,
 idprodutofk int not null,
+quantidade int not null, check (quantidade>0),
 fornecedor varchar(64) not null,
 aquisicao date not null,
 fabricacao date not null,
