@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\model",
+    "\\model\\Funcionarios",
+    "\\Properties"
   ],
+  "SelectedNode": "\\model\\Funcionarios\\Caixa.cs",
   "PreviewInSolutionExplorer": false
 }

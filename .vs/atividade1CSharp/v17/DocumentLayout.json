@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\",
+  "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{217D5F55-7596-4ED6-B6C1-A744748FC24C}|Sistema\\Sistema.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\atividade1csharp\\sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{217D5F55-7596-4ED6-B6C1-A744748FC24C}|Sistema\\Sistema.csproj|solutionrelative:sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\khaleu\\desktop\\etec\\ds\\programa\u00E7\u00E3oalgo\\atividade1csharp\\sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,9 +20,9 @@
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\Sistema\\Program.cs",
-              "RelativeDocumentMoniker": "Sistema\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\Sistema\\Program.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\Sistema\\Program.cs",
-              "RelativeToolTip": "Sistema\\Program.cs",
+              "RelativeToolTip": "..\\Programa\u00E7\u00E3oAlgo\\atividade1CSharp\\Sistema\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T23:21:50.705Z",
