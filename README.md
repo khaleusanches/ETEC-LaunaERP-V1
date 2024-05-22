@@ -1,2 +1,3 @@
 Reminders
-[ ] Update flowchart
+- [X] Update flowchart
+- [ ] 
