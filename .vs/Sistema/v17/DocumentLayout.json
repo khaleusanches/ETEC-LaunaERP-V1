@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\view\\tl_padrao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\view\\tl_padrao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\tl_padrao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6A18C69-D15D-4C78-A673-85382EC0DA30}|Controller\\Controller.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\controller\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6A18C69-D15D-4C78-A673-85382EC0DA30}|Controller\\Controller.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\controller\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6A18C69-D15D-4C78-A673-85382EC0DA30}|Controller\\Controller.csproj|solutionrelative:controller\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\caixadeferramentasperso\\labelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\caixadeferramentasperso\\labelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|solutionrelative:caixadeferramentasperso\\labelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,8 +38,7 @@
               "RelativeToolTip": "CaixaDeFerramentasPerso\\LabelP.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T18:27:48.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T18:27:48.202Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Controller\\DAO.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T17:59:02.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T17:59:02.007Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "View\\Tl_Padrao.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T17:58:04.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T17:58:04.067Z"
             },
             {
               "$type": "Document",
