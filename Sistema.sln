@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema", "Sistema.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{F6A18C69-D15D-4C78-A673-85382EC0DA30}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaDeFerramentasPerso", "CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj", "{009F8578-42DB-4042-8A4A-72390463BD1F}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6A18C69-D15D-4C78-A673-85382EC0DA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6A18C69-D15D-4C78-A673-85382EC0DA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6A18C69-D15D-4C78-A673-85382EC0DA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6A18C69-D15D-4C78-A673-85382EC0DA30}.Release|Any CPU.Build.0 = Release|Any CPU
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU

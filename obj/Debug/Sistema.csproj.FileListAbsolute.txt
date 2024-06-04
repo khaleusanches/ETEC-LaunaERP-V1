@@ -12,3 +12,5 @@ C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\bin\Debug\Controller.pdb
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\bin\Debug\View.pdb
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\bin\Debug\MySql.Data.xml
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\obj\Debug\Sistema.csproj.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\bin\Debug\CaixaDeFerramentasPerso.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\bin\Debug\CaixaDeFerramentasPerso.pdb

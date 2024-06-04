@@ -4,3 +4,11 @@ C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.csproj.Asse
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.csproj.CoreCompileInputs.cache
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.dll
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\CaixaDeFerramentasPerso.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\CaixaDeFerramentasPerso.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\obj\Debug\View.csproj.Up2Date
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\Sistema.exe
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\MySql.Data.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\Sistema.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\Sistema.exe.config
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\View\bin\Debug\MySql.Data.xml

@@ -3,20 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\auxiliarrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:auxiliarrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\view\\rh\\banco_funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\rh\\banco_funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\cargos\\assistenterh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:cargos\\assistenterh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\view\\itelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\itelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\view\\rh\\tl_principal_rh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\rh\\tl_principal_rh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\view\\tl_padrao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\tl_padrao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6A18C69-D15D-4C78-A673-85382EC0DA30}|Controller\\Controller.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\controller\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6A18C69-D15D-4C78-A673-85382EC0DA30}|Controller\\Controller.csproj|solutionrelative:controller\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\view\\tl_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FAB1E5D-E1A2-4D88-B0EB-465126535A39}|View\\View.csproj|solutionrelative:view\\tl_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3401A2C-08EF-46A4-8F9F-26D7A146175B}|Sistema.csproj|solutionrelative:funcionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\caixadeferramentasperso\\buttonp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|solutionrelative:caixadeferramentasperso\\buttonp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\caixadeferramentasperso\\labelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|solutionrelative:caixadeferramentasperso\\labelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\caixadeferramentasperso\\textboxp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009F8578-42DB-4042-8A4A-72390463BD1F}|CaixaDeFerramentasPerso\\CaixaDeFerramentasPerso.csproj|solutionrelative:caixadeferramentasperso\\textboxp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +62,170 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ITelas.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\ITelas.cs",
+              "RelativeDocumentMoniker": "View\\ITelas.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\ITelas.cs",
+              "RelativeToolTip": "View\\ITelas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T08:02:41.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuxiliarRH.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\AuxiliarRH.cs",
+              "RelativeDocumentMoniker": "AuxiliarRH.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\AuxiliarRH.cs",
+              "RelativeToolTip": "AuxiliarRH.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T02:08:27.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssistenteRH.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Cargos\\AssistenteRH.cs",
+              "RelativeDocumentMoniker": "Cargos\\AssistenteRH.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Cargos\\AssistenteRH.cs",
+              "RelativeToolTip": "Cargos\\AssistenteRH.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T01:58:24.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Banco_Funcionarios.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\RH\\Banco_Funcionarios.cs",
+              "RelativeDocumentMoniker": "View\\RH\\Banco_Funcionarios.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\RH\\Banco_Funcionarios.cs",
+              "RelativeToolTip": "View\\RH\\Banco_Funcionarios.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAQwEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T22:56:27.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tl_Principal_RH.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\RH\\Tl_Principal_RH.cs",
+              "RelativeDocumentMoniker": "View\\RH\\Tl_Principal_RH.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\RH\\Tl_Principal_RH.cs",
+              "RelativeToolTip": "View\\RH\\Tl_Principal_RH.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAqwCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T22:46:21.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Funcionarios.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Funcionarios.cs",
+              "RelativeDocumentMoniker": "Funcionarios.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Funcionarios.cs",
+              "RelativeToolTip": "Funcionarios.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T22:49:01.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ButtonP.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\ButtonP.cs",
+              "RelativeDocumentMoniker": "CaixaDeFerramentasPerso\\ButtonP.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\ButtonP.cs",
+              "RelativeToolTip": "CaixaDeFerramentasPerso\\ButtonP.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T18:58:51.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DAO.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\DAO.cs",
+              "RelativeDocumentMoniker": "DAO.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\DAO.cs",
+              "RelativeToolTip": "DAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwCMAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T19:08:23.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TextBoxP.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\TextBoxP.cs",
+              "RelativeDocumentMoniker": "CaixaDeFerramentasPerso\\TextBoxP.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\TextBoxP.cs",
+              "RelativeToolTip": "CaixaDeFerramentasPerso\\TextBoxP.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T19:03:02.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "LabelP.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\LabelP.cs",
               "RelativeDocumentMoniker": "CaixaDeFerramentasPerso\\LabelP.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\CaixaDeFerramentasPerso\\LabelP.cs",
               "RelativeToolTip": "CaixaDeFerramentasPerso\\LabelP.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T18:27:48.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DAO.cs",
-              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Controller\\DAO.cs",
-              "RelativeDocumentMoniker": "Controller\\DAO.cs",
-              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Controller\\DAO.cs",
-              "RelativeToolTip": "Controller\\DAO.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAbAAAA",
+              "DocumentIndex": 7,
+              "Title": "Tl_Login.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\Tl_Login.cs",
+              "RelativeDocumentMoniker": "View\\Tl_Login.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\Tl_Login.cs",
+              "RelativeToolTip": "View\\Tl_Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T17:59:02.007Z"
+              "WhenOpened": "2024-05-22T23:16:45.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Tl_Padrao.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\Tl_Padrao.cs",
               "RelativeDocumentMoniker": "View\\Tl_Padrao.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\View\\Tl_Padrao.cs",
               "RelativeToolTip": "View\\Tl_Padrao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T17:58:04.067Z"
+              "WhenOpened": "2024-06-03T22:50:51.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAADgvw0AAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T17:55:28.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T17:55:28.748Z"
             }
           ]
         }

@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>View</RootNamespace>
     <AssemblyName>View</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,10 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITelas.cs" />
+    <Compile Include="RH\Banco_Funcionarios.cs" />
+    <Compile Include="RH\Tl_Principal_RH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tl_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tl_Padrao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj">
+      <Project>{009f8578-42db-4042-8a4a-72390463bd1f}</Project>
+      <Name>CaixaDeFerramentasPerso</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema.csproj">
+      <Project>{b3401a2c-08ef-46a4-8f9f-26d7a146175b}</Project>
+      <Name>Sistema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
