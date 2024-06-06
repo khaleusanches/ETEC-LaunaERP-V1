@@ -213,23 +213,23 @@ insert into cargos (nome) values
 ("Operador");
 
 insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, admissao, salario, login, senha, desconto) values
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "geradm", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "astadm", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "auxadm", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "gerrh", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "astrh", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "auxrh", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "gerfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "astfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "auxfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "gervnd", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "astvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "auxvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "oprvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "gerlog", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "astlog", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "auxlog", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20XX", "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "oprlog", "senhapadrao", "", 0.8);
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000101, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "geradm", "senhapadrao", "", 0.7),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000202, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "astadm", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000303, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "auxadm", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000404, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "gerrh", "senhapadrao", "", 0.7),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000505, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "astrh", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000615, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "auxrh", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000701, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "gerfnc", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000811, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "astfnc", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000915, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "auxfnc", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001016, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "gervnd", "senhapadrao", "", 0.7),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001112, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "astvnd", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001201, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "auxvnd", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001120, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "oprvnd", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001012, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "gerlog", "senhapadrao", "", 0.7),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000221, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "astlog", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000223, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "auxlog", "senhapadrao", "", 0.8),
+("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000108, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "oprlog", "senhapadrao", "", 0.8);
 
 
 
