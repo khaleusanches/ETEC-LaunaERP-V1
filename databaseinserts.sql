@@ -1,3 +1,5 @@
+drop database projeto;
+
 create database projeto;
 use projeto;
 
@@ -55,7 +57,7 @@ desconto decimal(10,2) not null default '0.9'
 
 create table operacoes(
 id int unique not null auto_increment,    primary key(id),
-idclientefk int,                          foreign key (idclientefk) references clientes (id),
+cpfcliente varchar(11),                          
 total decimal(10,2),                      check (total>=0),
 troco decimal(10,2),                      check (troco>=0),
 desconto decimal(10,2),
@@ -93,8 +95,8 @@ rg varchar(9) unique not null,
 nascimento date not null,
 pis varchar(11) unique not null,
 endereco varchar(200) not null,
-idsetorfk int not null,                    foreign key (idsetorfk) references setores (id),
-idcargofk int not null,                    foreign key (idcargofk) references cargos (id),
+idsetor int not null,
+idcargo int not null,
 class int not null,
 admissao date not null,
 salario decimal(10,2) not null,
@@ -129,7 +131,7 @@ insert into telefones(idfornecedorfk, tel, obs) values
 (9, "XX XX XXXX-XX25", "Tel 9A"), (9, "XX XX XXXX-XX26", "Tel 9B"), (9, "XX XX XXXX-XX27", "Tel 9C"),
 (10, "XX XX XXXX-XX28", "Tel 10A"), (10, "XX XX XXXX-XX29", "Tel 10B"), (10, "XX XX XXXX-XX30", "Tel 10C");
 
-insert into produtos(nome, valor, estoque, descricao)
+insert into produtos(nome, valor, estoque, descricao) values
 ("Produto 1", 23, 100, ""),
 ("Produto 2", 26, 200, ""),
 ("Produto 3", 24, 215, ""),
@@ -174,22 +176,22 @@ insert into lotes(idprodutofk, quantidade, fornecedor, aquisicao, fabricacao, va
 (20, 150, "Fornecedor10", 20240413, 20240401, 20240606, 20, "Sessão 4 Fileira 5 Prateleira 5");
 
 insert into clientes(nome, cpf, desconto) values
-(Cliente1, "1XXXXXXXXXX", "0.9"),
-(Cliente2, "2XXXXXXXXXX", "0.9"),
-(Cliente3, "3XXXXXXXXXX", "0.9"),
-(Cliente4, "4XXXXXXXXXX", "0.9"),
-(Cliente5, "5XXXXXXXXXX", "0.9"),
-(Cliente6, "6XXXXXXXXXX", "0.9"),
-(Cliente7, "7XXXXXXXXXX", "0.9"),
-(Cliente8, "8XXXXXXXXXX", "0.9"),
-(Cliente9, "9XXXXXXXXXX", "0.9"),
-(Cliente10, "10XXXXXXXXX", "0.9");
+('Cliente1', "1XXXXXXXXXX", "0.9"),
+('Cliente2', "2XXXXXXXXXX", "0.9"),
+('Cliente3', "3XXXXXXXXXX", "0.9"),
+('Cliente4', "4XXXXXXXXXX", "0.9"),
+('Cliente5', "5XXXXXXXXXX", "0.9"),
+('Cliente6', "6XXXXXXXXXX", "0.9"),
+('Cliente7', "7XXXXXXXXXX", "0.9"),
+('Cliente8', "8XXXXXXXXXX", "0.9"),
+('Cliente9', "9XXXXXXXXXX", "0.9"),
+('Cliente10', "10XXXXXXXXX", "0.9");
 
-insert into operacoes(idclientefk, desconto, total, troco)values
-('', '', 20, 2),
-('', '', 44, 2.5), 
-(1, 0.9, 86, 1.2), 
-(2, 0.9, 13, 0.5);
+insert into operacoes(cpfcliente, desconto, total, troco)values
+('', '1', 20, 2),
+('', '1', 44, 2.5), 
+("3XXXXXXXXXX", 0.9, 86, 1.2), 
+("4XXXXXXXXXX", 0.9, 13, 0.5);
 
 insert into vendas (idoperacaofk, idprodutofk, quantidade) values
 (1, 2, 1),
@@ -212,24 +214,21 @@ insert into cargos (nome) values
 ("Auxiliar"),
 ("Operador");
 
-insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, admissao, salario, login, senha, desconto) values
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000101, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "geradm", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000202, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "astadm", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000303, "XXXXXXXXXXX", "Endereço ", 1, , 202404, 00, "auxadm", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000404, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "gerrh", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000505, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "astrh", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000615, "XXXXXXXXXXX", "Endereço ", 2, , 202404, 00, "auxrh", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000701, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "gerfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000811, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "astfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000915, "XXXXXXXXXXX", "Endereço ", 3, , 202404, 00, "auxfnc", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001016, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "gervnd", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001112, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "astvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001201, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "auxvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001120, "XXXXXXXXXXX", "Endereço ", 4, , 202404, 00, "oprvnd", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20001012, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "gerlog", "senhapadrao", "", 0.7),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000221, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "astlog", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000223, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "auxlog", "senhapadrao", "", 0.8),
-("", "@email", "XX XX XXXXX-XXX", "XXXXXXXXX", 20000108, "XXXXXXXXXXX", "Endereço ", 5, , 202404, 00, "oprlog", "senhapadrao", "", 0.8);
-
-
-
+insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetor, idcargo, admissao, salario, login, senha, desconto) values
+("gfdssss", "fdfs@email", "XX XX XXXXX-XXX1", "XXXXXXX0X", 20000101, "XXXXXXXXXX1", "Endereço A", 1, 2, 202404, 2000, "geradm", "senhapadrao", 0.7),
+("hdfs", "dgfsdf@email", "XX XX XXXXX-XXX2", "XXXXXX0XXX", 20000202, "XXXXXXXXXX2", "Endereço b", 1, 3, 202404, 1200, "astadm", "senhapadrao", 0.8),
+("hfdhdf", "safas@email", "XX XX XXXXX-XXX3", "XXXXXX00XX", 20000303, "XXXXXXXXXX3", "Endereço c", 1, 2, 202404, 1100, "auxadm", "senhapadrao", 0.8),
+("hfd", "dgsd@email", "XX XX XXXXX-XXX4", "XXXXXXX1XX", 20000404, "XXXXXXXXXX4", "Endereço d", 2, 3, 202404, 20000, "gerrh", "senhapadrao", 0.7),
+("hf", "gfrgsedfr@email", "XX XX XXXXX-XXX5", "XXX2XXXXXX", 20000505, "XXXXXXXXXX5", "Endereço e", 2, 2, 202404, 1600, "astrh", "senhapadrao", 0.8),
+("shjfgsfga", "gdsfd@email", "XX XX XXXXX-X1XX", "XX9XXXXXXX", 20000615, "XXXXXXXXXX6", "Endereço f", 2, 1, 202404, 1400, "auxrh", "senhapadrao", 0.8),
+("asfasd", "grfesa@email", "XX XX XXXXX-XX1X", "XXXX4XXXXX", 20000701, "XXXXXXXXXX7", "Endereço g", 3, 1, 202404, 1200, "gerfnc", "senhapadrao", 0.8),
+("fsdaswd", "geasedrfasd@email", "XX XX XXXXX-X2XX", "X5XXXXXXXX", 20000811, "XXXXXXXXXX8", "Endereço h", 3, 1, 202404, 1100, "astfnc", "senhapadrao", 0.8),
+("asda", "gsdfsd@email", "XX XX XXXXX-XX7X", "XXXXXXXX6X", 20000915, "XXXXXXXXXX9", "Endereço i", 3, 2, 202404, 1600, "auxfnc", "senhapadrao", 0.8),
+("fcsazdfsd", "adged@email", "XX XX XXXXX-X4XX", "XXXXX4XXXX", 20001016, "XXXXXXXXX10", "Endereço j", 4, 3, 202404, 1400, "gervnd", "senhapadrao", 0.7),
+("adas", "gfeda@email", "XX XX XXXXX-XX3X", "XXXXXXXXX4", 20001112, "XXXXXXXXX11", "Endereço k", 4, 4, 202404, 1500, "astvnd", "senhapadrao", 0.8),
+("asdaw", "azfd@email", "XX XX XXXXX-XXX9", "XX4XXXXXXX", 20001201, "XXXXXXXXX12", "Endereço l", 4, 5, 202404, 1100, "auxvnd", "senhapadrao", 0.8),
+("ges", "aa@email", "XX XX XXXXX-2XXX", "XXXXXXX3XX", 20001120, "XXXXXXXXX13", "Endereço m", 4, 1, 202404, 1800, "oprvnd", "senhapadrao", 0.8),
+("gsedf", "agad@email", "XX XX XXXXX-1XXX", "XX3XXXXXXX", 20001012, "XXXXXXXXX14", "Endereço n", 5, 2, 202404, 1600, "gerlog", "senhapadrao", 0.7),
+("gfa", "hrdrf@email", "XX XX XXXXX-0XXX", "XX1XXXXXXX", 20000221, "XXXXXXXXX15", "Endereço o", 5, 1, 202404, 1400, "astlog", "senhapadrao", 0.8),
+("sfa", "hgsg@email", "XX XX XXXXX-XX0X", "XXXXX1XXXX", 20000223, "XXXXXXXXX16", "Endereço p", 5, 1, 202404, 1200, "auxlog", "senhapadrao", 0.8),
+("sasd", "hsfaser@email", "XX XX XXXXX-X0XX", "1XXXXXXXXX", 20000108, "XXXXXXXXX17", "Endereço q", 5, 1, 202404, 1100, "oprlog", "senhapadrao", 0.8);
