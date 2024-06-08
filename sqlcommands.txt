@@ -1,0 +1,75 @@
+
+SQL 1 - Busca login
+
+select funcionarios.login
+where funcionarios.login = '" + inputlogin + "';
+
+
+
+SQL 2 - Busca senha referente ao login
+
+select funcionarios.senha
+where funcionarios.login = '" + inputlogin + "';
+
+
+
+SQL 3 - Busca classe referente ao login
+
+select funcionarios.class
+where funcionario.login = '" + inputlogin + "';
+
+
+
+SQL 4 - Busca todos os funcionários no banco
+
+"select	funcionarios.nome as 'Nome',
+	email as 'Email',
+	tel as 'Telefone',
+	pis as 'PIS',
+	cargos.nome as 'Cargo',
+	setores.nome as 'Setor',
+	admissao as 'Data de admissão',
+	salario as 'Salário',
+	desconto as 'Desconto de Funcionário'
+from funcionarios
+inner join cargos on idcargofk = cargo.id
+inner join setores on idsetorfk = setores.id
+order by funcionarios.nome;"
+
+
+SQL 5 - Busca todos os funcionários organizando por setor
+
+"select	setores.nome as 'Setor',
+	funcionarios.nome as 'Nome',
+	cargos.nome as 'Cargo',
+	email as 'Email',
+	tel as 'Telefone',
+	pis as 'PIS',
+	admissao as 'Data de admissão',
+	salario as 'Salário',
+	desconto as 'Desconto de Funcionário'
+from setores
+inner join funcionarios on idsetorfk = setores.id
+inner join cargos on idcargofk = cargo.id
+order by setores.nome;
+
+
+
+
+update	funcionarios
+	set nome = '"
+		if ()
+
+ + nomeinput + "' where id = '" id selecionado "'
+	set email as 'Email',
+	set tel as 'Telefone',
+	set pis as 'PIS',
+	set cargos.nome as 'Cargo',
+	set setores.nome as 'Setor',
+	set admissao as 'Data de admissão',
+	set salario as 'Salário',
+	set desconto as 'Desconto de Funcionário'
+from funcionarios
+inner join cargos on idcargofk = cargo.id
+inner join setores on idsetorfk = setores.id
+order by funcionarios.nome;
