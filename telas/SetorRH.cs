@@ -25,7 +25,17 @@ namespace SetorRH
         public DataTable ExbFuncionarios() 
         {
             dt = banco.consultar(
-            "select	funcionarios.nome as 'Nome', id as 'ID', cargos.nome as 'Cargo', setores.nome as 'Setor', email as 'Email', tel as 'Telefone', pis as 'PIS', admissao as 'Data de admissão', salario as 'Salário', desconto as 'Desconto de Funcionário' from funcionarios inner join cargos on idcargofk = cargo.id inner join setores on idsetorfk = setores.id");
+            "select"
+                +" funcionarios.nome as 'Nome',"
+                +" id as 'ID', cargos.nome as 'Cargo',"
+                +" setores.nome as 'Setor', email as 'Email',"
+                +" tel as 'Telefone', pis as 'PIS',"
+                +" admissao as 'Data de admissão',"
+                +" salario as 'Salário',"
+                +" desconto as 'Desconto de Funcionário'"
+            +" from funcionarios"
+            +" inner join cargos on idcargofk = cargo.id"
+            +" inner join setores on idsetorfk = setores.id");
             return dt;
         }
         
