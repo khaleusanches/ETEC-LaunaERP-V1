@@ -22,12 +22,12 @@ obs varchar (48)
 --------------------------------------------
 
 create table produtos(
-id int unique not null auto_increment,    primary key(id)
+id int unique not null auto_increment,    primary key(id),
 nome varchar(64) unique not null,
 valor decimal (10,2),
 estoque int,
 descricao varchar(180),
-disponivel varchar(1),                    check (disponivel = s or disponivel = n)
+disponivel varchar(1),                    check (disponivel = 's' or disponivel = 'n')
 );
 
 ----------------------------
@@ -42,6 +42,15 @@ fabricacao date not null,
 validade date not null,
 notafiscal int unique not null,
 localizacao varchar(32) not null
+);
+
+--------------------------------------------
+
+create table clientes(
+id int unique not null auto_increment,    primary key(id),
+nome varchar(64) not null,
+cpf varchar(11) unique not null,
+desconto decimal(10,2) not null default '0.8'
 );
 
 --------------------------------------------
@@ -61,15 +70,6 @@ id int unique not null auto_increment,    primary key (id),
 idoperacaofk int not null,                foreign key (idoperacaofk) references operacoes (id),
 idprodutofk int not null,                 foreign key (idprodutofk) references produtos (id),
 quantidade int not null
-);
-
---------------------------------------------
-
-create table clientes(
-id int unique not null auto_increment,    primary key(id),
-nome varchar(64) not null,
-cpf varchar(11) unique not null,
-desconto decimal(10,2) not null default '0.8'
 );
 
 --------------------------------------------
@@ -104,6 +104,3 @@ login varchar(32) unique not null,
 senha varchar(32) not null,
 desconto decimal(10,2) not null default '0.7'
 );
-
---------------------------------------------
-
