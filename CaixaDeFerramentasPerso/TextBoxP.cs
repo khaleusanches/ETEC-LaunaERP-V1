@@ -31,7 +31,7 @@ namespace CaixaDeFerramentasPerso
                 this.Top = top;
                 if (left == 999)
                 {
-                    this.Left = (tela.Width / 2) - width / 2 - 8;
+                    this.Left = (tela.Width/2) - width - 25;
                 }
                 else
                 {

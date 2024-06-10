@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telas", "Telas.csproj", "{46EE6A46-A2EA-439E-BCAA-703DF0884310}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telas", "Telas\Telas.csproj", "{46EE6A46-A2EA-439E-BCAA-703DF0884310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaDeFerramentasPerso", "..\CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj", "{009F8578-42DB-4042-8A4A-72390463BD1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaDeFerramentasPerso", "CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj", "{009F8578-42DB-4042-8A4A-72390463BD1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

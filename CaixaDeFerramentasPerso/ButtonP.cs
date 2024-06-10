@@ -32,7 +32,7 @@ namespace CaixaDeFerramentasPerso
             Text = txt;
             if (left == 999)
             {
-                Left = (tela.Width / 2) - width / 2 - 8;
+                this.Left = (tela.Width / 2) - width - 25;
             }
             if (tela != null)
             {

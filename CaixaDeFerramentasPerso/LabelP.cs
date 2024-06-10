@@ -33,7 +33,7 @@ namespace CaixaDeFerramentasPerso
                 Left = left;
                 if (left == 999)
                 {
-                    Left = (tela.Width / 2) - width / 2 - 8;
+                    this.Left = (tela.Width / 2) - width - 25;
                 }
                 tela.Controls.Add(this);
             }

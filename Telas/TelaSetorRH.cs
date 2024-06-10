@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace Telas
 {
-    public partial class TelaLogin : Form
+    public partial class TelaSetorRH : TelaPadrao
     {
-        public TelaLogin()
+        public TelaSetorRH()
         {
             InitializeComponent();
-        }
-
-        private void lbUsername_Click(object sender, EventArgs e)
-        {
         }
     }
 }

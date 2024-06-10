@@ -1,4 +1,6 @@
 ﻿using CaixaDeFerramentasPerso;
+using System;
+using System.Windows.Forms;
 
 namespace Telas
 {
@@ -30,44 +32,49 @@ namespace Telas
         /// </summary>
         private void InitializeComponent()
         {
+            this.Width = 1000;
+            this.Height = 720;
             this.SuspendLayout();
             // 
             // lbUsername
             // 
-            this.lbUsername.Font = new System.Drawing.Font("Arial", 10F);
-            this.lbUsername.Location = new System.Drawing.Point(300, 0);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(250, 100);
-            this.lbUsername.TabIndex = 0;
-            this.lbUsername.Text = "Nome de Usuário:";
-            this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
+            lbUsername = new LabelP(150, 25, 125, 999, "Nome de Usuário:", this);
             // 
             // lbPassword
             // 
-            this.lbPassword.Font = new System.Drawing.Font("Arial", 10F);
-            this.lbPassword.Location = new System.Drawing.Point(300, 200);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(100, 100);
-            this.lbPassword.TabIndex = 1;
-            this.lbPassword.Text = "Senha:";
+            lbSenha = new LabelP(150, 25, 200, 999, "Senha:", this);
             // 
             // tbUsername
             // 
-            this.tbUsername.Font = new System.Drawing.Font("Arial", 10F);
-            this.tbUsername.Location = new System.Drawing.Point(300, 120);
-            this.tbUsername.MaxLength = 55;
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(100, 23);
-            this.tbUsername.TabIndex = 2;
+            tbUsername = new TextBoxP(150, 50, 150, 999, "", 50, this);
+            tbUsername.TextChanged += new System.EventHandler(tbUsername_tbSenha_TextChanged);
+            // 
+            // tbSenha
+            // 
+            tbSenha = new TextBoxP(150, 50, 225, 999, "", 50, this);
+            tbSenha.TextChanged += new System.EventHandler(tbUsername_tbSenha_TextChanged);
+            tbSenha.PasswordChar = '*';
+            // 
+            // btnLogar
+            // 
+            btnLogar = new ButtonP(true, 150, 35, 275, 999, "Logar", this);
+            btnLogar.Click += new System.EventHandler(btnLogar_Click);
+            btnLogar.Enabled = false;
             // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(800, 450);
+           
+            this.MaximizeBox = false;
             this.Controls.Add(this.lbUsername);
-            this.Controls.Add(this.lbPassword);
+            this.Controls.Add(this.lbSenha);
             this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.btnLogar);
             this.Name = "TelaLogin";
             this.Text = "TelaLogin";
             this.ResumeLayout(false);
@@ -78,7 +85,9 @@ namespace Telas
         #endregion
 
         private LabelP lbUsername;
-        private LabelP lbPassword;
+        private LabelP lbSenha;
         private TextBoxP tbUsername;
+        private TextBoxP tbSenha;
+        private ButtonP btnLogar;
     }
 }
