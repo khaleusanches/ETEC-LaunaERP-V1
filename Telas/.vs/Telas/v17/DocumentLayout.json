@@ -1,0 +1,60 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\atividade1CSharp\\Telas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\tecnico\\desktop\\atividade1csharp\\telas\\telas\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\tecnico\\desktop\\atividade1csharp\\telas\\telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelaLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\atividade1CSharp\\Telas\\Telas\\TelaLogin.cs",
+              "RelativeDocumentMoniker": "Telas\\TelaLogin.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\atividade1CSharp\\Telas\\Telas\\TelaLogin.cs [Design]",
+              "RelativeToolTip": "Telas\\TelaLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T18:17:42.641Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelaSetorRH.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\atividade1CSharp\\Telas\\Telas\\TelaSetorRH.cs",
+              "RelativeDocumentMoniker": "Telas\\TelaSetorRH.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\atividade1CSharp\\Telas\\Telas\\TelaSetorRH.cs [Design]",
+              "RelativeToolTip": "Telas\\TelaSetorRH.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T18:16:06.152Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
