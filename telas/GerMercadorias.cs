@@ -25,7 +25,14 @@ namespace GerMercadorias
         public DataTable ExbEstoque() 
         {
             dt = banco.consultar(
-            "select	id as 'ID', nome as 'Produto', valor as 'Valor unitário (R$)' estoque as 'Quantidade em estoque', descricao as 'Descrição',  disponivel as 'A venda' from produtos");
+            "select"
+                +" id as 'ID',"
+                +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)',"
+                +" estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição',"
+                +" disponivel as 'A venda'"
+                +" from produtos");
             return dt;
         }
 
