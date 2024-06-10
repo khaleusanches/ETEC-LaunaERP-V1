@@ -21,8 +21,7 @@ namespace GerMercadorias
 
 
 
-
-        
+        //---------------------------------------------------------
         public DataTable ExbEstoque() 
         {
             dt = banco.consultar(
@@ -30,46 +29,112 @@ namespace GerMercadorias
             return dt;
         }
 
-      
         public DataTable ExbDisponiveis() 
         {
             dt = banco.consultar(
-            "select	id as 'ID', nome as 'Produto', valor as 'Valor unitário (R$)' estoque as 'Quantidade em estoque', descricao as 'Descrição' from produtos where disponivel = 'n'");
+            "select"
+                +" id as 'ID',"
+                +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)',"
+                +" estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição'"
+                +" from produtos where disponivel = 's'"
+            );
             return dt;
         }   
       
         public DataTable ExbIndisponiveis() 
         {
             dt = banco.consultar(
-            "select	id as 'ID', nome as 'Produto', valor as 'Valor unitário (R$)' estoque as 'Quantidade em estoque', descricao as 'Descrição' from produtos where disponivel = 's'");
+            "select"
+                +" id as 'ID',"
+                +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)'"
+                +" estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição'"
+                +" from produtos where disponivel = 'n'"
+            );
             return dt;
         }
+        //------------------------------------------------------------------
 
-      
+        //--------------------------------------------------------------
         public void CadProduto(string nome, string valor, string estoque, string descricao, string disponivel)
         {
           banco.comandar(
-            "insert into produtos(nome, valor, estoque, descricao, disponivel);
-            fechar();
+              "insert into Lotes(nome, valor, estoque, descricao, disponivel) "+
+              "values('"+nome+"', '"+valor+"', '"+estoque+"',  '"+descricao+"', '"+estoque+')"
+          );
+          fechar();
         }
 
-            
-        public void DelProduto(int i)
-        
-        {
-            banco.comandar("Delete * from produtos where id = '" + i + "'");
-            fechar();
-        }
-        
         public void AtuProduto(int i, string nome, string valor, string estoque, string descricao, string disponivel)
         {
-            banco.comandar("update produtos set nome = '" + nome + "', valor = '" + valor + "', estoque = '" + estoque + "', descricao = '" + descricao + "', disponivel = '" + disponivel + "' where id = '" + i + "'");
+            banco.comandar(
+                "update Lotes set"
+                   + " nome = '"+nome+"',"
+                   + " valor = '"+valor+"',"
+                   + " estoque = '"+estoque+"',"
+                   + " descricao = '"+descricao+"',"
+                   + " disponivel = '"+disponivel+"'"
+                   + " where id = '"+i+"'");
             fechar();
         }
 
+        public void DelProduto(int i)
+        {
+            dt = banco.consultar(
+            "select	id from lotes where idprodutofk = '"+i+"'
+            return dt;
+            Console.WriteLine("Deletar este produto irá deletar todos os lotes to mesmo. Deseja prosseguir?");
+            // adicionar botao para deletar ou voltar
+                if {/*deletar*/}
+                    banco.comandar("Delete * from lotes where idprodutofk = '"+i+"'");
+                    banco.comandar("Delete * from Produtos where id = '"+i+"'");
+                }
+            fechar();
+        }
+        //--------------------------------------------------------------
 
+                
+        //--------------------------------------------------------------
+        public void CadProduto(string nome, string valor, string estoque, string descricao, string disponivel)
+        {
+          banco.comandar(
+              "insert into Lotes(nome, valor, estoque, descricao, disponivel) "+
+              "values('"+nome+"', '"+valor+"', '"+estoque+"',  '"+descricao+"', '"+estoque+')"
+          );
+          fechar();
+        }
 
-                           
+        public void AtuProduto(int i, string nome, string valor, string estoque, string descricao, string disponivel)
+        {
+            banco.comandar(
+                "update Lotes set"
+                   + " nome = '"+nome+"',"
+                   + " valor = '"+valor+"',"
+                   + " estoque = '"+estoque+"',"
+                   + " descricao = '"+descricao+"',"
+                   + " disponivel = '"+disponivel+"'"
+                   + " where id = '"+i+"'");
+            fechar();
+        }
+        
+        public void DelProduto(int i)
+        {
+            dt = banco.consultar(
+            "select	id from lotes where idLotefk = '"+i+"'
+            return dt;
+            Console.WriteLine("Deletar este Lote irá deletar todos os lotes to mesmo. Prosseguir?");
+            // adicionar botao para deletar ou voltar
+                if {/*deletar*/}
+                    banco.comandar("Delete * from lotes where idLotefk = '"+i+"'");
+                    banco.comandar("Delete * from Lotes where id = '"+i+"'");
+                }
+            fechar();
+        }
+        //--------------------------------------------------------------
+ 
         public void fechar()
         {
             dt.Clear();
