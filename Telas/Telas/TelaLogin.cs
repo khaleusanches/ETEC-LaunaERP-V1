@@ -16,5 +16,9 @@ namespace Telas
         {
             InitializeComponent();
         }
+
+        private void lbUsername_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
