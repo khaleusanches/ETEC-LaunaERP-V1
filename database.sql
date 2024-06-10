@@ -26,7 +26,8 @@ id int unique not null auto_increment,    primary key(id)
 nome varchar(64) unique not null,
 valor decimal (10,2),
 estoque int,
-descricao varchar(180)
+descricao varchar(180),
+disponivel varchar(1),                    check (disponivel = s or disponivel = n)
 );
 
 ----------------------------
