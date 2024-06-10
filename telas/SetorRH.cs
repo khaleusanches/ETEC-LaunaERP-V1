@@ -29,7 +29,7 @@ namespace SetorRH
             return dt;
         }
         
-        public void CadastrarFuncionario(string nome, string cargo, string setor, string email, string tel, string pis, string admissao, string salario, string desconto)
+        public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string pis, string admissao, string salario, string desconto)
         {
           banco.comandar(
             "insert into funcionarios(nome, idcargofk, idsetorfk, email, tel, pis, admissao, salario, desconto) values ('"+nome+"','"+cargo+"','"+setor+"','"+email+"','"tel+"','"+pis+"','"+admissao+"','"+salario,+"','"+desconto+"')");
@@ -59,7 +59,7 @@ namespace SetorRH
             return dt;
         }
         
-        public void CadastrarSetor(string nome)
+        public void CadSetor(string nome)
         {
           banco.comandar(
             "insert into setores(nome) values ('"+nome+"')");
@@ -94,7 +94,7 @@ namespace SetorRH
             return dt;
         }
         
-        public void CadastrarCargo(string nome)
+        public void CadCargo(string nome)
         {
           banco.comandar(
             "insert into cargos(nome) values ('"+nome+"')");
