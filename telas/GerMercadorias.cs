@@ -225,7 +225,7 @@ namespace GerMercadorias
             return dt;
         }
         
-        public DataTable ExbLotesAntigos() 
+        public DataTable ExbLotesValidadeDistante() 
         //Lista todos os lotes cadastrados organizando pela data de validade (antigo para recente)
         {
             dt = banco.consultar(
@@ -245,7 +245,7 @@ namespace GerMercadorias
         }  
 
         
-        public DataTable ExbLotesRecentes() 
+        public DataTable ExbLotesValidadess() 
         //Lista todos os lotes cadastrados organizando pela data de validade (distante para próximo)
         {
             dt = banco.consultar(
