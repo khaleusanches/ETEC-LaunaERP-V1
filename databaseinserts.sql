@@ -128,27 +128,27 @@ insert into telefones(idfornecedorfk, tel, obs) values
 (9, "XX XX XXXX-XX25", "Tel 9A"), (9, "XX XX XXXX-XX26", "Tel 9B"), (9, "XX XX XXXX-XX27", "Tel 9C"),
 (10, "XX XX XXXX-XX28", "Tel 10A"), (10, "XX XX XXXX-XX29", "Tel 10B"), (10, "XX XX XXXX-XX30", "Tel 10C");
 
-insert into produtos(nome, valor, estoque, descricao) values
-("Produto 1", 23, 100, ""),
-("Produto 2", 26, 200, ""),
-("Produto 3", 24, 215, ""),
-("Produto 4", 12, 133, ""),
-("Produto 5", 132, 546, ""),
-("Produto 6", 27, 458, ""),
-("Produto 7", 23, 115, ""),
-("Produto 8", 44, 746, ""),
-("Produto 9", 52, 184, ""),
-("Produto 10", 122,154, ""),
-("Produto 11", 34, 188, ""),
-("Produto 12", 56, 484, ""),
-("Produto 13", 48, 44, ""),
-("Produto 14", 260, 418, ""),
-("Produto 15", 154, 582, ""),
-("Produto 16", 51, 362, ""),
-("Produto 17", 26, 54, ""),
-("Produto 18", 50, 74, ""),
-("Produto 19", 10, 556, ""),
-("Produto 20", 184, 112, "");
+insert into produtos(nome, valor, estoque, descricao, disponivel) values
+  ("Produto 1", 23, 100, "", "s"),
+  ("Produto 2", 26, 200, "", "s"),
+  ("Produto 3", 24, 215, "", "s"),
+  ("Prodto 4", 12, 133, "", "s"),
+  ("Produto 5", 132, 546, "", "n"),
+  ("Produto 6", 27, 458, "", "n"),
+  ("Produto 7", 23, 115, "", "n"),
+  ("Produto 8", 44, 746, "", "s"),
+  ("Produto 9", 52, 184, "", "n"),
+  ("Produto 10", 122,154, "", "s"),
+  ("Produto 11", 34, 188, "", "n"),
+  ("Produto 12", 56, 484, "", "s"),
+  ("Produto 13", 48, 44, "", "s"),
+  ("Produto 14", 260, 418, "", "s"),
+  ("Produto 15", 154, 582, "", "s"),
+  ("Produto 16", 51, 362, "", "n"),
+  ("Produto 17", 26, 54, "", "n"),
+  ("Produto 18", 50, 74, "", "n"),
+  ("Produto 19", 10, 556, "", "s"),
+  ("Produto 20", 184, 112, "", "s");
 
 insert into lotes(idprodutofk, quantidade, fornecedor, aquisicao, fabricacao, validade, notafiscal, localizacao) values
 (1, 100, "Fornecedor1", 20240425, 20240331, 20240624, 1, "Sessão 1 Fileira 1 Prateleira 1"),
