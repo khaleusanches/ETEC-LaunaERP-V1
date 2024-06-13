@@ -35,8 +35,12 @@ namespace Telas
             btnFuncionarios = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Funcionarios", this);
             btnFuncionarios.BringToFront();
             btnFuncionarios.Click += Btn_funcionarios_Click;
+            btnCargosSetores = new ButtonP(true, 90, 50, 25, 125, "Gerenciar Cargos & Setores", this);
+            btnCargosSetores.BringToFront();
+            btnCargosSetores.Click += new System.EventHandler(Btn_Cargos_Setores_Click);
         }
         private ButtonP btnFuncionarios;
+        private ButtonP btnCargosSetores;
         #endregion
     }
 }

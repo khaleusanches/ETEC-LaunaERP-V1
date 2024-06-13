@@ -7,3 +7,11 @@ C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\obj\Debug\Logica.csproj.
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\obj\Debug\Logica.dll
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\obj\Debug\Logica.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\bin\Debug\Logica.dll
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\bin\Debug\Logica.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\bin\Debug\MySql.Data.xml
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.Up2Date
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.dll
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.pdb
