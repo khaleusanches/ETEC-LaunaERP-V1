@@ -85,6 +85,19 @@ create table cargos(
   descricao varchar (180)
 );
 
+insert into setores (nome) values
+("Administrativo"),
+("Recursos Humanos"),
+("Financeiro"),
+("Vendas"),
+("Logística"),
+('TI');
+
+insert into cargos (nome) values
+("Gerente"),
+("Assistente"),
+("Auxiliar"),
+("Operador");
 --------------------------------------------
 create table classes (
   id int unique not null auto_increment,     primary key(id),
@@ -135,6 +148,21 @@ create table funcionarios(
   senha varchar(32) not null,
   desconto decimal(10,2) not null default '0.8'
 );
+
+insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, class, admissao, salario, login, senha, desconto) values
+('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', '4xxxxxxxx', 20071221, '6758 Alice Travessa - Ingaí, MS / 33055-287', 1, '/*CARGO*/', /*ADMISSAO*/, '5000', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Larissa Silva Melo', 'larissamelo12@gmail', '1xxxxxxxx', 20070112, '91948 Silva Rua - Patrocínio, CE / 97005-906', 1, '/*CARGO*/', /*ADMISSAO*/, '5000', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Ana Maria de Assis', 'anamariadeassis@gmail.com', 'xxxxxxxx4',20001124, '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611', 4, '/*CARGOGerentede Loja*/', /*ADMISSAO*/, '3800', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Gustavo Almeida Ramos', 'gustavoramos@gmail.com', 'xxxxxxx1x', 19980812, '289 Mariana Travessa - Altaneira, PA / 18272-679', 4, '/*CARGOOperadorde Caixa*/', /*ADMISSAO*/, '1600', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Lizandra Alves Machado', 'lizandraalvesmachado@gmail.com', 'x3xxxxxxx', 20020714, '27898 Martins Rua - Tabaí, PI / 61345-052', 4, '/*CARGOOperadorade Caixa */', /*ADMISSAO*/, '1600', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Eduardo Lima Oliveira', 'eduardolima1425@gmail.com', 'xxxxxxxx2', 19891231, '950 Raul Marginal - Cubati, AC / 47193-673', 5, '/*CARGORepositor de Loja*/', /*ADMISSAO*/, '1685', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('João de Assis', 'joaodeassis@gmail.com', 'xxxxxxxx', 20010903, '325 Maria Júlia Alameda - Piacatu, AM / 20447-969', 5, '/*CARGORepositor de Loja*/', /*ADMISSAO*/, '1685', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Juliana Guedes da Silva', 'juliana20guedes@gmail.com', 'xxxxx1xxx', 20030513, '36343 Anthony Travessa - Trajano de Morais, PA / 48880-735', 4, '/*CARGOVendedora de Loja*/', /*ADMISSAO*/, '1400', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Damiana da Silva Souza', 'damianadasilva44@gmail.com', 'xxxx8xxxx', '0953 Roberto Alameda - Goioerê, DF / 96055-289', 20030421, 4, '/*CARGOVendedora de Loja*/', /*ADMISSAO*/, '1400', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Francisco Pinto Amaral', 'franciscoamaral@gmail.com', 'xxxxx9xxx', '4627 Moreira Alameda - Arvorezinha, AP / 20558-413', 20040111, 4, '/*CARGOEntregador*/', /*ADMISSAO*/, '1355' /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Khaléu Sanches Mancini', 'khaleumancini@gmail.com', 'x1xxxxxxx', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852', 20070101, 6, '/*CARGOProgramador*/', /*ADMISSAO*/, '5.4', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/),
+('Clara Santana Araújo', 'claraaraujo2@gmail.com', 'xxx2xxxxx', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 6, '/*CARGOProgramadora*/', /*ADMISSAO*/, '60', /*LOGIN*/,  /*SENHA*/,  /*DESCONTO*/);
+
 -------------------------------------------------------
 
 insert into fornecedores(nome, cnpj, endereco, email) values
@@ -230,37 +258,3 @@ insert into vendas (idoperacaofk, idprodutofk, quantidade) values
 (3, 2, 1),
 (4, 2, 1),
 (4, 4, 1);
-
-insert into setores (nome) values
-("Administrativo"),
-("Recursos Humanos"),
-("Financeiro"),
-("Vendas"),
-("Logística");
-
-insert into cargos (nome) values
-("Gerente"),
-("Assistente"),
-("Auxiliar"),
-("Operador");
-
-select * from setores;
-
-insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, admissao, salario, login, senha, desconto) values
-("gfdssss", "fdfs@email", "XX XX XXXXX-XXX1", "XXXXXXX0X", 20000101, "XXXXXXXXXX1", "Endereço A", 1, 2, 202404, 2000, "geradm", "senhapadrao", 0.7),
-("hdfs", "dgfsdf@email", "XX XX XXXXX-XXX2", "XXXXXX0XXX", 20000202, "XXXXXXXXXX2", "Endereço b", 1, 3, 202404, 1200, "astadm", "senhapadrao", 0.8),
-("hfdhdf", "safas@email", "XX XX XXXXX-XXX3", "XXXXXX00XX", 20000303, "XXXXXXXXXX3", "Endereço c", 1, 2, 202404, 1100, "auxadm", "senhapadrao", 0.8),
-("hfd", "dgsd@email", "XX XX XXXXX-XXX4", "XXXXXXX1XX", 20000404, "XXXXXXXXXX4", "Endereço d", 2, 3, 202404, 20000, "gerrh", "senhapadrao", 0.7),
-("hf", "gfrgsedfr@email", "XX XX XXXXX-XXX5", "XXX2XXXXXX", 20000505, "XXXXXXXXXX5", "Endereço e", 2, 2, 202404, 1600, "astrh", "senhapadrao", 0.8),
-("shjfgsfga", "gdsfd@email", "XX XX XXXXX-X1XX", "XX9XXXXXXX", 20000615, "XXXXXXXXXX6", "Endereço f", 2, 1, 202404, 1400, "auxrh", "senhapadrao", 0.8),
-("asfasd", "grfesa@email", "XX XX XXXXX-XX1X", "XXXX4XXXXX", 20000701, "XXXXXXXXXX7", "Endereço g", 3, 1, 202404, 1200, "gerfnc", "senhapadrao", 0.8),
-("fsdaswd", "geasedrfasd@email", "XX XX XXXXX-X2XX", "X5XXXXXXXX", 20000811, "XXXXXXXXXX8", "Endereço h", 3, 1, 202404, 1100, "astfnc", "senhapadrao", 0.8),
-("asda", "gsdfsd@email", "XX XX XXXXX-XX7X", "XXXXXXXX6X", 20000915, "XXXXXXXXXX9", "Endereço i", 3, 2, 202404, 1600, "auxfnc", "senhapadrao", 0.8),
-("fcsazdfsd", "adged@email", "XX XX XXXXX-X4XX", "XXXXX4XXXX", 20001016, "XXXXXXXXX10", "Endereço j", 4, 3, 202404, 1400, "gervnd", "senhapadrao", 0.7),
-("adas", "gfeda@email", "XX XX XXXXX-XX3X", "XXXXXXXXX4", 20001112, "XXXXXXXXX11", "Endereço k", 4, 4, 202404, 1500, "astvnd", "senhapadrao", 0.8),
-("asdaw", "azfd@email", "XX XX XXXXX-XXX9", "XX4XXXXXXX", 20001201, "XXXXXXXXX12", "Endereço l", 4, 2, 202404, 1100, "auxvnd", "senhapadrao", 0.8),
-("ges", "aa@email", "XX XX XXXXX-2XXX", "XXXXXXX3XX", 20001120, "XXXXXXXXX13", "Endereço m", 4, 1, 202404, 1800, "oprvnd", "senhapadrao", 0.8),
-("gsedf", "agad@email", "XX XX XXXXX-1XXX", "XX3XXXXXXX", 20001012, "XXXXXXXXX14", "Endereço n", 2, 2, 202404, 1600, "gerlog", "senhapadrao", 0.7),
-("gfa", "hrdrf@email", "XX XX XXXXX-0XXX", "XX1XXXXXXX", 20000221, "XXXXXXXXX15", "Endereço o", 1, 1, 202404, 1400, "astlog", "senhapadrao", 0.8),
-("sfa", "hgsg@email", "XX XX XXXXX-XX0X", "XXXXX1XXXX", 20000223, "XXXXXXXXX16", "Endereço p", 2, 1, 202404, 1200, "auxlog", "senhapadrao", 0.8),
-("sasd", "hsfaser@email", "XX XX XXXXX-X0XX", "1XXXXXXXXX", 20000108, "XXXXXXXXX17", "Endereço q", 4, 1, 202404, 1100, "oprlog", "senhapadrao", 0.8);
