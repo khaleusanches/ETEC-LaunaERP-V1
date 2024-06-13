@@ -177,7 +177,9 @@ insert into cargos (nome) values
   ('Secreatário(a)'),
   ('Zelador'),
   ('Repositor'),
-  ('Segurança');
+  ('Segurança'),
+  ('Vendedor(a)'),
+  ('Programador');
 --------------------------------------------
 create table classes (
   id int unique not null auto_increment,     primary key(id),
@@ -228,16 +230,18 @@ create table funcionarios(
   senha varchar(32) not null,
   desconto decimal(10,2) not null default '0.8'
 );
+
+//ADICIONAR CLASSES
 insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, class, admissao, salario, login, senha, desconto) values
-('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', '4xxxxxxxx', 20071221, '6758 Alice Travessa - Ingaí, MS / 33055-287', 1, 5, 20240601 '5000', 'loginpadrao1', 'senhapadrao' , '0.8'),
-('Larissa Silva Melo', 'larissamelo12@gmail', '1xxxxxxxx', 20070112, '91948 Silva Rua - Patrocínio, CE / 97005-906', 1, 5, 20240601 '5000', 'loginpadrao', 'senhapadrao2' , '0.8'),
-('Ana Maria de Assis', 'anamariadeassis@gmail.com', 'xxxxxxxx4',20001124, '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611', 4, 1, 20240601 '3800', 'loginpadrao3', 'senhapadrao', '0.8'),
-('Gustavo Almeida Ramos', 'gustavoramos@gmail.com', 'xxxxxxx1x', 19980812, '289 Mariana Travessa - Altaneira, PA / 18272-679', 4, 6, 20240601 '1600', 'loginpadrao4', 'senhapadrao', '0.8'),
-('Lizandra Alves Machado', 'lizandraalvesmachado@gmail.com', 'x3xxxxxxx', 20020714, '27898 Martins Rua - Tabaí, PI / 61345-052', 4, 6, 20240601 '1600', 'loginpadrao5', 'senhapadrao', '0.8'),
-('Eduardo Lima Oliveira', 'eduardolima1425@gmail.com', 'xxxxxxxx2', 19891231, '950 Raul Marginal - Cubati, AC / 47193-673', 5, '/*CARGORepositor de Loja*/',20240601 '1685', 'loginpadrao6','senhapadrao' , '0.8'),
-('João de Assis', 'joaodeassis@gmail.com', 'xxxxxxxx', 20010903, '325 Maria Júlia Alameda - Piacatu, AM / 20447-969', 5, '/*CARGORepositor de Loja*/',20240601 '1685', 'loginpadrao7', 'senhapadrao' , '0.8'),
-('Juliana Guedes da Silva', 'juliana20guedes@gmail.com', 'xxxxx1xxx', 20030513, '36343 Anthony Travessa - Trajano de Morais, PA / 48880-735', 4, '/*CARGOVendedora de Loja*/',20240601 '1400', 'loginpadrao8', 'senhapadrao' , '0.8'),
-('Damiana da Silva Souza', 'damianadasilva44@gmail.com', 'xxxx8xxxx', '0953 Roberto Alameda - Goioerê, DF / 96055-289', 20030421, 4, '/*CARGOVendedora de Loja*/',20240601 '1400', 'loginpadrao9', 'senhapadrao' , '0.8'),
-('Francisco Pinto Amaral', 'franciscoamaral@gmail.com', 'xxxxx9xxx', '4627 Moreira Alameda - Arvorezinha, AP / 20558-413', 20040111, 4, '/*CARGOEntregador*/',20240601 '1355' 'loginpadrao10', 'senhapadrao' , '0.8'),
-('Khaléu Sanches Mancini', 'khaleumancini@gmail.com', 'x1xxxxxxx', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852', 20070101, 6, '/*CARGOProgramador*/',20240601 '5.4', 'loginpadrao11', 'senhapadrao' , '0.8'),
-('Clara Santana Araújo', 'claraaraujo2@gmail.com', 'xxx2xxxxx', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 6, '/*CARGOProgramadora*/',20240601 '60', 'loginpadrao12', 'senhapadrao' , '0.8');
+('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', '4xxxxxxxx', 20071221, 'XXXXXX1XXXX', '6758 Alice Travessa - Ingaí, MS / 33055-287', 1, 5, 10, 20240601, '5000', 'loginpadrao1', 'senhapadrao' , '0.8'),
+('Larissa Silva Melo', 'larissamelo12@gmail', '1xxxxxxxx', 20070112, 'XXXX2XXXXXX', '91948 Silva Rua - Patrocínio, CE / 97005-906', 1, 5, 20240601, 10, '5000', 'loginpadrao', 'senhapadrao2' , '0.8'),
+('Ana Maria de Assis', 'anamariadeassis@gmail.com', 'xxxxxxxx4',20001124, 'XXXXXX7XXXX', '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611', 4, 1, 20240601, '3800', 'loginpadrao3', 'senhapadrao', '0.8'),
+('Gustavo Almeida Ramos', 'gustavoramos@gmail.com', 'xxxxxxx1x', 19980812, 'XXXXXXXX6XX', '289 Mariana Travessa - Altaneira, PA / 18272-679', 4, 6, 20240601, '1600', 'loginpadrao4', 'senhapadrao', '0.8'),
+('Lizandra Alves Machado', 'lizandraalvesmachado@gmail.com', 'x3xxxxxxx', 20020714, 'XXXXXX7XXXX', '27898 Martins Rua - Tabaí, PI / 61345-052', 4, 6, 20240601, '1600', 'loginpadrao5', 'senhapadrao', '0.8'),
+('Eduardo Lima Oliveira', 'eduardolima1425@gmail.com', 'xxxxxxxx2', 19891231, 'XXXXXXXX4XX', '950 Raul Marginal - Cubati, AC / 47193-673', 5, 12, 20240601, '1685', 'loginpadrao6','senhapadrao' , '0.8'),
+('João de Assis', 'joaodeassis@gmail.com', 'xxxxxxxx', 20010903, 'XXXXXXXXXX', '325 Maria Júlia Alameda - Piacatu, AM / 20447-969', 5, 12, 20240601, '1685', 'loginpadrao7', 'senhapadrao' , '0.8'),
+('Juliana Guedes da Silva', 'juliana20guedes@gmail.com', 'xxxxx1xxx', 20030513, 'XXXX8XXXXXX', '36343 Anthony Travessa - Trajano de Morais, PA / 48880-735', 4, 4,20240601,'1400', 'loginpadrao8', 'senhapadrao' , '0.8'),
+('Damiana da Silva Souza', 'damianadasilva44@gmail.com', 'xxxx8xxxx', 'XX1XXXXXXXX', '0953 Roberto Alameda - Goioerê, DF / 96055-289', 20030421, 4, 4,20240601, '1400', 'loginpadrao9', 'senhapadrao' , '0.8'),
+('Francisco Pinto Amaral', 'franciscoamaral@gmail.com', 'xxxxx9xxx', 'X1XXXXXXXXX', '4627 Moreira Alameda - Arvorezinha, AP / 20558-413', 20040111, 4, 8,20240601, '1355' 'loginpadrao10', 'senhapadrao' , '0.8'),
+('Khaléu Sanches Mancini', 'khaleumancini@gmail.com', 'x1xxxxxxx', '1XXXXXXXXXX', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852', 20070101, 6, 15,20240601, '5.4', 'loginpadrao11', 'senhapadrao' , '0.8'),
+('Clara Santana Araújo', 'claraaraujo2@gmail.com', 'xxx2xxxxx', '0XXXXXXXXXX', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 6, 15,20240601, '60', 'loginpadrao12', 'senhapadrao', '0.8');
