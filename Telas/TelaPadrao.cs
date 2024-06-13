@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace Telas
 {
-    public abstract class TelaPadrao : Form
+    public class TelaPadrao : Form
     {
         public TelaPadrao()
         {
             Width = 1000;
-            Height = 720;
+            Height = 1200;
             BackColor = Color.White;
             Panel barra = new Panel();
             barra.Width = 1000;
@@ -23,6 +23,8 @@ namespace Telas
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1000, 720);
         }
     }
 }

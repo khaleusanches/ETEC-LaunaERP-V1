@@ -12,9 +12,23 @@ namespace Telas
 {
     public partial class TelaSetorRH : TelaPadrao
     {
+        BancoFuncionarios bancoFuncionarios = new BancoFuncionarios();
         public TelaSetorRH()
         {
             InitializeComponent();
+        }
+        private void Btn_funcionarios_Click(object sender, EventArgs e)
+        {
+            if (btnFuncionarios.atv == true)
+            {
+                bancoFuncionarios.exibir(this);
+                btnFuncionarios.atv = false;
+            }
+            else
+            {
+                bancoFuncionarios.fechar(this);
+                btnFuncionarios.atv = true;
+            }
         }
     }
 }
