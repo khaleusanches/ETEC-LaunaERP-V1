@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoFuncionarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaLogin.cs">
@@ -92,6 +93,10 @@
     <ProjectReference Include="..\CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj">
       <Project>{009f8578-42db-4042-8a4a-72390463bd1f}</Project>
       <Name>CaixaDeFerramentasPerso</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{83425615-082c-4dab-8187-479e1c912aad}</Project>
+      <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

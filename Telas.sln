@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telas", "Telas\Telas.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaDeFerramentasPerso", "CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj", "{009F8578-42DB-4042-8A4A-72390463BD1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{83425615-082C-4DAB-8187-479E1C912AAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{009F8578-42DB-4042-8A4A-72390463BD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83425615-082C-4DAB-8187-479E1C912AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83425615-082C-4DAB-8187-479E1C912AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83425615-082C-4DAB-8187-479E1C912AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83425615-082C-4DAB-8187-479E1C912AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

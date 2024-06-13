@@ -1,6 +1,8 @@
-﻿namespace Telas
+﻿using CaixaDeFerramentasPerso;
+
+namespace Telas
 {
-    partial class TelaSetorRH
+    partial class TelaSetorRH : TelaPadrao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +31,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "TelaSetorRH";
+            btnFuncionarios = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Funcionarios", this);
+            btnFuncionarios.BringToFront();
+            btnFuncionarios.Click += Btn_funcionarios_Click;
         }
-
+        private ButtonP btnFuncionarios;
         #endregion
     }
 }
