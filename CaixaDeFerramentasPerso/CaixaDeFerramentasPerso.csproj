@@ -49,6 +49,9 @@
     <Compile Include="ComboBoxP.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataGridViewP.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LabelP.cs">
       <SubType>Component</SubType>
     </Compile>

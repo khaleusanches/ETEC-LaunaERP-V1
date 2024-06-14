@@ -13,7 +13,6 @@ namespace Logica
     {
         string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
         MySqlConnection con;
-        DataTable dt = new DataTable();
         MySqlCommand cmd;
         MySqlDataReader dr;
         public DAO()
@@ -33,10 +32,16 @@ namespace Logica
         public void updateInsertDelete(string sql)
         {
             cmd = new MySqlCommand(sql, con);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch 
+            { }
         }
         public DataTable lerTabela(string sql)
         {
+            DataTable dt = new DataTable();
             cmd = new MySqlCommand(sql, con);
             dr = cmd.ExecuteReader();
             dt.Load(dr);

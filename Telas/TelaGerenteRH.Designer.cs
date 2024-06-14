@@ -2,7 +2,7 @@
 
 namespace Telas
 {
-    partial class TelaSetorRH : TelaPadrao
+    partial class TelaGerenteRH
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,11 @@ namespace Telas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Text = "TelaSetorRH";
-            btnFuncionarios = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Funcionarios", this);
-            btnFuncionarios.BringToFront();
-            btnFuncionarios.Click += Btn_funcionarios_Click;
-            btnCargosSetores = new ButtonP(true, 90, 50, 25, 125, "Gerenciar Cargos & Setores", this);
-            btnCargosSetores.BringToFront();
-            btnCargosSetores.Click += new System.EventHandler(Btn_Cargos_Setores_Click);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "TelaGerenteRH";
+
         }
-        private ButtonP btnFuncionarios;
-        private ButtonP btnCargosSetores;
         #endregion
     }
 }

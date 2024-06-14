@@ -12,7 +12,7 @@ namespace Telas
 {
     public class BancoFuncionarios
     {
-        LabelP[] labelPs = new LabelP[13];
+        LabelP[] labelPs = new LabelP[15];
         TextBoxP[] textBoxP = new TextBoxP[13];
         DataTable dt;
         DAO dao = new DAO();
@@ -20,6 +20,7 @@ namespace Telas
         ButtonP btnAdd;
         ComboBoxP cargos;
         ComboBoxP setores;
+
         string[] listCargo = new string[] { "Gerente", "Assistente", "Auxiliar", "Operador" };
         string[] listSetores = new string[] { "Administrativo", "Recursos Humanos", "Financeiro", "Vendas", "Logística", "TI" };
         public void exibir(Form tela)
@@ -42,6 +43,8 @@ namespace Telas
             labelPs[10] = new LabelP(100, 20, 465, 160, "Salario:", tela);
             labelPs[11] = new LabelP(100, 20, 525, 25, "Login:", tela);
             labelPs[12] = new LabelP(100, 20, 525, 160, "Password:", tela);
+            labelPs[13] = new LabelP(100, 20, 580, 25, "Cargo:", tela);
+            labelPs[14] = new LabelP(100, 20, 580, 140, "Setores:", tela);
 
             textBoxP[0] = new TextBoxP(30, 25, 145, 25, "", 9, tela);
             textBoxP[0].Enabled = false;
@@ -79,19 +82,18 @@ namespace Telas
             dgv.Top = 125;
             dgv.Left = 285;
             tela.Controls.Add(dgv);
-        }
 
-        private DataTable verTabela()
-        {
-            throw new NotImplementedException();
         }
 
         public void fechar(Form tela)
         {
-            for (int i = 0; i < textBoxP.Count(); i++)
+            foreach (TextBoxP tbp in textBoxP)
             {
-                tela.Controls.Remove(labelPs[i]);
-                tela.Controls.Remove(textBoxP[i]);
+                tela.Controls.Remove(tbp);
+            }
+            foreach(LabelP labelP in labelPs)
+            {
+                tela.Controls.Remove(labelP);
             }
             tela.Controls.Remove(dgv);
             tela.Controls.Remove(cargos);
@@ -104,6 +106,7 @@ namespace Telas
             string sql = $"insert into funcionarios (nome, email, tel, endereco, rg, nascimento, admissao, pis, salario, login, senha, idsetorfk, idcargofk) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}', '{textBoxP[7].Text}', '{textBoxP[8].Text}', '{textBoxP[9].Text}', '{textBoxP[10].Text}', '{textBoxP[11].Text}', '{textBoxP[12].Text}', {cargos.SelectedIndex+1}, {setores.SelectedIndex+1})";
             MessageBox.Show(sql);
             dao.updateInsertDelete(sql);
+            dgv.DataSource = dao.lerTabela("select * from funcionarios");
         }
 
         private void BancoFuncionarios_TextChanged(object sender, EventArgs e)

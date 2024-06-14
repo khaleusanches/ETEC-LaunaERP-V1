@@ -46,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoCargosSetores.cs" />
     <Compile Include="BancoFuncionarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaGerenteRH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaGerenteRH.Designer.cs">
+      <DependentUpon>TelaGerenteRH.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
