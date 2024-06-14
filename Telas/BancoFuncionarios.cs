@@ -16,7 +16,7 @@ namespace Telas
         TextBoxP[] textBoxP = new TextBoxP[13];
         DataTable dt;
         DAO dao = new DAO();
-        DataGridView dgv = new DataGridView();
+        DataGridViewP dgv;
         ButtonP btnAdd;
         ComboBoxP cargos;
         ComboBoxP setores;
@@ -74,15 +74,8 @@ namespace Telas
             btnAdd = new ButtonP(true, 100, 25, 650, 25, "Cadastrar funcionario", tela);
             btnAdd.Enabled = false;
             btnAdd.Click += (sender, EventArgs) => Btn_add_Click(textBoxP);
-            
-            dgv.DataSource = dao.lerTabela("select * from funcionarios");
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.Width = 680;
-            dgv.Height = 500;
-            dgv.Top = 125;
-            dgv.Left = 285;
-            tela.Controls.Add(dgv);
 
+            dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela("select * from funcionarios"), tela);
         }
 
         public void fechar(Form tela)
@@ -121,7 +114,7 @@ namespace Telas
             else { btnAdd.Enabled = false; }
         }
 
-
+         
     }
 
 }

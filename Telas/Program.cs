@@ -17,7 +17,7 @@ namespace Telas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaSetorRH());
+            Application.Run(new TelaLogin());
         }
     }
 }
