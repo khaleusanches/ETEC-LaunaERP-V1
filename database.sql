@@ -61,22 +61,22 @@ create table lotes(
   id int unique not null auto_increment,    primary key(id),
   idprodutofk int not null,                 foreign key (idprodutofk) references produtos (id),
   quantidade int not null,                  check (quantidade>0),
-  fornecedor varchar(64) not null,
+  idfornecedor varchar(64) not null,
   aquisicao date not null,
   fabricacao date not null,
   validade date not null,
   notafiscal int unique not null,
   localizacao varchar(32) not null
 );
-insert into lotes(idprodutofk, quantidade, fornecedor, aquisicao, fabricacao, validade, notafiscal, localizacao) values
-(1, 100, 'Fornecedor1', 20240425, 20240331, 20240624, 1, 'Sessão 1 Fileira 1 Prateleira 1'),
-(2, 200, 'Fornecedor1', 20240422, 20240410, 20240826, 2, 'Sessão 1 Fileira 2 Prateleira 2'),
-(3, 250, 'Fornecedor2', 20240212, 20240108, 20240922, 3, 'Sessão 1 Fileira 3 Prateleira 3'),
-(4, 150, 'Fornecedor2', 20240212, 20240208, 20240624, 4, 'Sessão 1 Fileira 4 Prateleira 4'),
-(5, 540, 'Fornecedor3', 20240323, 20240318, 20240821, 5, 'Sessão 1 Fileira 5 Prateleira 5'),
-(6, 480, 'Fornecedor3', 20240215, 20240202, 20240814, 6, 'Sessão 2 Fileira 1 Prateleira 1'),
-(7, 130, 'Fornecedor4', 20240312, 20240228, 20240911, 7, 'Sessão 2 Fileira 2 Prateleira 2'),
-(8, 750, 'Fornecedor4', 20240302, 20240228, 20241006, 8, 'Sessão 2 Fileira 3 Prateleira 3');
+insert into lotes(idprodutofk, quantidade, idfornecedor, aquisicao, fabricacao, validade, notafiscal, localizacao) values
+(1, 100, '1', 20240425, 20240331, 20240624, 1, 'Sessão 1 Fileira 1 Prateleira 1'),
+(2, 200, '1', 20240422, 20240410, 20240826, 2, 'Sessão 1 Fileira 2 Prateleira 2'),
+(3, 250, '2', 20240212, 20240108, 20240922, 3, 'Sessão 1 Fileira 3 Prateleira 3'),
+(4, 150, '2', 20240212, 20240208, 20240624, 4, 'Sessão 1 Fileira 4 Prateleira 4'),
+(5, 540, '3', 20240323, 20240318, 20240821, 5, 'Sessão 1 Fileira 5 Prateleira 5'),
+(6, 480, '3', 20240215, 20240202, 20240814, 6, 'Sessão 2 Fileira 1 Prateleira 1'),
+(7, 130, '4', 20240312, 20240228, 20240911, 7, 'Sessão 2 Fileira 2 Prateleira 2'),
+(8, 750, '4', 20240302, 20240228, 20241006, 8, 'Sessão 2 Fileira 3 Prateleira 3');
 --------------------------------------------
 create table clientes(
   id int unique not null auto_increment,    primary key(id),
@@ -192,8 +192,8 @@ create table funcionarios(
 );
 
 insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, class, admissao, salario, login, senha, desconto) values
-('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', 			      'XX X XXXXX-XXX1', '4xxxxxxxx', 20071221, 'XXXXXX1XXXX', '6758 Alice Travessa - Ingaí, MS / 33055-287',					          1, 5, 10,  20240601, '5000', 'brunasampaio',  'senhapadrao', '0.7'),
-('Larissa Silva Melo',		    'larissamelo12@gmail', 			      'XX X XXXXX-XXX2', '1xxxxxxxx', 20070112, 'XXXX2XXXXXX', '91948 Silva Rua - Patrocínio, CE / 97005-906', 					        1, 5, 10,  20240601, '5000', 'larissamelo',  'senhapadrao', '0.7'),
+('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', 			      'XX X XXXXX-XXX1', '4xxxxxxxx', 20060421, 'XXXXXX1XXXX', '6758 Alice Travessa - Ingaí, MS / 33055-287',					          1, 5, 10,  20240601, '5000', 'brunasampaio',  'senhapadrao', '0.7'),
+('Larissa Silva Melo',		    'larissamelo12@gmail', 			      'XX X XXXXX-XXX2', '1xxxxxxxx', 20051205, 'XXXX2XXXXXX', '91948 Silva Rua - Patrocínio, CE / 97005-906', 					        1, 5, 10,  20240601, '5000', 'larissamelo',  'senhapadrao', '0.7'),
 ('Ana Maria de Assis', 		    'anamariadeassis@gmail.com', 		  'XX X XXXXX-XXX3', 'xxxxxxxx4', 20001124, 'XXXXXX7XXXX', '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611',			      4, 1, 8,   20240601, '3800', 'anagerente',  'senhapadrao', '0.7'),
 ('Gustavo Almeida Ramos', 	  'gustavoramos@gmail.com', 		    'XX X XXXXX-XXX4', 'xxxxxxx1x', 19980812, 'XXXXXXXX6XX', '289 Mariana Travessa - Altaneira, PA / 18272-679', 			        4, 6, 7,   20240601, '1600', 'gustavocaixa',  'senhapadrao', '0.8'),
 ('Lizandra Alves Machado', 	  'lizandraalvesmachado@gmail.com', 'XX X XXXXX-XXX5', 'x3xxxxxxx', 20020714, 'XXXXXX7XXXX', '27898 Martins Rua - Tabaí, PI / 61345-052', 						        4, 6, 7,   20240601, '1600', 'lizandracaixa',  'senhapadrao', '0.8'),
@@ -202,5 +202,5 @@ insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idset
 ('Juliana Guedes da Silva',	  'juliana20guedes@gmail.com',	 	  'XX X XXXXX-XXX8', 'xxxxx1xxx', 20030513, 'XXXX8XXXXXX', '36343 Anthony Travessa - Trajano de Morais, PA / 48880-735', 	  4, 14, 7,  20240601,'1400',  'julianavendedora',  'senhapadrao', '0.8'),
 ('Damiana da Silva Souza', 	  'damianadasilva44@gmail.com', 	  'XX X XXXXX-XXX9', 'xxxx8xxxx', 19980801, 'XX1XXXXXXXX', '0953 Roberto Alameda - Goioerê, DF / 96055-289', 20030421, 		  4, 14, 7,  20240601, '1400', 'damianavendedora',  'senhapadrao', '0.8'),
 ('Francisco Pinto Amaral', 	  'franciscoamaral@gmail.com', 		  'XX X XXXXX-XXX0', 'xxxxx9xxx', 20050112, 'X1XXXXXXXXX', '4627 Moreira Alameda - Arvorezinha, AP / 20558-413', 20040111,  5, 8, 5,   20240601, '1355', '', '', '0.8'),
-('Khaléu Sanches Mancini', 	  'khaleumancini@gmail.com', 		    'XX X XXXXX-XX11', 'x1xxxxxxx', 20030612, '1XXXXXXXXXX', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852',	6, 15, 10, 20070101, '5.4',  'khaleu1111', 'senhapadrao', '0.8'),
-('Clara Santana Araújo', 	    'claraaraujo2@gmail.com', 		    'XX X XXXXX-XX22', 'xxx2xxxxx', 19970122, '0XXXXXXXXXX', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 		6, 15, 10, 20240601, '60',   'clara2222', 'senhapadrao', '0.8');
+('Khaléu Sanches Mancini', 	  'khaleumancini@gmail.com', 		    'XX X XXXXX-XX11', 'x1xxxxxxx', 20061116, '1XXXXXXXXXX', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852',	6, 15, 10, 20070101, '5.4',  'khaleu1111', 'senhapadrao', '0.8'),
+('Clara Santana Araújo', 	    'claraaraujo2@gmail.com', 		    'XX X XXXXX-XX22', 'xxx2xxxxx', 20040222, '0XXXXXXXXXX', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 		6, 15, 10, 20240601, '60',   'clara2222', 'senhapadrao', '0.8');
