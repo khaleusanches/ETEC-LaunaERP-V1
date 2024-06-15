@@ -20,11 +20,9 @@ namespace GerMercadorias
         Banco banco = new Banco();
         DataTable DT_consultaID = new DataTable();
 
-
-
         //---------------------------------------------------------
         public DataTable ExbEstoqueID() 
-        //Lista todos os produtos cadastrados organizando pelo ID do produto
+        //1 Lista todos os produtos cadastrados organizando pelo ID do produto
         {
             dt = banco.consultar(
             "select"
@@ -58,7 +56,7 @@ namespace GerMercadorias
         }
         
         public DataTable ExbCatalogoID() 
-        //Lista produtos disponíveis para compra organizando pelo id do produto
+        //Lista produtos DISPONÍVEL NO CATALOGO organizando pelo id do produto
         {
             dt = banco.consultar(
             "select"
@@ -75,7 +73,7 @@ namespace GerMercadorias
         }
         
         public DataTable ExbCatalogoNome() 
-        //Lista produtos disponíveis para compra organizando pelo nome do produto
+        //Lista produtos  DISPONÍVEL NO CATALOGO organizando pelo nome do produto
         {
             dt = banco.consultar(
             "select"
@@ -129,10 +127,10 @@ namespace GerMercadorias
         //Lista todos os lotes cadastrados organizando pelo nome do produto no lote
         {
             dt = banco.consultar(
-            "select"
-                +" nome as 'Produto',"           
+            "select"  
                 +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição'
+                +" nome as 'Produto',"         
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
@@ -146,11 +144,12 @@ namespace GerMercadorias
         }  
         
         public DataTable ExbLotesAntigos() 
-        //Lista todos os lotes cadastrados organizando pela data de aquisição (antigo para recente)
+        //Lista todos os lotes cadastrados organizando pela data de aquisição (antigo para recentes)
         {
             dt = banco.consultar(
-            "select"
-                +" aquisicao as 'Data de aquisição'
+            "select"  
+                +" lotes.id as 'ID Lote',"
+                +" aquisicao as 'Data de aquisição',"
                 +" nome as 'Produto',"
                 +" fabricacao as 'Data de fabricação',"
                 +" validade as 'Data de validade',"
@@ -169,8 +168,9 @@ namespace GerMercadorias
         //Lista todos os lotes cadastrados organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
-            "select"
-                +" aquisicao as 'Data de aquisição'
+            "select"  
+                +" lotes.id as 'ID Lote',"
+                +" aquisicao as 'Data de aquisição',"
                 +" nome as 'Produto',"           
                 +" lotes.id as 'ID Lote',"
                 +" fabricacao as 'Data de fabricação',"
@@ -185,14 +185,15 @@ namespace GerMercadorias
             return dt;
         }
         
-        public DataTable ExbLotesFabrAntigos() 
-        //Lista todos os lotes cadastrados organizando pela data de fabricacao (antigo para recente)
+        public DataTable ExbFabricadosAntigos() 
+        //Lista todos os lotes cadastrados organizando pela data de fabricacao (antigos para recentes)
         {
             dt = banco.consultar(
-            "select"
+            "select"     
+                +" lotes.id as 'ID Lote',"
                 +" fabricacao as 'Data de fabricação',"
                 +" nome as 'Produto',"           
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -205,15 +206,15 @@ namespace GerMercadorias
         }  
 
     
-        public DataTable ExbLotesFabrRecentes() 
-        //Lista todos os lotes cadastrados organizando pela data de aquisição (recente para antigo)
+        public DataTable ExbFabricadosRecentes() 
+        //Lista todos os lotes cadastrados organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
-            "select"
-                +" fabricacao as 'Data de fabricação',"
-                +" nome as 'Produto',"           
+            "select"     
                 +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição'
+                +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"      
+                +" aquisicao as 'Data de aquisição',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -225,14 +226,15 @@ namespace GerMercadorias
             return dt;
         }
         
-        public DataTable ExbLotesValidadeDistante() 
-        //Lista todos os lotes cadastrados organizando pela data de validade (antigo para recente)
+        public DataTable ExbValidadeProximos() 
+        //Lista todos os lotes cadastrados organizando pela data de validade (proximos para distantes)
         {
             dt = banco.consultar(
-            "select"
+            "select"     
+                +" lotes.id as 'ID Lote',"
                 +" validade as 'Data de validade',"
                 +" nome as 'Produto',"           
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -245,15 +247,15 @@ namespace GerMercadorias
         }  
 
         
-        public DataTable ExbLotesValidadess() 
-        //Lista todos os lotes cadastrados organizando pela data de validade (distante para próximo)
+        public DataTable ExbValidadePDistantes() 
+        //Lista todos os lotes cadastrados organizando pela data de validade (distante para próximos)
         {
             dt = banco.consultar(
-            "select"
-                +" nome as 'Produto',"           
+            "select"    
                 +" lotes.id as 'ID Lote',"
+                +" nome as 'Produto',"       
                 +" validade as 'Data de validade',"
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -272,7 +274,7 @@ namespace GerMercadorias
             dt = banco.consultar(
             "select"        
                 +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
@@ -290,8 +292,9 @@ namespace GerMercadorias
         //Lista os lotes do produto selecionado organizando pela data de aquisição (antigo para recente)
         {
             dt = banco.consultar(
-            "select"
-                +" aquisicao as 'Data de aquisição'
+            "select"     
+                +" lotes.id as 'ID Lote',"
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
@@ -311,8 +314,8 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" aquisicao as 'Data de aquisição'
                 +" lotes.id as 'ID Lote',"
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
@@ -331,8 +334,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
+                +" lotes.id as 'ID Lote',"
                 +" fabricacao as 'Data de fabricação',"
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -350,9 +354,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" fabricacao as 'Data de fabricação',"
                 +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição'
+                +" fabricacao as 'Data de fabricação',"
+                +" aquisicao as 'Data de aquisição',"
                 +" validade as 'Data de validade',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -365,19 +369,20 @@ namespace GerMercadorias
             return dt;
         }
         
-        public DataTable ExbLotesAntigos() 
-        //Lista os lotes do produto selecionado organizando pela data de validade (antigo para recente)
+        
+        public DataTable ExbValidadeProximos() 
+        //Lista  os lotes do produto selecionado organizando pela data de validade (proximos para distantes)
         {
             dt = banco.consultar(
-            "select"
-                +" validade as 'Data de validade',"
-                +" nome as 'Produto',"           
-                +" aquisicao as 'Data de aquisição'
+            "select"     
+                +" lotes.id as 'ID Lote',"
+                +" validade as 'Data de validade'," 
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
-            +" inner join produtos"
+            +" inner join produtos on"
             +" on idprodutofk = '"+i+"'"
             +" and idprodutofk = produtos.id"
             +" order by validade"
@@ -386,15 +391,14 @@ namespace GerMercadorias
         }  
 
         
-        public DataTable ExbLotesRecentes(int i) 
-        //Lista os lotes cadastrados do produto selecionado organizando pela data de validade (distante para próximo)
+        public DataTable ExbValidadePDistantes() 
+        //Lista  os lotes do produto selecionado organizando pela data de validade (distante para próximos)
         {
             dt = banco.consultar(
-            "select"
-                +" nome as 'Produto',"           
-                +" lotes.id as 'ID Lote',"
+            "select"    
+                +" lotes.id as 'ID Lote',"  
                 +" validade as 'Data de validade',"
-                +" aquisicao as 'Data de aquisição'
+                +" aquisicao as 'Data de aquisição',"
                 +" fabricacao as 'Data de fabricação',"
                 +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
@@ -406,11 +410,8 @@ namespace GerMercadorias
             );
             return dt;
         }
-
         //------------------------------------------------------------------
 
-
-       
  
         public void fechar()
         {
