@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Telas
 {
-    public class BancoCargosSetores
+    public class BancoCargosSetores : InterfacesBanco
     {
         private LabelP[] labelPs = new LabelP[7];
         private TextBoxP[] textBoxPs = new TextBoxP[5];
@@ -28,7 +28,7 @@ namespace Telas
         Panel painel = new Panel();
 
         private DAO dao = new DAO();
-        public void exibir(Form tela)
+        public override void exibir(TelaPadrao tela)
         {
             inicializarCargos(tela);
             // DIVISÃO
@@ -49,7 +49,7 @@ namespace Telas
         //CARGOS
         //
         //
-        public void inicializarCargos(Form tela)
+        public void inicializarCargos(TelaPadrao tela)
         {
             //LABEL CARGO
             //
@@ -128,7 +128,7 @@ namespace Telas
         //SETORES
         //
         //
-        public void inicializarSetores(Form tela)
+        public void inicializarSetores(TelaPadrao tela)
         {
             //
             //LABEL STORES
@@ -187,7 +187,7 @@ namespace Telas
             }
         }
 
-        public void fechar(Form tela)
+        public override void fechar(TelaPadrao tela)
         {
             foreach (LabelP labelP in labelPs)
             {

@@ -12,31 +12,21 @@ using System.Windows.Forms;
 
 namespace Telas
 {
-    public partial class TelaSetorRH : TelaPadrao
+    public partial class TelaSetorLogistica : TelaPadrao
     {
-        InterfacesBanco[] abas = new InterfacesBanco[3];
-        ButtonP[] btnAbas = new ButtonP[3];
+        InterfacesBanco[] abas = new InterfacesBanco[1];
+        ButtonP[] btnAbas = new ButtonP[1];
 
-        public TelaSetorRH(Funcionario funcionario) : base (funcionario)
+        public TelaSetorLogistica(Funcionario funcionario) : base(funcionario)
         {
             this.funcionario = funcionario;
             InitializeComponent();
-            abas[0] = new BancoFuncionarios();
-            abas[1] = new BancoCargosSetores();
-            abas[2] = new BancoUsuarios();
+            abas[0] = new BancoCatalogoProdutos();
             funcionario.FuncionariosSetor(this);
         }
-        private void Btn_funcionarios_Click(object sender, EventArgs e)
+        private void Btn_Catalogo_Produtos_Click(object sender, EventArgs e)
         {
             Abrir_Fechar_Abas(0);
-        }
-        private void Btn_Cargos_Setores_Click(object sender, EventArgs e)
-        {
-            Abrir_Fechar_Abas(1);
-        }
-        private void Btn_Usuarios_Click(object sender, EventArgs e)
-        {
-            Abrir_Fechar_Abas(2);
         }
 
         private void Abrir_Fechar_Abas(int nmr)
@@ -48,7 +38,8 @@ namespace Telas
                 btnAbas[nmr].atv = true;
                 funcionario.b.Enabled = true;
             }
-            else { 
+            else
+            {
                 for (int i = 0; i < btnAbas.Length; i++)
                 {
                     if (btnAbas[i].atv == false)
@@ -61,7 +52,7 @@ namespace Telas
                 abas[nmr].exibir(this);
                 funcionario.b.Enabled = false;
             }
-            
+
         }
     }
 }

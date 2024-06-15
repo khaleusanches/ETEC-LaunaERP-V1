@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace Telas
 {
     public class TelaPadrao : Form
     {
-        public TelaPadrao()
+        public Funcionario funcionario;
+        public TelaPadrao(Funcionario funcionario)
         {
             Width = 1000;
             Height = 1200;

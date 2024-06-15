@@ -6,11 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Logica
 {
     public class DAO
     {
+        CultureInfo newCulture = new CultureInfo("en-US");
         string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
         MySqlConnection con;
         MySqlCommand cmd;
@@ -19,6 +21,8 @@ namespace Logica
         {
             try
             {
+                CultureInfo.DefaultThreadCurrentCulture = newCulture;
+                CultureInfo.DefaultThreadCurrentUICulture = newCulture;
                 con = new MySqlConnection(strConnection);
                 con.Open();
             }

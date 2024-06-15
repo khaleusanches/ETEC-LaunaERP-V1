@@ -15,3 +15,5 @@ C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.CoreCom
 C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.dll
 C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.pdb
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.dll
+C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.pdb

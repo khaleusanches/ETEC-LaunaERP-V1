@@ -34,6 +34,7 @@
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,7 +45,14 @@
   <ItemGroup>
     <Compile Include="DAO.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Gerente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaixaDeFerramentasPerso\CaixaDeFerramentasPerso.csproj">
+      <Project>{009f8578-42db-4042-8a4a-72390463bd1f}</Project>
+      <Name>CaixaDeFerramentasPerso</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

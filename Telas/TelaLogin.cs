@@ -15,9 +15,11 @@ namespace Telas
     {
         string op ="";
         DAO dao = new DAO();
+        public static Funcionario func;
         public TelaLogin()
         {
             InitializeComponent();
+            btnLogar.Enabled = true;
         }
 
         private void lbUsername_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Telas
             }
             else 
             {
-                btnLogar.Enabled = false;
+                btnLogar.Enabled = true;
             }
         }
         private void btnLogar_Click(object sender, EventArgs e)
@@ -40,32 +42,53 @@ namespace Telas
             DataTable dt = dao.lerTabela($"select * from usuarios where usuarios.login = '{tbUsername.Text}' and usuarios.senha = '{tbSenha.Text}';");
             if(dt.Rows.Count > 0 )
             {
-                dt = dao.lerTabela("select funcionarios.nome, setores.nome, cargos.nome from usuarios " +
+                dt = dao.lerTabela("select id funcionarios.nome, setores.nome, cargos.nome from usuarios " +
                     "left join funcionarios on usuarios.id_func = funcionarios.id " +
                     "left join setores on funcionarios.idsetorfk = setores.id " +
                     "inner join cargos on funcionarios.idcargofk = cargos.id " +
                     $"where usuarios.login = '{tbUsername.Text}' and usuarios.senha = '{tbSenha.Text}';");
-                Funcionario func = new Funcionario(dt.Rows[0][0].ToString(), tbUsername.Text, dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString());
+                if (dt.Rows[0][2].ToString() == "Gerente") 
+                { 
+                    func = new Gerente(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), tbUsername.Text, dt.Rows[0][2].ToString()); 
+                }
+                else
+                {
+                    func = new Funcionario(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), tbUsername.Text, dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
+                }
                 switch (func.setor)
                 {
                     case "Administrativo":
-                        if (func.cargo == "Gerente") { };
                         break;
 
+                    case "Financeiro":
+                        this.Hide();
+                        new TelaSetorRH(func).ShowDialog();
+                        break;
                     case "Recursos Humanos":
+                        this.Hide();
+                        new TelaSetorRH(func).ShowDialog();
+                        break;
+                    case "Logistica":
+                        this.Hide();
+                        new TelaSetorLogistica(func).ShowDialog();
+                        break;
+                    case "Vendas":
                         if (func.cargo == "Gerente")
                         {
                             this.Hide();
-                            new TelaGerenteRH().ShowDialog();
+                            new TelaGerenteVendas(func).ShowDialog();
                         }
                         else
                         {
-                            this.Hide();
-                            new TelaSetorRH().ShowDialog();
+                            new TelaPrincipalCaixa(func).ShowDialog();
                         }
                         break;
                 }
-
+            }
+            else
+            {
+                func = new Gerente("1", "teste", "teste", "Logistica");
+                new TelaGerenteVendas(func).ShowDialog();
             }
         }
     }

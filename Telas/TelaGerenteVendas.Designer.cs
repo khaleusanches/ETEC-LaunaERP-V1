@@ -3,12 +3,13 @@ using System;
 
 namespace Telas
 {
-    partial class TelaSetorRH : TelaPadrao
+    partial class TelaGerenteVendas
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private ButtonP[] btnAbas = new ButtonP[1];
 
         /// <summary>
         /// Clean up any resources being used.
@@ -32,23 +33,13 @@ namespace Telas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Text = "TelaSetorRH";
-            btnAbas[0] = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Funcionarios", this);
+            this.Text = "TelaGerenteVendas";
+            btnAbas[0] = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Produtos", this);
             btnAbas[0].BringToFront();
-            btnAbas[0].Click += Btn_funcionarios_Click;
-            btnAbas[1] = new ButtonP(true, 90, 50, 25, 125, "Gerenciar Cargos & Setores", this);
-            btnAbas[1].BringToFront();
-            btnAbas[1].Click += new System.EventHandler(Btn_Cargos_Setores_Click);
-            btnAbas[2] = new ButtonP(true, 90, 50, 25, 225, "Gerenciar Usuarios", this);
-            btnAbas[2].BringToFront();
-            btnAbas[2].Click += new System.EventHandler(Btn_Usuarios_Click);
-            if(funcionario.cargo != "Gerente")
-            {
-                Controls.Remove(btnAbas[2]);
-            }
+            btnAbas[0].Click += Btn_Operacoes_Click;
         }
 
-        
+      
         #endregion
     }
 }
