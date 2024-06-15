@@ -15,7 +15,6 @@ namespace Telas
     public partial class TelaSetorLogistica : TelaPadrao
     {
         InterfacesBanco[] abas = new InterfacesBanco[1];
-        ButtonP[] btnAbas = new ButtonP[1];
 
         public TelaSetorLogistica(Funcionario funcionario) : base(funcionario)
         {

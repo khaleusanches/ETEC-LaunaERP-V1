@@ -1,0 +1,102 @@
+﻿using CaixaDeFerramentasPerso;
+using Logica;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Telas
+{
+    public partial class TelaSetorFinanceiro : TelaPadrao
+    {
+        InterfacesBanco[] abas = new InterfacesBanco[6];
+        ButtonP[] btnAbas = new ButtonP[6];
+        ButtonP[] btnContasMenu = new ButtonP[2];
+        ButtonP btnContas;
+        MenuP menu;
+        public TelaSetorFinanceiro(Funcionario funcionario) : base(funcionario)
+        {
+            this.funcionario = funcionario;
+            InitializeComponent();
+            abas[0] = new BancoFornecedores();
+            abas[1] = new BancoLotes();
+            abas[2] = new BancoCatalogoProdutos();
+            abas[3] = new BancoOperacoes();
+            abas[4] = new BancoContasBancarias();
+            abas[5] = new BancoEmprestimos();
+
+            funcionario.FuncionariosSetor(this);
+        }
+        private void Btn_Fornecedores_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(0);
+        }
+        private void Btn_Pedidos_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(1);
+        }
+        private void Btn_Estoque_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(2);
+        }
+        private void Btn_Operacoes_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(3);
+        }
+        private void Btn_Bancos_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(4);
+        }
+        private void Btn_Emprestimos_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(5);
+        }
+        private void Btn_Menu_Click(object sender, EventArgs e)
+        {
+            if(btnContas.atv == true)
+            {
+                btnContasMenu[0] = btnAbas[4];
+                btnContasMenu[1] = btnAbas[5];
+                menu = new MenuP(btnContasMenu, Color.LightSlateGray, 75, 485, 200, 60, this);
+                menu.exibir(this);
+                btnContas.atv = false;
+            }
+            else
+            {
+                menu.fechar(this);
+                btnContas.atv = true;
+            }
+        }
+
+        private void Abrir_Fechar_Abas(int nmr)
+        {
+            funcionario.desativarFuncionariosSetor();
+            if (btnAbas[nmr].atv == false)
+            {
+                abas[nmr].fechar(this);
+                btnAbas[nmr].atv = true;
+                funcionario.b.Enabled = true;
+            }
+            else
+            {
+                for (int i = 0; i < btnAbas.Length; i++)
+                {
+                    if (btnAbas[i].atv == false)
+                    {
+                        abas[i].fechar(this);
+                        btnAbas[i].atv = true;
+                    }
+                }
+                btnAbas[nmr].atv = false;
+                abas[nmr].exibir(this);
+                funcionario.b.Enabled = false;
+            }
+
+        }
+    }
+}

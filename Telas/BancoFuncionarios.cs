@@ -98,7 +98,6 @@ namespace Telas
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             string[] text = new string[5] { textBoxP[0].Text, textBoxP[2].Text, textBoxP[3].Text, textBoxP[4].Text, textBoxP[9].Text };
-            
             new atualizarFuncionarios(text, listCargo, listSetores).ShowDialog();
         }
 

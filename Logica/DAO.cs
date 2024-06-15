@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace Logica
 {
     public class DAO
     {
-        CultureInfo newCulture = new CultureInfo("en-US");
+        CultureInfo newCulture = new CultureInfo("pt-BR");
         string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
         MySqlConnection con;
         MySqlCommand cmd;
@@ -40,8 +41,8 @@ namespace Logica
             {
                 cmd.ExecuteNonQuery();
             }
-            catch 
-            { }
+            catch (Exception ex)
+            { MessageBox.Show(ex.ToString()); }
         }
         public DataTable lerTabela(string sql)
         {

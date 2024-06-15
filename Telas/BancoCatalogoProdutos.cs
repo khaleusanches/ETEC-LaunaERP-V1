@@ -49,7 +49,10 @@ namespace Telas
             btnRemove.Click += new EventHandler(BtnRemove_Click);
 
 
-            dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela("select * from produtos"), tela);
+            dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela("select"+" nome as 'Produto', id as 'ID', valor as 'Valor unitário (R$)', estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição',"
+                +" disponivel as 'A venda'"
+                +" from produtos"), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
 
 
@@ -61,7 +64,7 @@ namespace Telas
             {
                 int i = int.Parse(dgv.SelectedCells[0].Value.ToString());
                 dao.updateInsertDelete($"DELETE from produtos where id={i}");
-                dgv.DataSource = dao.lerTabela("select * from produtos");
+                dgv.DataSource = "select" + " nome as 'Produto', id as 'ID', valor as 'Valor unitário (R$)', estoque as 'Quantidade em estoque'," + " descricao as 'Descrição'," + " disponivel as 'A venda' from produtos";
             }
         }
 
@@ -81,7 +84,10 @@ namespace Telas
             string sql = $"insert into produtos (nome, valor, estoque, descricao, disponivel) values ('{textBoxPs[1].Text}', '{textBoxPs[2].Text}', '{textBoxPs[3].Text}', '{textBoxPs[4].Text}', '{cbDisponibilidade.Text}');";
             MessageBox.Show(sql);
             dao.updateInsertDelete(sql);
-            dgv.DataSource = dao.lerTabela("select * from produtos");
+            dgv.DataSource = dao.lerTabela("select" + " nome as 'Produto', id as 'ID', valor as 'Valor unitário (R$)', estoque as 'Quantidade em estoque',"
+                + " descricao as 'Descrição',"
+                + " disponivel as 'A venda'"
+                + " from produtos");
         }
 
         private void BancoUsuarios_TextChanged(object sender, EventArgs e)

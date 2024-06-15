@@ -10,7 +10,6 @@ namespace CaixaDeFerramentasPerso
     public class ButtonP : Button
     {
         public bool atv;
-
         /// <summary>
         /// Adiciona um objeto Button da biblioteca Forms na tela desejada, left = 999 para centralizar.
         /// Button é uma classe da biblioteca Forms utilizada para criar botões.

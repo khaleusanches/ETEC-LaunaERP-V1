@@ -52,9 +52,13 @@
     <Compile Include="atualizarFuncionarios.Designer.cs">
       <DependentUpon>atualizarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="BancoContasBancarias.cs" />
     <Compile Include="BancoCargosSetores.cs" />
     <Compile Include="BancoCatalogoProdutos.cs" />
+    <Compile Include="BancoEmprestimos.cs" />
+    <Compile Include="BancoFornecedores.cs" />
     <Compile Include="BancoFuncionarios.cs" />
+    <Compile Include="BancoLotes.cs" />
     <Compile Include="BancoOperacoes.cs" />
     <Compile Include="BancoUsuarios.cs" />
     <Compile Include="Caixas.cs">
@@ -77,6 +81,12 @@
     </Compile>
     <Compile Include="TelaPadrao.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaSetorFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaSetorFinanceiro.Designer.cs">
+      <DependentUpon>TelaSetorFinanceiro.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaSetorLogistica.cs">
       <SubType>Form</SubType>

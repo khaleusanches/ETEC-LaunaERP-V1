@@ -8,7 +8,7 @@ namespace Telas
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private ButtonP[] btnAbas = new ButtonP[1];
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>

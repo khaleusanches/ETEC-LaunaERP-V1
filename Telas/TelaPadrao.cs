@@ -16,6 +16,7 @@ namespace Telas
         {
             Width = 1000;
             Height = 1200;
+            this.funcionario = funcionario;
             BackColor = Color.White;
             Panel barra = new Panel();
             barra.Width = 1000;
