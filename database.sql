@@ -111,12 +111,9 @@ create table setores(
   nome varchar(32) unique not null
 );
 insert into setores values
-(1, 'Administrativo'),
-(2, 'Recursos Humanos'),
-(3, 'Financeiro'),
-(4, 'Vendas'),
-(5, 'Logística'),
-(6, 'TI'),
+(1, 'Administrativo'),  (2, 'Recursos Humanos'),
+(3, 'Financeiro'),      (4, 'Vendas'),
+(5, 'Logística'),       (6, 'TI'),
 (7, 'Limpeza');
 
 create table cargos(
@@ -125,20 +122,13 @@ create table cargos(
   descricao varchar (180)
 );
 insert into cargos (nome) values
-  (1, 'Gerente'),
-  (2, 'Assistente'),
-  (3, 'Auxiliar'),
-  (4, 'Operador(a)'),
-  (5, 'Diretor'),
-  (6, 'Caixa'),
-  (7, 'Cozinheiro(a)'),
-  (8, 'Entregador(a)'),
-  (9, 'Mensageiro(a)'),
-  (10, 'Secreatário(a)'),
-  (11, 'Zelador'),
-  (12, 'Repositor'),
-  (13, 'Segurança'),
-  (14, 'Vendedor(a)'),
+  (1, 'Gerente'),        (2, 'Assistente'),
+  (3, 'Auxiliar'),       (4, 'Operador(a)'),
+  (5, 'Diretor'),        (6, 'Caixa'),
+  (7, 'Cozinheiro(a)'),  (8, 'Entregador(a)'),
+  (9, 'Mensageiro(a)'),  (10, 'Secreatário(a)'),
+  (11, 'Zelador'),       (12, 'Repositor'),
+  (13, 'Segurança'),     (14, 'Vendedor(a)'),
   (15, 'Programador');
 --------------------------------------------
 create table classes (
