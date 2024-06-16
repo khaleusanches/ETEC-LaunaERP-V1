@@ -17,113 +17,131 @@ namespace SetorRH
         DataTable dt = new DataTable();
         Banco banco = new Banco();
         DataTable DT_consultaID = new DataTable();
-
-
-
-
+//-----------------------------
         
-        public DataTable ExbFuncionarios() 
+        public DataTable ExbFuncionariosNome() 
         {
             dt = banco.consultar(
             "select"
                 +" funcionarios.nome as 'Nome',"
-                +" id as 'ID', cargos.nome as 'Cargo',"
-                +" setores.nome as 'Setor', email as 'Email',"
+                +" id as 'ID',"
+                +" cargos.nome as 'Cargo',"
+                +" setores.nome as 'Setor',"
+                +" classe as 'Classe'"
+                +" email as 'Email',"
                 +" tel as 'Telefone', pis as 'PIS',"
                 +" admissao as 'Data de admissão',"
                 +" salario as 'Salário',"
                 +" desconto as 'Desconto de Funcionário'"
             +" from funcionarios"
             +" inner join cargos on idcargofk = cargo.id"
-            +" inner join setores on idsetorfk = setores.id");
+            +" inner join setores on idsetorfk = setores.id"
+            +" order by funcionario.nome"
+            );
             return dt;
         }
-        
-        public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string pis, string admissao, string salario, string desconto)
+        public DataTable ExbFuncionariosID() 
         {
-          banco.comandar(
-            "insert into funcionarios(nome, idcargofk, idsetorfk, email, tel, pis, admissao, salario, desconto) "+
-            "values ('"+nome+"','"+cargo+"','"+setor+"','"+email+"','"tel+"','"+pis+"','"+admissao+"','"+salario,+"','"+desconto+"')");
+            dt = banco.consultar(
+            "select"
+                +" funcionarios.nome as 'Nome',"
+                +" id as 'ID',"
+                +" cargos.nome as 'Cargo',"
+                +" setores.nome as 'Setor',"
+                +" classe as 'Classe'"
+                +" email as 'Email',"
+                +" tel as 'Telefone', pis as 'PIS',"
+                +" admissao as 'Data de admissão',"
+                +" salario as 'Salário',"
+                +" desconto as 'Desconto de Funcionário'"
+            +" from funcionarios"
+            +" inner join cargos on idcargofk = cargo.id"
+            +" inner join setores on idsetorfk = setores.id"
+            +" order by funcionario.id"
+            );
+            return dt;
+        }
+        //-----------------------------
+        public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, string classe, int admissao, int salario, string login, string senha, string desconto)
+        {
+            banco.comandar(
+            "insert into funcionarios(nome, idcargofk, idsetorfk, email, tel, rg, nascimento, pis, endereco, classe, admissao, salario, login, senha, desconto) "+
+            "values ('"+nome+"','"+cargo+"','"+setor+"','"+classe+"','"+email+"','"tel+"','"+rg+"','"+nascimento+"','"+pis+"','"+endereco+"','"+admissao+"','"+salario,+"','"+login+"','"+senha+"','"+desconto+"')");
             fechar();
         }
-        public void DelFuncionario(int i)
-        
+        //-----------------------------
+        public void DelFuncionario(int i)        
         {
             banco.comandar("Delete * from funcionarios where id = '"+i+"'");
             fechar();
         }
-        
-        public void AtuFuncionario(int i, string nome, string cargo, string setor, string email, string tel, string pis, string admissao, string salario, string desconto) 
+        //-----------------------------
+        public void AtuFuncionario(int i, string nome, string cargo, string classe, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, int admissao, int salario, string desconto)
         {
             banco.comandar(
                 "update funcionarios set"
                     +" nome = '"+nome+"',"
                     +" cargo = '"+cargo+"',"
                     +" setor = '"+setor+"',"
+                    +" classe = '"+classe+"',"
                     +" email = '"+email+"',"
                     +" tel = '"+tel+"',"
+                    +" rg = '"+rg+"',"
+                    +" nascimento = '"+nascimento+"',"
                     +" pis ='"+pis+"',"
+                    +" endereco = '"+endereco+"',"
                     +" admissao = '"+admissao+"',"
                     +" salario = '"+salario+"',"
                     +" desconto = '"+desconto"
                 +" where id = '"+i+"'");
             fechar();
         }
-        
-        public DataTable ExbSetores() 
+        //--------------------------------------------------------------------
+        public DataTable ExbSetoresNome() 
         {
-            dt = banco.consultar(
-            "select	id as 'ID', nome as 'Nome' from setores");
+            dt = banco.consultar("select nome as 'Nome', id as 'ID' from setores order by nome");
             return dt;
         }
         
-        public void CadSetor(string nome)
+        public DataTable ExbSetoresID() 
         {
-          banco.comandar(
-            "insert into setores(nome) values ('"+nome+"')");
+            dt = banco.consultar("select id as 'ID', nome as 'Nome' from setores order by id");
+            return dt;
+        }
+        
+        public void CadSetor(int id, string nome) 
+        {
+            banco.comandar(
+                "insert into setores(id, nome) values '"+id+"', '"+nome+"'");
             fechar();
         }
         
         public void DelSetor(int i)
         {
-          dt = banco.consultar(
-              "select setores.nome as 'Setor',"
-                +" cargos.nome as 'Cargo',"
-                +" nome as 'Nome',"
-                +" email as 'Email',"
-                +" tel as 'Telefone',"
-                +" pis as 'PIS',"
-                +" admissao as 'Data de admissão',"
-                +" salario as 'Salário',"
-                +" from funcionarios"
-            +" inner join cargos on idcargofk = cargo.id"
-            +" inner join setores on idsetorfk = '"+i+"'"
-          );
-          if (dt != null) {
-            Console.WriteLine("Este setor não pode ser deletado. Remova os funcionários pertencentes à este setor.");
-          }
-          else {
-            banco.comandar("Delete * from setores where id = '"+i+"'");
-            fechar();
-          }
+            dt = banco.consultar("select nome as 'Nome' from setores");
+              if (dt != null) {}
+              else { banco.comandar("Delete * from setores where id = '"+i+"'");
+            fechar(); }
         }
         
-        public void AtlSetor(int id, string nome) 
+        public void AtuSetor(int i, int id, string nome) 
         {
-            banco.comandar(
-                "update setores set"
-                    +" id = '"+id+"',"
-                    +" nome = '"+nome+"'");
+            banco.comandar("update setores set id = '"+id+"', nome = '"+nome+"' where id = '"+i+"'");
             fechar();
         }
-
+//--------------------------------------------------------------------
         
         public DataTable ExbCargos() 
         {
-            dt = banco.consultar(
-            "select	id as 'ID', nome as 'Nome' from cargos");
+            dt = banco.consultar("select nome as 'Nome', id as 'ID', descricao as 'Descrição' from cargos order by nome");
             return dt;
         }
+        
+         public DataTable ExbID() 
+        {
+            dt = banco.consultar("select id as 'ID', nome as 'Nome', descricao as 'Descrição' from cargos order by id");
+            return dt;
+         }
         
         public void CadCargo(string nome)
         {
@@ -134,34 +152,15 @@ namespace SetorRH
         
         public void DelCargo(int i)
         {
-          dt = banco.consultar(
-              "select cargos.nome as 'Cargo',"
-                  +" setores.nome as 'Setor',"
-                  +" nome as 'Nome',"
-                  +" email as 'Email',"
-                  +" tel as 'Telefone',"
-                  +" pis as 'PIS',"
-                  +" admissao as 'Data de admissão',"
-                  +" salario as 'Salário',"
-                  +" from funcionarios"
-              +" inner join cargos on idcargofk = cargo.id"
-              +" inner join setores on idsetorfk = '"+i+"'");
-          if (dt != null) {
-            Console.WriteLine("Este cargo não pode ser deletado. Remova os funcionários pertencenter à este cargo.");
-          }
-          else {
-            banco.comandar("Delete * from cargps where id = '"+i+"'");
-            fechar();
-          }
+            dt = banco.consultar("select nome as 'Nome' from cargos");
+              if (dt != null) {}
+              else { banco.comandar("Delete * from cargos where id = '"+i+"'");
+            fechar(); }
         }
         
-        public void AtlCargo(int id, string nome, string descricap) 
+        public void AtuCargo(int id, string nome, string descricap) 
         {
-            banco.comandar(
-                "update cargos set"
-                    +" id = '"+id+"',"
-                    +" nome = '"+nome+"',"
-                    +" descricao = '"+descricao+"'");
+            banco.comandar( "update cargos set id = '"+id+"', nome = '"+nome+"', descricao = '"+descricao+"' where id = '"+i+"'");
             fechar();
         }
                            
