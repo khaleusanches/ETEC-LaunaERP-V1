@@ -173,7 +173,7 @@ create table funcionarios(
   endereco varchar(200) not null,
   idcargofk int not null,                    foreign key (idcargofk) references cargos (id),
   idsetorfk int not null,                    foreign key (idsetorfk) references setores (id),
-  class int,
+  classe int,
   admissao date not null,
   salario decimal(10,2) not null,
   login varchar(32) unique,
@@ -181,7 +181,7 @@ create table funcionarios(
   desconto decimal(10,2) not null default '0.8'
 );
 
-insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, class, admissao, salario, login, senha, desconto) values
+insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, classe, admissao, salario, login, senha, desconto) values
 ('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', 			      'XX X XXXXX-XXX1', '4xxxxxxxx', 20060421, 'XXXXXX1XXXX', '6758 Alice Travessa - Ingaí, MS / 33055-287',					          1, 5, 10,  20240601, '5000', 'brunasampaio',  'senhapadrao', '0.7'),
 ('Larissa Silva Melo',		    'larissamelo12@gmail', 			      'XX X XXXXX-XXX2', '1xxxxxxxx', 20051205, 'XXXX2XXXXXX', '91948 Silva Rua - Patrocínio, CE / 97005-906', 					        1, 5, 10,  20240601, '5000', 'larissamelo',  'senhapadrao', '0.7'),
 ('Ana Maria de Assis', 		    'anamariadeassis@gmail.com', 		  'XX X XXXXX-XXX3', 'xxxxxxxx4', 20001124, 'XXXXXX7XXXX', '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611',			      4, 1, 8,   20240601, '3800', 'anagerente',  'senhapadrao', '0.7'),
