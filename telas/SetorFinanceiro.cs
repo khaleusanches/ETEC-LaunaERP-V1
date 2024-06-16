@@ -119,8 +119,8 @@ namespace SetorFinanceiro
         {
             dt = banco.consultar(
             "select"
-                +" funcionarios.nome as 'Nome',"
                 +" id as 'ID',"
+                +" funcionarios.nome as 'Nome',"
                 +" cargos.nome as 'Cargo',"
                 +" setores.nome as 'Setor',"
                 +" classe as 'Classe'"
