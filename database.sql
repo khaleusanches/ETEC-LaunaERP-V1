@@ -34,7 +34,7 @@ create table categorias(
   descricao varchar(180)
 );
 insert into categorias values
-  (0, 'Não Categorizado', 'Produtos não categorizados');
+  (1, 'Não Categorizado', 'Produtos não categorizados');
 
 create table produtos(
   id int unique not null auto_increment,    primary key(id),
