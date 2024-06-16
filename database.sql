@@ -78,34 +78,6 @@ insert into lotes(idprodutofk, quantidade, idfornecedor, aquisicao, fabricacao, 
 (7, 130, '4', 20240312, 20240228, 20240911, 7, 'Sessão 2 Fileira 2 Prateleira 2'),
 (8, 750, '4', 20240302, 20240228, 20241006, 8, 'Sessão 2 Fileira 3 Prateleira 3');
 --------------------------------------------
-create table clientes(
-  id int unique not null auto_increment,    primary key(id),
-  nome varchar(64) not null,
-  cpf varchar(11) unique not null,
-  desconto decimal(10,2) not null default '0.8'
-);
-insert into clientes(nome, cpf, desconto) values
-('Cliente1', '1XXXXXXXXXX', '0.9'),
-('Cliente2', '2XXXXXXXXXX', '0.9'),
-('Cliente3', '3XXXXXXXXXX', '0.9'),
-('Cliente4', '4XXXXXXXXXX', '0.9');
---------------------------------------------
-create table operacoes(
-  id int unique not null auto_increment,    primary key(id),
-  idclientefk int,                          foreign key (idclientefk) references clientes (id),
-  total decimal(10,2),                      check (total>0),
-  troco decimal(10,2),                      check (troco>0),
-  desconto decimal(10,2),
-  avaliacao int,
-  dataehora datetime
-);
-create table vendas(
-  id int unique not null auto_increment,    primary key (id),
-  idoperacaofk int not null,                foreign key (idoperacaofk) references operacoes (id),
-  idprodutofk int not null,                 foreign key (idprodutofk) references produtos (id),
-  quantidade int not null
-  );
---------------------------------------------
 create table setores(
   id int unique not null auto_increment,   primary key(id),
   nome varchar(32) unique not null
@@ -173,7 +145,7 @@ create table funcionarios(
   endereco varchar(200) not null,
   idcargofk int not null,                    foreign key (idcargofk) references cargos (id),
   idsetorfk int not null,                    foreign key (idsetorfk) references setores (id),
-  classe int,
+  idclassefk int,                            foreign key (idclassefk) references classes (id),
   admissao date not null,
   salario decimal(10,2) not null,
   login varchar(32) unique,
@@ -181,7 +153,7 @@ create table funcionarios(
   desconto decimal(10,2) not null default '0.8'
 );
 
-insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, classe, admissao, salario, login, senha, desconto) values
+insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idsetorfk, idcargofk, idclassefk, admissao, salario, login, senha, desconto) values
 ('Bruna Sampaio de Oliveira', 'brunasampaio8@gmail', 			      'XX X XXXXX-XXX1', '4xxxxxxxx', 20060421, 'XXXXXX1XXXX', '6758 Alice Travessa - Ingaí, MS / 33055-287',					          1, 5, 10,  20240601, '5000', 'brunasampaio',  'senhapadrao', '0.7'),
 ('Larissa Silva Melo',		    'larissamelo12@gmail', 			      'XX X XXXXX-XXX2', '1xxxxxxxx', 20051205, 'XXXX2XXXXXX', '91948 Silva Rua - Patrocínio, CE / 97005-906', 					        1, 5, 10,  20240601, '5000', 'larissamelo',  'senhapadrao', '0.7'),
 ('Ana Maria de Assis', 		    'anamariadeassis@gmail.com', 		  'XX X XXXXX-XXX3', 'xxxxxxxx4', 20001124, 'XXXXXX7XXXX', '218 Benjamin Avenida - Treze Tílias, RJ / 95383-611',			      4, 1, 8,   20240601, '3800', 'anagerente',  'senhapadrao', '0.7'),
@@ -194,3 +166,32 @@ insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idset
 ('Francisco Pinto Amaral', 	  'franciscoamaral@gmail.com', 		  'XX X XXXXX-XXX0', 'xxxxx9xxx', 20050112, 'X1XXXXXXXXX', '4627 Moreira Alameda - Arvorezinha, AP / 20558-413', 20040111,  5, 8, 5,   20240601, '1355', '', '', '0.8'),
 ('Khaléu Sanches Mancini', 	  'khaleumancini@gmail.com', 		    'XX X XXXXX-XX11', 'x1xxxxxxx', 20061116, '1XXXXXXXXXX', '062 Maria Antonieta - Santa Maria de Itabira, PR / 80259-852',	6, 15, 10, 20070101, '5.4',  'khaleu1111', 'senhapadrao', '0.8'),
 ('Clara Santana Araújo', 	    'claraaraujo2@gmail.com', 		    'XX X XXXXX-XX22', 'xxx2xxxxx', 20040222, '0XXXXXXXXXX', '7252 Reis Travessa - Anitápolis, GO / 70485-158', 20040202, 		6, 15, 10, 20240601, '60',   'clara2222', 'senhapadrao', '0.8');
+--------------------------------------------------------------------------------
+create table clientes(
+  id int unique not null auto_increment,    primary key(id),
+  nome varchar(64) not null,
+  cpf varchar(11) unique not null,
+  desconto decimal(10,2) not null default '0.8'
+);
+insert into clientes(nome, cpf, desconto) values
+('Cliente1', '1XXXXXXXXXX', '0.9'),
+('Cliente2', '2XXXXXXXXXX', '0.9'),
+('Cliente3', '3XXXXXXXXXX', '0.9'),
+('Cliente4', '4XXXXXXXXXX', '0.9');
+--------------------------------------------
+create table operacoes(
+  id int unique not null auto_increment,    primary key(id),
+  idclientefk int,                          foreign key (idclientefk) references clientes (id),
+  idfuncionariofk int,                      foreign key (idfuncionariofk) references funcionarios (id),
+  total decimal(10,2),                      check (total>0),
+  troco decimal(10,2),                      check (troco>0),
+  desconto decimal(10,2),
+  avaliacao int,
+  dataehora datetime
+);
+create table vendas(
+  id int unique not null auto_increment,    primary key (id),
+  idoperacaofk int not null,                foreign key (idoperacaofk) references operacoes (id),
+  idprodutofk int not null,                 foreign key (idprodutofk) references produtos (id),
+  quantidade int not null
+  );
