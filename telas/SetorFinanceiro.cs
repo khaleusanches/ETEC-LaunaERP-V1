@@ -19,7 +19,7 @@ namespace SetorFinanceiro
         DataTable DT_consultaID = new DataTable();
 
         //--------------------------------------------------------------------
-        public DataTable ExbFornecedores() 
+        public DataTable ExbFornecedoresNome() 
         {
             dt = banco.consultar(
             "select"
@@ -35,6 +35,25 @@ namespace SetorFinanceiro
             +" inner join telefones"
             +" on idfornecedorfk = fornecedores.id"
             +"order by fornecedores.id");
+            return dt;
+        }
+        
+        public DataTable ExbFornecedoresID() 
+        {
+            dt = banco.consultar(
+            "select"
+                +" fornecedores.id as 'ID',"
+                +" nome as 'Nome',"
+                +" razaosocial as 'Razão Social'"               
+                +" cnpj as 'CNPJ/CPF',"
+                +" email as 'Correio Eletrônico'"
+                +" tel as 'Tel',"
+                +" obs as '',"
+                +" endereco as 'Endereço',"
+            +" from fornecedores"
+            +" inner join telefones"
+            +" on idfornecedorfk = fornecedores.id"
+            +"order by nome");
             return dt;
         }
         //-----------------------------
