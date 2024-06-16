@@ -114,24 +114,6 @@ namespace SetorLogistico
             banco.comandar("delete * from lotes where idprodutofk = '"+i+"')");
             fechar();
         }
-        //--------------------------------------------------------------------
-        public DataTable ExbFuncionariosSetorLogistico(int i) 
-        {
-            dt = banco.consultar(
-            "select"
-                +" funcionarios.nome as 'Nome',"
-                +" id as 'ID',"
-                +" cargos.nome as 'Cargo',"
-                +" email as 'Email',"
-                +" tel as 'Telefone', pis as 'PIS',"
-                +" admissao as 'Data de admissão',"
-                +" salario as 'Salário',"
-            +" from funcionarios"
-            +" inner join cargos on idcargofk = cargo.id"
-            +" and idsetorfk = 5"
-            );
-            return dt;
-        }
         //--------------------------------------------------------------------      
                          
         public void fechar()
