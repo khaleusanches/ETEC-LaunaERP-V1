@@ -65,7 +65,7 @@ namespace SetorRH
         public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, string classe, int admissao, int salario, string login, string senha, string desconto)
         {
             banco.comandar(
-            "insert into funcionarios(nome, idcargofk, idsetorfk, email, tel, rg, nascimento, pis, endereco, classe, admissao, salario, login, senha, desconto) "+
+            "insert into funcionarios(nome, idcargofk, idsetorfk, classe, email, tel, rg, nascimento, pis, endereco, admissao, salario, login, senha, desconto) "+
             "values ('"+nome+"','"+cargo+"','"+setor+"','"+classe+"','"+email+"','"tel+"','"+rg+"','"+nascimento+"','"+pis+"','"+endereco+"','"+admissao+"','"+salario,+"','"+login+"','"+senha+"','"+desconto+"')");
             fechar();
         }
@@ -118,7 +118,7 @@ namespace SetorRH
         
         public void DelSetor(int i)
         {
-            dt = banco.consultar("select nome as 'Nome' from setores");
+            dt = banco.consultar("select idsetorfk from funcionarios where idsetorfk = '"+i+"'");
               if (dt != null) {}
               else { banco.comandar("Delete * from setores where id = '"+i+"'");
             fechar(); }
@@ -152,7 +152,7 @@ namespace SetorRH
         
         public void DelCargo(int i)
         {
-            dt = banco.consultar("select nome as 'Nome' from cargos");
+            dt = banco.consultar("select idcargofk from funcionarios where idsetorfk = '"+i+"'");
               if (dt != null) {}
               else { banco.comandar("Delete * from cargos where id = '"+i+"'");
             fechar(); }
