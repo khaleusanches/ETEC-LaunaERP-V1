@@ -27,7 +27,7 @@ namespace SetorRH
                 +" id as 'ID',"
                 +" cargos.nome as 'Cargo',"
                 +" setores.nome as 'Setor',"
-                +" classe as 'Classe'"
+                +" idclassefk as 'Classe'"
                 +" email as 'Email',"
                 +" tel as 'Telefone', pis as 'PIS',"
                 +" admissao as 'Data de admissão',"
@@ -48,7 +48,7 @@ namespace SetorRH
                 +" funcionarios.nome as 'Nome',"
                 +" id as 'ID',"
                 +" cargos.nome as 'Cargo',"
-                +" classe as 'Classe'"
+                +" idclassefk as 'Classe'"
                 +" email as 'Email',"
                 +" tel as 'Telefone', pis as 'PIS',"
                 +" admissao as 'Data de admissão',"
@@ -68,7 +68,7 @@ namespace SetorRH
                 +" funcionarios.nome as 'Nome',"
                 +" id as 'ID',"
                 +" cargos.nome as 'Cargo',"
-                +" classe as 'Classe'"
+                +" idclassefk as 'Classe'"
                 +" email as 'Email',"
                 +" tel as 'Telefone', pis as 'PIS',"
                 +" admissao as 'Data de admissão',"
@@ -85,7 +85,7 @@ namespace SetorRH
         public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, string classe, int admissao, int salario, string login, string senha, string desconto)
         {
             banco.comandar(
-            "insert into funcionarios(nome, idcargofk, idsetorfk, classe, email, tel, rg, nascimento, pis, endereco, admissao, salario, login, senha, desconto) "+
+            "insert into funcionarios(nome, idcargofk, idsetorfk, idclassefk, email, tel, rg, nascimento, pis, endereco, admissao, salario, login, senha, desconto) "+
             "values ('"+nome+"','"+cargo+"','"+setor+"','"+classe+"','"+email+"','"tel+"','"+rg+"','"+nascimento+"','"+pis+"','"+endereco+"','"+admissao+"','"+salario,+"','"+login+"','"+senha+"','"+desconto+"')");
             fechar();
         }
@@ -101,9 +101,9 @@ namespace SetorRH
             banco.comandar(
                 "update funcionarios set"
                     +" nome = '"+nome+"',"
-                    +" cargo = '"+cargo+"',"
-                    +" setor = '"+setor+"',"
-                    +" classe = '"+classe+"',"
+                    +" idcargofk = '"+cargo+"',"
+                    +" idsetorfk = '"+setor+"',"
+                    +" idclassefk = '"+classe+"',"
                     +" email = '"+email+"',"
                     +" tel = '"+tel+"',"
                     +" rg = '"+rg+"',"
