@@ -85,7 +85,7 @@ create table setores(
 insert into setores values
 (1, 'Administrativo'),  (2, 'Recursos Humanos'),
 (3, 'Financeiro'),      (4, 'Vendas'),
-(5, 'Logística'),       (6, 'TI'),
+(5, 'Logístico'),       (6, 'TI'),
 (7, 'Limpeza');
 
 create table cargos(
