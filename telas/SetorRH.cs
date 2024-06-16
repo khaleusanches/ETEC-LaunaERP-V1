@@ -40,14 +40,14 @@ namespace SetorRH
             );
             return dt;
         }
-        public DataTable ExbFuncionariosID() 
+        public DataTable ExbFuncionariosSetor() 
         {
             dt = banco.consultar(
             "select"
+                +" setores.nome as 'Setor',"
                 +" funcionarios.nome as 'Nome',"
                 +" id as 'ID',"
                 +" cargos.nome as 'Cargo',"
-                +" setores.nome as 'Setor',"
                 +" classe as 'Classe'"
                 +" email as 'Email',"
                 +" tel as 'Telefone', pis as 'PIS',"
@@ -57,7 +57,27 @@ namespace SetorRH
             +" from funcionarios"
             +" inner join cargos on idcargofk = cargo.id"
             +" inner join setores on idsetorfk = setores.id"
-            +" order by funcionario.id"
+            +" order by setores.nome"
+            );
+            return dt;
+        }
+        public DataTable ExbFuncionariosSetorSelecionado(int i) 
+        {
+            dt = banco.consultar(
+            "select"
+                +" funcionarios.nome as 'Nome',"
+                +" id as 'ID',"
+                +" cargos.nome as 'Cargo',"
+                +" classe as 'Classe'"
+                +" email as 'Email',"
+                +" tel as 'Telefone', pis as 'PIS',"
+                +" admissao as 'Data de admissão',"
+                +" salario as 'Salário',"
+                +" desconto as 'Desconto de Funcionário'"
+            +" from funcionarios"
+            +" inner join cargos on idcargofk = cargo.id"
+            +" inner join setores on idsetorfk = setores.id"
+            +" and idsetorfk = '"+i+"'"
             );
             return dt;
         }
