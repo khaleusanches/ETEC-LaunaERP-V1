@@ -82,7 +82,7 @@ namespace SetorRH
             return dt;
         }
         //-----------------------------
-        public void CadFuncionario(string nome, string cargo, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, string classe, int admissao, int salario, string login, string senha, string desconto)
+        public void CadFuncionario(string nome, string cargo, string classe, string setor, string email, string tel, string rg, int nascimento, string pis, string endereco, int admissao, int salario, string login, string senha, string desconto)
         {
             banco.comandar(
             "insert into funcionarios(nome, idcargofk, idsetorfk, idclassefk, email, tel, rg, nascimento, pis, endereco, admissao, salario, login, senha, desconto) "+
@@ -178,7 +178,7 @@ namespace SetorRH
             fechar(); }
         }
         
-        public void AtuCargo(int id, string nome, string descricap) 
+        public void AtuCargo(int id, string nome, string descricao) 
         {
             banco.comandar( "update cargos set id = '"+id+"', nome = '"+nome+"', descricao = '"+descricao+"' where id = '"+i+"'");
             fechar();
