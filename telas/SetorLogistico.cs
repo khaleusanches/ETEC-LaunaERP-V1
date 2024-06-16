@@ -72,16 +72,16 @@ namespace SetorLogistico
             fechar();
         }
       //--------------------------------------------------------------------
-        public void CadProduto(string nome, string valor, string categoria, string descricao, string disponivel)
+        public void CadProduto(string nome, string valor, string categoria, string descricao)
         {
           banco.comandar(
             "insert into produtos(nome, valor, idcategoriafk, descricao, disponivel) "
-            + "values ('"+nome+"', '"+valor+"', '"+categoria+"', '"+" '"+descricao+"', '"+disponivel+"')");
+            + "values ('"+nome+"', '"+valor+"', '"+categoria+"', '"+" '"+descricao+"', 's')");
             fechar();
         }   
-        public void AtuProduto(int i, string nome, string valor, string categoria, string descricao, string disponivel)
+        public void AtuProduto(int i, string nome, string valor, string categoria, string descricao)
         {
-            banco.comandar("update produtos set nome = '"+nome+"', valor = '"+valor+"', idcategoriafk = '"+categoria+"', descricao = '"+descricao+"', disponivel = '"+disponivel+"' where id = '"+i+"'");
+            banco.comandar("update produtos set nome = '"+nome+"', valor = '"+valor+"', idcategoriafk = '"+categoria+"', descricao = '"+descricao+"' where id = '"+i+"'");
             fechar();
         }
         public void DelProduto(int i)
