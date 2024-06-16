@@ -89,7 +89,7 @@ namespace SetorFinanceiro
         }
         //-----------------------------
         // AtuFornecedor e AtuTel ficam no mesmo lugar mas executam duas funções por ser 2 tabelas diferentes
-        public void AtuFornecedor(string nome, steing razaosocial, string cnpj, string email, string endereco) 
+        public void AtuFornecedor(int i, string nome, steing razaosocial, string cnpj, string email, string endereco) 
         {
             banco.comandar(
                 "update fornecedores set"
