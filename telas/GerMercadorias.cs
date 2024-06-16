@@ -13,8 +13,7 @@ using TL_Estoque;
 
 namespace GerMercadorias
 {
-    public class GerMercadorias 
-    //Métodos diferentes de exibir os produtos e os lotes no estoque
+    public class GerMercadorias//Métodos diferentes de exibir os produtos e os lotes no estoque
     {
         DataTable dt = new DataTable();
         Banco banco = new Banco();
@@ -26,12 +25,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" id as 'ID',"
-                +" nome as 'Produto',"
-                +" valor as 'Valor unitário (R$)',"
-                +" estoque as 'Quantidade em estoque',"
-                +" descricao as 'Descrição',"
-                +" disponivel as 'A venda'"
+                +" id as 'ID',"                        +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)',"    +" estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição',"          +" disponivel as 'A venda'"
             +" from produtos"
             +" order by id"
             );
@@ -43,12 +39,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" nome as 'Produto',"
-                +" id as 'ID',"
-                +" valor as 'Valor unitário (R$)',"
-                +" estoque as 'Quantidade em estoque',"
-                +" descricao as 'Descrição',"
-                +" disponivel as 'A venda'"
+                +" nome as 'Produto',"                +" id as 'ID',"
+                +" valor as 'Valor unitário (R$)',"   +" estoque as 'Quantidade em estoque',"
+                +" descricao as 'Descrição',"         +" disponivel as 'A venda'"
             +" from produtos"
             +" order by nome"
             );
@@ -60,10 +53,8 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" id as 'ID',"
-                +" nome as 'Produto',"
-                +" valor as 'Valor unitário (R$)',"
-                +" estoque as 'Quantidade em estoque',"
+                +" id as 'ID',"                        +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)',"    +" estoque as 'Quantidade em estoque',"
                 +" descricao as 'Descrição'"
             +" from produtos"
             +" where disponivel = 's'"
@@ -77,10 +68,8 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" nome as 'Produto',"
-                +" id as 'ID',"
-                +" valor as 'Valor unitário (R$)',"
-                +" estoque as 'Quantidade em estoque',"
+                +" nome as 'Produto',"                +" id as 'ID',"
+                +" valor as 'Valor unitário (R$)',"   +" estoque as 'Quantidade em estoque',"
                 +" descricao as 'Descrição'"
             +" from produtos"
             +" where disponivel = 's'"
@@ -94,12 +83,10 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" id as 'ID',"
-                +" nome as 'Produto',"
-                +" valor as 'Valor unitário (R$)'"
-                +" estoque as 'Quantidade em estoque',"
+                +" id as 'ID',"                      +" nome as 'Produto',"
+                +" valor as 'Valor unitário (R$)'"   +" estoque as 'Quantidade em estoque',"
                 +" descricao as 'Descrição'"
-                +" from produtos"
+            +" from produtos"
             +" where disponivel = 'n'"
             +" order by id"
             );
@@ -111,32 +98,28 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"
-                +" nome as 'Produto',"
-                +" id as 'ID',"
-                +" valor as 'Valor unitário (R$)'"
-                +" estoque as 'Quantidade em estoque',"
+                +" nome as 'Produto',"                +" id as 'ID',"
+                +" valor as 'Valor unitário (R$)'"    +" estoque as 'Quantidade em estoque',"
                 +" descricao as 'Descrição'"
-                +" from produtos"
+            +" from produtos"
             +" where disponivel = 'n'"
             +" order by nome"
             );
             return dt;
         }
 //------------------------------------------------------------
+//------------------------------------------------------------
         public DataTable ExbLotes() 
         //Lista todos os lotes cadastrados organizando pelo nome do produto no lote
         {
             dt = banco.consultar(
             "select"  
-                +" lotes.id as 'ID Lote',"
-                +" nome as 'Produto',"         
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"         
+                +" aquisicao as 'Data de aquisição',"     +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"       +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
-            +" from lotes'"
-            +" inner join produtos"
+                +" from lotes'"
+                +" inner join produtos
             +" on idprodutofk = produtos.id"
             +" order by nome"
             );
@@ -148,12 +131,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"  
-                +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição',"
-                +" nome as 'Produto',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"            +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"   +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos on"
@@ -163,20 +143,15 @@ namespace GerMercadorias
             return dt;
         }  
 
-        
         public DataTable ExbLotesRecentes() 
         //Lista todos os lotes cadastrados organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
             "select"  
-                +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição',"
-                +" nome as 'Produto',"           
-                +" lotes.id as 'ID Lote',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
-                +" disponivel as 'Produto a venda'"
+                +" lotes.id as 'ID Lote',"                +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                    +" lotes.id as 'ID Lote',"
+                +" fabricacao as 'Data de fabricação',"   +" validade as 'Data de validade',"
+                +" notafiscal as 'Nota Fiscal',"          +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos"
             +" on idprodutofk = produtos.id"
@@ -190,12 +165,9 @@ namespace GerMercadorias
         {
             dt = banco.consultar(
             "select"     
-                +" lotes.id as 'ID Lote',"
-                +" fabricacao as 'Data de fabricação',"
-                +" nome as 'Produto',"           
-                +" aquisicao as 'Data de aquisição',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos on"
@@ -204,19 +176,15 @@ namespace GerMercadorias
             );
             return dt;
         }  
-
     
         public DataTable ExbFabricadosRecentes() 
         //Lista todos os lotes cadastrados organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
             "select"     
-                +" lotes.id as 'ID Lote',"
-                +" fabricacao as 'Data de fabricação',"
-                +" nome as 'Produto',"      
-                +" aquisicao as 'Data de aquisição',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos"
@@ -226,17 +194,14 @@ namespace GerMercadorias
             return dt;
         }
         
-        public DataTable ExbValidadeProximos() 
+        public DataTable ExbValidadeProxima() 
         //Lista todos os lotes cadastrados organizando pela data de validade (proximos para distantes)
         {
             dt = banco.consultar(
             "select"     
-                +" lotes.id as 'ID Lote',"
-                +" validade as 'Data de validade',"
-                +" nome as 'Produto',"           
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"                  +" validade as 'Data de validade',"
+                +" nome as 'Produto',"                      +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"     +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos on"
@@ -246,170 +211,274 @@ namespace GerMercadorias
             return dt;
         }  
 
-        
-        public DataTable ExbValidadePDistantes() 
+        public DataTable ExbValidadeDistante() 
         //Lista todos os lotes cadastrados organizando pela data de validade (distante para próximos)
         {
             dt = banco.consultar(
             "select"    
-                +" lotes.id as 'ID Lote',"
-                +" nome as 'Produto',"       
-                +" validade as 'Data de validade',"
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" notafiscal as 'Nota Fiscal',"
-                +" disponivel as 'Produto a venda'"
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"       
+                +" validade as 'Data de validade',"       +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"   +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"       
             +" from lotes'"
             +" inner join produtos"
             +" on idprodutofk = produtos.id"
             +" order by validade desc"
             );
             return dt;
-        }
-
         //------------------------------------------------------------------
-        public DataTable ExbSelecionado(int i) 
-        //Lista os lotes do produto selecionado
+        //------------------------------------------------------------------
+        public DataTable ExbLotesProdSel() 
+        //Lista lotes do produto selecionado organizando pelo nome do produto no lote
         {
             dt = banco.consultar(
-            "select"        
-                +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+            "select"  
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"         
+                +" aquisicao as 'Data de aquisição',"     +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"       +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
-            +" from lotes'"
-            +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+                +" from lotes'"
+                +" inner join produtos
+            +" on idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by nome"
             );
             return dt;
         }  
         
-        public DataTable ExbSelecionadoAntigos(int i) 
-        //Lista os lotes do produto selecionado organizando pela data de aquisição (antigo para recente)
+        public DataTable ExbLotesAntigosProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de aquisição (antigo para recentes)
         {
             dt = banco.consultar(
-            "select"     
-                +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+            "select"  
+                +" lotes.id as 'ID Lote',"            +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"   +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
-            +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" inner join produtos on"
+            +" idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by aquisicao"
             );
             return dt;
         }  
 
-        
-        public DataTable ExbSelecionadoRecentes(int i) 
-        //Lista os lotes do produto selecionado organizando pela data de aquisição (recentes para antigos)
+        public DataTable ExbLotesRecentesProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
-            "select"
-                +" lotes.id as 'ID Lote',"
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
-                +" disponivel as 'Produto a venda'"
+            "select"  
+                +" lotes.id as 'ID Lote',"                +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                    +" lotes.id as 'ID Lote',"
+                +" fabricacao as 'Data de fabricação',"   +" validade as 'Data de validade',"
+                +" notafiscal as 'Nota Fiscal',"          +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" on idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by aquisicao desc"
             );
             return dt;
         }
         
-        public DataTable ExbSelecionadoFabrAntigos() 
-        //Lista os lotes do produto selecionado organizando pela data de fabricacao (antigo para recente)
+        public DataTable ExbFabricadosAntigosProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de fabricacao (antigos para recentes)
         {
             dt = banco.consultar(
-            "select"
-                +" lotes.id as 'ID Lote',"
-                +" fabricacao as 'Data de fabricação',"
-                +" aquisicao as 'Data de aquisição',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+            "select"     
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
-            +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" inner join produtos on"
+            +" idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by fabricacao"
             );
             return dt;
         }  
     
-        public DataTable ExbSelecionadoFabrRecentes() 
-        //Lista os lotes do produto selecionado organizando pela data de aquisição (recente para antigo)
+        public DataTable ExbFabricadosRecentesProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de aquisição (recentes para antigos)
         {
             dt = banco.consultar(
-            "select"
-                +" lotes.id as 'ID Lote',"
-                +" fabricacao as 'Data de fabricação',"
-                +" aquisicao as 'Data de aquisição',"
-                +" validade as 'Data de validade',"
-                +" notafiscal as 'Nota Fiscal',"
+            "select"     
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" on idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by fabricacao desc"
             );
             return dt;
         }
         
-        
-        public DataTable ExbValidadeProximos() 
-        //Lista  os lotes do produto selecionado organizando pela data de validade (proximos para distantes)
+        public DataTable ExbValidadeProximaProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de validade (proximos para distantes)
         {
             dt = banco.consultar(
             "select"     
-                +" lotes.id as 'ID Lote',"
-                +" validade as 'Data de validade'," 
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" notafiscal as 'Nota Fiscal',"
+                +" lotes.id as 'ID Lote',"                  +" validade as 'Data de validade',"
+                +" nome as 'Produto',"                      +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"     +" notafiscal as 'Nota Fiscal',"
                 +" disponivel as 'Produto a venda'"
             +" from lotes'"
             +" inner join produtos on"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by validade"
             );
             return dt;
         }  
 
-        
-        public DataTable ExbValidadePDistantes() 
-        //Lista  os lotes do produto selecionado organizando pela data de validade (distante para próximos)
+        public DataTable ExbValidadeDistanteProdSel() 
+        //Lista lotes do produto selecionado organizando pela data de validade (distante para próximos)
         {
             dt = banco.consultar(
             "select"    
-                +" lotes.id as 'ID Lote',"  
-                +" validade as 'Data de validade',"
-                +" aquisicao as 'Data de aquisição',"
-                +" fabricacao as 'Data de fabricação',"
-                +" notafiscal as 'Nota Fiscal',"
-                +" disponivel as 'Produto a venda'"
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"       
+                +" validade as 'Data de validade',"       +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"   +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"       
             +" from lotes'"
             +" inner join produtos"
-            +" on idprodutofk = '"+i+"'"
-            +" and idprodutofk = produtos.id"
+            +" on idprodutofk = produtos.id"
+            +" and idprodutofk = '"+i+"'"
             +" order by validade desc"
             );
             return dt;
+        //------------------------------------------------------------------
+        //------------------------------------------------------------------
+        public DataTable ExbLotesFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pelo nome do produto no lote
+        {
+            dt = banco.consultar(
+            "select"  
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"         
+                +" aquisicao as 'Data de aquisição',"     +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"       +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"
+                +" from lotes'"
+                +" inner join produtos
+            +" on idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by nome"
+            );
+            return dt;
+        }  
+        
+        public DataTable ExbLotesAntigosFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de aquisição (antigo para recentes)
+        {
+            dt = banco.consultar(
+            "select"  
+                +" lotes.id as 'ID Lote',"            +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                +" fabricacao as 'Data de fabricação',"
+                +" validade as 'Data de validade',"   +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"
+            +" from lotes'"
+            +" inner join produtos on"
+            +" idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by aquisicao"
+            );
+            return dt;
+        }  
+
+        public DataTable ExbLotesRecentesFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de aquisição (recentes para antigos)
+        {
+            dt = banco.consultar(
+            "select"  
+                +" lotes.id as 'ID Lote',"                +" aquisicao as 'Data de aquisição',"
+                +" nome as 'Produto',"                    +" lotes.id as 'ID Lote',"
+                +" fabricacao as 'Data de fabricação',"   +" validade as 'Data de validade',"
+                +" notafiscal as 'Nota Fiscal',"          +" disponivel as 'Produto a venda'"
+            +" from lotes'"
+            +" inner join produtos"
+            +" on idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by aquisicao desc"
+            );
+            return dt;
         }
+        
+        public DataTable ExbFabricadosAntigosFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de fabricacao (antigos para recentes)
+        {
+            dt = banco.consultar(
+            "select"     
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"
+            +" from lotes'"
+            +" inner join produtos on"
+            +" idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by fabricacao"
+            );
+            return dt;
+        }  
+    
+        public DataTable ExbFabricadosRecentesFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de aquisição (recentes para antigos)
+        {
+            dt = banco.consultar(
+            "select"     
+                +" lotes.id as 'ID Lote',"             +" fabricacao as 'Data de fabricação',"
+                +" nome as 'Produto',"                 +" aquisicao as 'Data de aquisição',"
+                +" validade as 'Data de validade',"    +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"
+            +" from lotes'"
+            +" inner join produtos"
+            +" on idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by fabricacao desc"
+            );
+            return dt;
+        }
+        
+        public DataTable ExbValidadeProximaFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de validade (proximos para distantes)
+        {
+            dt = banco.consultar(
+            "select"     
+                +" lotes.id as 'ID Lote',"                  +" validade as 'Data de validade',"
+                +" nome as 'Produto',"                      +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"     +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"
+            +" from lotes'"
+            +" inner join produtos on"
+            +" idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by validade"
+            );
+            return dt;
+        }  
+
+        public DataTable ExbValidadeDistanteFornSel() 
+        //Lista lotes do fornecedor selecionado organizando pela data de validade (distante para próximos)
+        {
+            dt = banco.consultar(
+            "select"    
+                +" lotes.id as 'ID Lote',"                +" nome as 'Produto',"       
+                +" validade as 'Data de validade',"       +" aquisicao as 'Data de aquisição',"
+                +" fabricacao as 'Data de fabricação',"   +" notafiscal as 'Nota Fiscal',"
+                +" disponivel as 'Produto a venda'"       
+            +" from lotes'"
+            +" inner join produtos"
+            +" on idprodutofk = produtos.id"
+            +" and idfornecedor = '"+i+"'"
+            +" order by validade desc"
+            );
+            return dt;
+        //------------------------------------------------------------------
         //------------------------------------------------------------------
 
  
