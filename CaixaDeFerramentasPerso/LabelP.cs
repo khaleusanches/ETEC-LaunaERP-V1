@@ -35,6 +35,7 @@ namespace CaixaDeFerramentasPerso
                 {
                     this.Left = (tela.Width / 2) - width - 25;
                 }
+                BackColor = Color.Transparent;
                 tela.Controls.Add(this);
             }
         }

@@ -52,6 +52,15 @@ namespace Telas
             btnAbas[4].Click += Btn_Bancos_Click;
             btnAbas[5] = new ButtonP(true, 200, 35, 110, 485, "EMPRÉSTIMOS", null);
             btnAbas[5].Click += Btn_Emprestimos_Click;
+
+            btnAbas[6] = new ButtonP(true, 200, 35, 145, 485, "DespesasVariadas", null);
+            btnAbas[6].Click += Btn_Despesas_Click;
+            btnAbas[7] = new ButtonP(true, 200, 35, 180, 485, "Pagar Contas", null);
+            btnAbas[7].Click += Btn_Pagar_Click;
+
+            btnAbas[8] = new ButtonP(true, 90, 50, 25, 600, "DRE", this);
+            btnAbas[8].BringToFront();
+            btnAbas[8].Click += Btn_DRE_Click;
         }
         #endregion
     }

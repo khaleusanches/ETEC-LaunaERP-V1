@@ -55,11 +55,14 @@
     <Compile Include="BancoContasBancarias.cs" />
     <Compile Include="BancoCargosSetores.cs" />
     <Compile Include="BancoCatalogoProdutos.cs" />
+    <Compile Include="BancoDespesas.cs" />
+    <Compile Include="BancoDRE.cs" />
     <Compile Include="BancoEmprestimos.cs" />
     <Compile Include="BancoFornecedores.cs" />
     <Compile Include="BancoFuncionarios.cs" />
     <Compile Include="BancoLotes.cs" />
     <Compile Include="BancoOperacoes.cs" />
+    <Compile Include="BancoPagarContas.cs" />
     <Compile Include="BancoUsuarios.cs" />
     <Compile Include="Caixas.cs">
       <SubType>Form</SubType>
