@@ -20,7 +20,7 @@ create table telefones(
   obs varchar (48)
 );
 
---------------------------------------------
+-----------------------------------------
 
 create table produtos(
   id int unique not null auto_increment,    primary key(id),
