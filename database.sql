@@ -179,12 +179,20 @@ insert into clientes(nome, cpf, desconto) values
 ('Cliente3', '3XXXXXXXXXX', '0.9'),
 ('Cliente4', '4XXXXXXXXXX', '0.9');
 --------------------------------------------
+create table metodos (
+  id int unique not null auto_increment,    primary key(id),
+  metodo varchar(80) unique not null;
+);
+insert into metodos(metodo) values
+  ('Dinheiro'), ('Cartão de Débito'), ('Cartão de Crédito'), ('Transferência'), ('Pix');
+---------------------------
 create table operacoes(
   id int unique not null auto_increment,    primary key(id),
   idclientefk int,                          foreign key (idclientefk) references clientes (id),
   idfuncionariofk int,                      foreign key (idfuncionariofk) references funcionarios (id),
-  total decimal(10,2),                      check (total>0),
-  troco decimal(10,2),                      check (troco>0),
+  total decimal(10,2),
+  troco decimal(10,2),
+  idmetodofk int,                           foreign key (idmetodofk) references metodos (metodo),
   desconto decimal(10,2),
   avaliacao int,
   dataehora datetime
