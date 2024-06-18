@@ -24,7 +24,6 @@ namespace Telas
             abas[0] = new BancoFuncionarios();
             abas[1] = new BancoCargosSetores();
             abas[2] = new BancoUsuarios();
-            funcionario.FuncionariosSetor(this);
         }
         private void Btn_funcionarios_Click(object sender, EventArgs e)
         {
@@ -41,12 +40,11 @@ namespace Telas
 
         private void Abrir_Fechar_Abas(int nmr)
         {
-            funcionario.desativarFuncionariosSetor();
             if (btnAbas[nmr].atv == false)
             {
                 abas[nmr].fechar(this);
                 btnAbas[nmr].atv = true;
-                funcionario.b.Enabled = true;
+                btnAbas[nmr].desselecionado();
             }
             else { 
                 for (int i = 0; i < btnAbas.Length; i++)
@@ -55,11 +53,12 @@ namespace Telas
                     {
                         abas[i].fechar(this);
                         btnAbas[i].atv = true;
+                        btnAbas[i].desselecionado();
                     }
                 }
                 btnAbas[nmr].atv = false;
                 abas[nmr].exibir(this);
-                funcionario.b.Enabled = false;
+                btnAbas[nmr].selecionado();
             }
             
         }

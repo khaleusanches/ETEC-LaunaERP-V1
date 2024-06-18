@@ -18,6 +18,7 @@ namespace CaixaDeFerramentasPerso
                 this.Top = top;
                 this.Left = left;
                 tela.Controls.Add(this);
+                BringToFront();
             }
         }
         public string pegarData()

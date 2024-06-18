@@ -23,20 +23,22 @@ namespace CaixaDeFerramentasPerso
         /// <param name="tela"></param>
         public LabelP(int width, int height, int top, int left, string texto, Form tela)
         {
+
+            this.Font = new Font("Arial", 10);
+            Text = texto;
+            Width = width;
+            Height = height;
+            Top = top;
+            Left = left;
+            if (left == 999)
+            {
+                this.Left = (tela.Width / 2) - width - 25;
+            }
+            BackColor = Color.White;
             if (tela != null)
             {
-                this.Font = new Font("Arial", 10);
-                Text = texto;
-                Width = width;
-                Height = height;
-                Top = top;
-                Left = left;
-                if (left == 999)
-                {
-                    this.Left = (tela.Width / 2) - width - 25;
-                }
-                BackColor = Color.Transparent;
                 tela.Controls.Add(this);
+                BringToFront();
             }
         }
     }

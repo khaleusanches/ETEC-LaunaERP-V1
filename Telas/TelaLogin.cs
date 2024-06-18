@@ -21,7 +21,6 @@ namespace Telas
             InitializeComponent();
             btnLogar.Enabled = true;
         }
-
         private void lbUsername_Click(object sender, EventArgs e)
         {
         }
@@ -88,7 +87,7 @@ namespace Telas
             else
             {
                 func = new Gerente("1", "teste", "teste", "Logistica");
-                new TelaPrincipalCaixa(func).ShowDialog();
+                new TelaSetorRH(func).ShowDialog();
             }
         }
     }

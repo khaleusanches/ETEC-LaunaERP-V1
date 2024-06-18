@@ -28,6 +28,7 @@ namespace CaixaDeFerramentasPerso
                 }
                 this.DropDownStyle = ComboBoxStyle.DropDownList;
                 tela.Controls.Add(this);
+                BringToFront();
             }
             
         }

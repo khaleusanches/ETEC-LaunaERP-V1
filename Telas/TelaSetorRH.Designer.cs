@@ -1,5 +1,8 @@
 ﻿using CaixaDeFerramentasPerso;
 using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace Telas
 {
@@ -31,15 +34,23 @@ namespace Telas
         /// </summary>
         private void InitializeComponent()
         {
+            Bitmap hamburguer = new Bitmap("teste.png");
+
             this.components = new System.ComponentModel.Container();
             this.Text = "TelaSetorRH";
-            btnAbas[0] = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Funcionarios", this);
+            ButtonP menuBurguer = new ButtonP(true, 20, 20, 15, 25, "", this);
+            menuBurguer.BackgroundImage = hamburguer;
+            menuBurguer.BackgroundImageLayout = ImageLayout.Stretch;
+            menuBurguer.BringToFront();
+
+            btnAbas[0] = new ButtonP(true, 100, 25, 12, 125, "Funcionários", this);
             btnAbas[0].BringToFront();
             btnAbas[0].Click += Btn_funcionarios_Click;
-            btnAbas[1] = new ButtonP(true, 90, 50, 25, 125, "Gerenciar Cargos & Setores", this);
+
+            btnAbas[1] = new ButtonP(true, 115, 25, 12, 235, "Cargos | Setores", this);
             btnAbas[1].BringToFront();
             btnAbas[1].Click += new System.EventHandler(Btn_Cargos_Setores_Click);
-            btnAbas[2] = new ButtonP(true, 90, 50, 25, 225, "Gerenciar Usuarios", this);
+            btnAbas[2] = new ButtonP(true, 90, 25, 12, 360, "Usuarios", this);
             btnAbas[2].BringToFront();
             btnAbas[2].Click += new System.EventHandler(Btn_Usuarios_Click);
             if(funcionario.cargo != "Gerente")
@@ -47,8 +58,6 @@ namespace Telas
                 Controls.Remove(btnAbas[2]);
             }
         }
-
-        
         #endregion
     }
 }

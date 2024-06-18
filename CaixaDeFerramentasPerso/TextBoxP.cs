@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace CaixaDeFerramentasPerso
 {
@@ -23,23 +24,25 @@ namespace CaixaDeFerramentasPerso
         /// <param name="tela"></param>
         public TextBoxP(int width, int height, int top, int left, string text, int maxTam, Form tela)
         {
+
+            this.Font = new Font("Arial", 10);
+            this.Width = width;
+            this.Height = height;
+            this.Top = top;
+            if (left == 999)
+            {
+                this.Left = (tela.Width / 2) - width - 25;
+            }
+            else
+            {
+                this.Left = left;
+            }
+            this.Text = text;
+            this.MaxLength = maxTam;
             if (tela != null)
             {
-                this.Font = new Font("Arial", 10);
-                this.Width = width;
-                this.Height = height;
-                this.Top = top;
-                if (left == 999)
-                {
-                    this.Left = (tela.Width/2) - width - 25;
-                }
-                else
-                {
-                    this.Left = left;
-                }
-                this.Text = text;
-                this.MaxLength = maxTam;
                 tela.Controls.Add(this);
+                BringToFront();
             }
         }
     }
