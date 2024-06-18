@@ -17,3 +17,13 @@ C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.dll
 C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.pdb
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.dll
 C:\Users\khaleu\Desktop\Etec\DS\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.pdb
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\bin\Debug\Logica.dll
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\bin\Debug\Logica.pdb
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.dll
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.pdb
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\bin\Debug\MySql.Data.xml
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.Up2Date
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.dll
+C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.pdb

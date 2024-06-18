@@ -3,6 +3,7 @@ using Logica;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Telas
 {
     public class BancoUsuarios : InterfacesBanco
     {
-        LabelP[] labelPs = new LabelP[4];
+        LabelP[] labelPs = new LabelP[5];
         TextBoxP[] textBoxPs = new TextBoxP[3];
         ComboBoxP listUsers;
         DataTable dt;
@@ -22,23 +23,23 @@ namespace Telas
         private ButtonP btnAdd;
         private DataGridViewP dgv;
         private ButtonP btnRemove;
-
-        public BancoUsuarios() 
-        {
-        
-        }
+        private PanelP[] container = new PanelP[3];
         public override void exibir(TelaPadrao tela)
         {
-            labelPs[0] = new LabelP(30, 20, 125, 25, "ID:", tela);
-            labelPs[1] = new LabelP(200, 20, 125, 90, "ID Funcionario:", tela);
-            labelPs[2] = new LabelP(100, 20, 180, 25, "Login:", tela);
-            labelPs[3] = new LabelP(100, 20, 235, 25, "Senha:", tela);
+            tela.Width = 625;
+            container[0] = new PanelP(210, 210, 85, 25, Color.White, tela);
+            labelPs[4] = new LabelP(100, 20, 100, 45, "USUÁRIOS", tela);
+            labelPs[4].Font = new Font("Arial", 12, FontStyle.Bold);
+            labelPs[0] = new LabelP(30, 20, 125, 45, "ID:", tela);
+            labelPs[1] = new LabelP(120, 20, 125, 90, "ID Funcionario:", tela);
+            labelPs[2] = new LabelP(100, 20, 180, 45, "Login:", tela);
+            labelPs[3] = new LabelP(100, 20, 235, 45, "Senha:", tela);
 
-            textBoxPs[0] = new TextBoxP(30, 25, 145, 25, "", 9, tela);
+            textBoxPs[0] = new TextBoxP(30, 25, 145, 45, "", 9, tela);
             textBoxPs[0].Enabled = false;
             listUsers = new ComboBoxP(100, 25, 145, 90, teste(), tela);
-            textBoxPs[1] = new TextBoxP(150, 25, 200, 25, "", 9, tela);
-            textBoxPs[2] = new TextBoxP(150, 25, 255, 25, "", 9, tela);
+            textBoxPs[1] = new TextBoxP(150, 25, 200, 45, "", 64, tela);
+            textBoxPs[2] = new TextBoxP(150, 25, 255, 45, "", 64, tela);
 
             foreach (TextBoxP t in textBoxPs)
             {
@@ -46,14 +47,14 @@ namespace Telas
             }
             listUsers.SelectedIndexChanged += new EventHandler(BancoUsuarios_TextChanged);
 
-            btnAdd = new ButtonP(true, 120, 50, 295, 25, "Cadastrar usuário", tela);
+            btnAdd = new ButtonP(true, 100, 40, 320, 25, "Cadastrar usuário", tela);
             btnAdd.Enabled = false;
             btnAdd.Click += new EventHandler(Btn_add_Click);
 
-            btnRemove = new ButtonP(true, 120, 50, 295, 150, "Remover usuário", tela);
+            btnRemove = new ButtonP(true, 100, 40, 320, 140, "Remover usuário", tela);
             btnRemove.Click += new EventHandler(BtnRemove_Click);
 
-            dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela("select id, id_func, login from usuarios"), tela);
+            dgv = new DataGridViewP(300, 400, 85, 300, dao.lerTabela("select id, id_func, login from usuarios"), tela);
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)

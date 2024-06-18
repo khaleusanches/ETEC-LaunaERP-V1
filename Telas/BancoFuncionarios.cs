@@ -29,11 +29,11 @@ namespace Telas
         DateTimePickerP dtNascimento, dtAdmissao;
 
         PanelP[] container = new PanelP[2];
-
+        PanelP teste;
         string[] lista = new string[1] {""};
         public override void exibir(TelaPadrao tela)
         {
-            
+            tela.Width = 1200;
             container[0] = new PanelP(490, 165, 85, 20, Color.White, tela);
             labelPs[12] = new LabelP(250, 20, 100, 35, "DADOS PESSOAIS", tela);
             labelPs[12].Font = new Font("Arial", 12, FontStyle.Bold);
@@ -103,7 +103,7 @@ namespace Telas
             +" inner join setores on idsetorfk = setores.id"
             +" order by funcionarios.nome"), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
-            PanelP teste = new PanelP(920, 540, 85, 540, Color.FromArgb(99, 133, 199), tela);
+            teste = new PanelP(920, 540, 85, 540, Color.FromArgb(99, 133, 199), tela);
         }
 
         public string[] pegaIDLista(string dado, string tabela, string where)
@@ -180,6 +180,11 @@ namespace Telas
             tela.Controls.Remove(cbCargos);
             tela.Controls.Remove(cbSetores);
             tela.Controls.Remove(btnAdd);
+            tela.Controls.Remove(teste);
+            tela.Controls.Remove(dtNascimento);
+            tela.Controls.Remove(dtAdmissao);
+            tela.Controls.Remove(container[0]);
+            tela.Controls.Remove(container[1]);
             if (funcionario.cargo == "Gerente")
             {
                 tela.Controls.Remove(btnUpdate);
@@ -188,7 +193,7 @@ namespace Telas
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            string sql = $"insert into funcionarios (nome, email, tel, endereco, rg, nascimento, admissao, pis, salario, idsetorfk, idcargofk) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}', '{textBoxP[6].Text}', '{textBoxP[7].Text}', '{textBoxP[8].Text}', '{textBoxP[9].Text}', {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")}, {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")})";
+            string sql = $"insert into funcionarios (nome, email, tel, endereco, rg, nascimento, admissao, pis, salario, idsetorfk, idcargofk) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}', '{dtNascimento.pegarData()}', '{dtNascimento.pegarData()}', '{textBoxP[6].Text}', '{textBoxP[7].Text}', {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")}, {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")})";
             dao.updateInsertDelete(sql);
             dgv.DataSource = dao.lerTabela("select"
                 + " funcionarios.nome as 'Nome',"

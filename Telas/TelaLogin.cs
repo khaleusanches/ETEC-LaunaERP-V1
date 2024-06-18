@@ -87,7 +87,7 @@ namespace Telas
             else
             {
                 func = new Gerente("1", "teste", "teste", "Logistica");
-                new TelaSetorRH(func).ShowDialog();
+                new TelaSetorFinanceiro(func).ShowDialog();
             }
         }
     }

@@ -26,9 +26,10 @@ namespace Telas
             Controls.Add(barra);
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
+            MaximizeBox = true;
             this.AutoScaleMode = AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1500, 720);
+            this.ClientSize = new System.Drawing.Size(1200, 720);
+
             FormBorderStyle = FormBorderStyle.None;
 
         }

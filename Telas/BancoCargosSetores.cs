@@ -15,6 +15,7 @@ namespace Telas
     {
         private LabelP[] labelPs = new LabelP[7];
         private TextBoxP[] textBoxPs = new TextBoxP[5];
+        private PanelP[] container = new PanelP[4];
 
         private DataGridViewP dgvCargo;
         private DataGridViewP dgvSetores;
@@ -25,23 +26,26 @@ namespace Telas
         private ButtonP btnAddSetor;
         private ButtonP btnRemoveSetor;
 
+        TelaPadrao tela;
+
         Panel painel = new Panel();
 
         private DAO dao = new DAO();
         public override void exibir(TelaPadrao tela)
         {
-            inicializarCargos(tela);
+            this.tela = tela;
+            inicializarCargos();
             // DIVISÃO
             //
             
-            painel.Width = 1000;
+            painel.Width = 1200;
             painel.Height = 5;
             painel.Top = 375;
             painel.BackColor = Color.DarkBlue;
             tela.Controls.Add( painel );
             //
             //
-            inicializarSetores(tela);
+            this.inicializarSetores();
         }
 
         //
@@ -49,22 +53,24 @@ namespace Telas
         //CARGOS
         //
         //
-        public void inicializarCargos(TelaPadrao tela)
+        public void inicializarCargos()
         {
             //LABEL CARGO
             //
-            labelPs[0] = new LabelP(100, 20, 125, 25, "CARGOS", tela);
-            labelPs[0].Font = new Font("Arial", 14);
-            labelPs[1] = new LabelP(30, 20, 165, 25, "ID:", tela);
-            labelPs[2] = new LabelP(50, 20, 165, 115, "Nome:", tela);
-            labelPs[3] = new LabelP(75, 20, 165, 250, "Descrição:", tela);
+            tela.Width = 1200;
+            container[0] = new PanelP(490, 200, 85, 20, Color.White, tela);
+            labelPs[0] = new LabelP(100, 20, 100, 25, "CARGOS", tela);
+            labelPs[0].Font = new Font("Arial", 12, FontStyle.Bold);
+            labelPs[1] = new LabelP(30, 20, 135, 25, "ID:", tela);
+            labelPs[2] = new LabelP(50, 20, 135, 115, "Nome:", tela);
+            labelPs[3] = new LabelP(75, 20, 135, 250, "Descrição:", tela);
             //
             // TEXTBOX CARGO
             //
-            textBoxPs[0] = new TextBoxP(50, 25, 160, 60, "", 3, tela);
+            textBoxPs[0] = new TextBoxP(50, 25, 135, 60, "", 3, tela);
             textBoxPs[0].Enabled = false;
-            textBoxPs[1] = new TextBoxP(75, 25, 160, 165, "", 75, tela);
-            textBoxPs[2] = new TextBoxP(150, 100, 160, 330, "", 300, tela);
+            textBoxPs[1] = new TextBoxP(75, 25, 135, 165, "", 75, tela);
+            textBoxPs[2] = new TextBoxP(150, 100, 135, 330, "", 300, tela);
             textBoxPs[2].Multiline = true;
 
             textBoxPs[1].TextChanged += new EventHandler(BancoCargos_TextChanged);
@@ -72,16 +78,18 @@ namespace Telas
             //
             // DATA GRID VIEW CARGO
             //
-            dgvCargo = new DataGridViewP(400, 200, 160, 495, dao.lerTabela("select * from cargos"), tela);
+            
+            dgvCargo = new DataGridViewP(200, 200, 85, 700, dao.lerTabela("select * from cargos"), tela);
             dgvCargo.SelectionChanged += DgvCargo_SelectionChanged;
+            container[2] = new PanelP(220, 210, 85, 690, Color.FromArgb(99, 133, 199), tela);
             //
             // BOTÕES CARGO
             //
-            btnAddCargo = new ButtonP(true, 150, 50, 225, 25, "Adicionar Cargo", tela);
+            btnAddCargo = new ButtonP(true, 150, 50, 295, 25, "Adicionar Cargo", tela);
             btnAddCargo.Enabled = false;
             btnAddCargo.Click += new EventHandler(BtnAddCargo_Click);
 
-            btnRemoveCargo = new ButtonP(true, 150, 50, 295, 25, "Remover Cargo", tela);
+            btnRemoveCargo = new ButtonP(true, 150, 50, 295, 185, "Remover Cargo", tela);
             btnRemoveCargo.Click += new EventHandler(BtnRemoveCargo_Click);
         }
 
@@ -128,26 +136,29 @@ namespace Telas
         //SETORES
         //
         //
-        public void inicializarSetores(TelaPadrao tela)
+        public void inicializarSetores()
         {
             //
             //LABEL STORES
             //
-            labelPs[4] = new LabelP(150, 20, 400, 25, "SETORES", tela);
-            labelPs[4].Font = new Font("Arial", 14);
-            labelPs[5] = new LabelP(30, 20, 440, 25, "ID:", tela);
-            labelPs[6] = new LabelP(50, 20, 440, 115, "Nome:", tela);
+            container[1] = new PanelP(350, 100, 405, 20, Color.White, tela);
+            labelPs[4] = new LabelP(150, 20, 415, 25, "SETORES", tela);
+            labelPs[4].Font = new Font("Arial", 12, FontStyle.Bold);
+            labelPs[5] = new LabelP(30, 20, 460, 25, "ID:", tela);
+            labelPs[6] = new LabelP(50, 20, 460, 115, "Nome:", tela);
             //
             // TEXTBOX SETORES
             //
-            textBoxPs[3] = new TextBoxP(50, 25, 435, 60, "", 9, tela);
+            textBoxPs[3] = new TextBoxP(50, 25, 460, 60, "", 9, tela);
             textBoxPs[3].Enabled = false;
-            textBoxPs[4] = new TextBoxP(75, 25, 435, 165, "", 9, tela);
+            textBoxPs[4] = new TextBoxP(75, 25, 460, 165, "", 9, tela);
             textBoxPs[4].TextChanged += new EventHandler(BancoSetores_TextChanged);
             //
             // DATA GRID VIEW SETORES
             //
-            dgvSetores = new DataGridViewP(400, 200, 435, 495, dao.lerTabela("select * from setores"), tela);
+            
+            dgvSetores = new DataGridViewP(200, 200, 405, 700, dao.lerTabela("select * from setores"), tela);
+            container[3] = new PanelP(220, 210, 405, 690, Color.FromArgb(99, 133, 199), tela);
             //
             // BOTÕES CARGO
             //
@@ -155,7 +166,7 @@ namespace Telas
             btnAddSetor.Enabled = false;
             btnAddSetor.Click += new EventHandler(BtnAddSetor_Click);
 
-            btnRemoveSetor = new ButtonP(true, 150, 50, 595, 25, "Remover Setor", tela);
+            btnRemoveSetor = new ButtonP(true, 150, 50, 525, 185, "Remover Setor", tela);
             btnRemoveSetor.Click += new EventHandler(BtnRemoveSetor_Click);
 
         }
@@ -196,6 +207,10 @@ namespace Telas
             foreach(TextBoxP textBoxP in textBoxPs)
             {
                 tela.Controls.Remove(textBoxP);
+            }
+            foreach(PanelP panelPs in container)
+            {
+                tela.Controls.Remove(panelPs);
             }
             tela.Controls.Remove(dgvCargo);
             
