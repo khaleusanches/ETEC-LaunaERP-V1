@@ -92,12 +92,11 @@ namespace Telas
 
         private void Abrir_Fechar_Abas(int nmr)
         {
-            funcionario.desativarFuncionariosSetor();
             if (btnAbas[nmr].atv == false)
             {
                 abas[nmr].fechar(this);
                 btnAbas[nmr].atv = true;
-                funcionario.b.Enabled = true;
+                btnAbas[nmr].desselecionado();
             }
             else
             {
@@ -107,11 +106,12 @@ namespace Telas
                     {
                         abas[i].fechar(this);
                         btnAbas[i].atv = true;
+                        btnAbas[i].desselecionado();
                     }
                 }
                 btnAbas[nmr].atv = false;
                 abas[nmr].exibir(this);
-                funcionario.b.Enabled = false;
+                btnAbas[nmr].selecionado();
             }
 
         }

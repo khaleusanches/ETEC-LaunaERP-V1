@@ -53,3 +53,5 @@ C:\Users\Alep\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.csproj.CoreCompileI
 C:\Users\Alep\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.csproj.Up2Date
 C:\Users\Alep\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.exe
 C:\Users\Alep\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.atualizarFuncionarios.resources
+C:\Users\Tecnico\Desktop\atividade1CSharp\Telas\obj\Debug\Telas.TelaPadrao.resources

@@ -27,3 +27,5 @@ C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.CoreCompil
 C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.dll
 C:\Users\Alep\Desktop\atividade1CSharp\Logica\obj\Debug\Logica.pdb
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.dll
+C:\Users\Tecnico\Desktop\atividade1CSharp\Logica\bin\Debug\CaixaDeFerramentasPerso.pdb
