@@ -32,33 +32,33 @@ namespace Telas
         {
             this.components = new System.ComponentModel.Container();
             this.Text = "TelaSetorFinanceiro";
-            btnAbas[0] = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Fornecedores", this);
+            btnAbas[0] = new ButtonP(true, 100, 25, 12, 125, "Fornecedores", this);
             btnAbas[0].BringToFront();
             btnAbas[0].Click += Btn_Fornecedores_Click;
-            btnAbas[1] = new ButtonP(true, 90, 50, 25, 140, "Gerenciar Pedidos", this);
+            btnAbas[1] = new ButtonP(true, 100, 25, 12, 225, "Pedidos", this);
             btnAbas[1].BringToFront();
             btnAbas[1].Click += Btn_Pedidos_Click;
-            btnAbas[2] = new ButtonP(true, 90, 50, 25, 255, "Estoque", this);
+            btnAbas[2] = new ButtonP(true, 100, 25, 12, 325, "Estoque", this);
             btnAbas[2].BringToFront();
             btnAbas[2].Click += Btn_Estoque_Click;
-            btnAbas[3] = new ButtonP(true, 90, 50, 25, 370, "Operações dos caixa", this);
+            btnAbas[3] = new ButtonP(true, 100, 25, 12, 425, "Operações", this);
             btnAbas[3].BringToFront();
             btnAbas[3].Click += Btn_Operacoes_Click;
-            btnContas = new ButtonP(true, 90, 50, 25, 485, "Contas", this);
+            btnContas = new ButtonP(true, 100, 25, 12, 525, "Contas", this);
             btnContas.BringToFront();
             btnContas.Click += Btn_Menu_Click;
 
-            btnAbas[4] = new ButtonP(true, 200, 35, 75, 485, "Contas Bancarias", null);
+            btnAbas[4] = new ButtonP(true, 200, 35, 37, 525, "Contas Bancarias", null);
             btnAbas[4].Click += Btn_Bancos_Click;
-            btnAbas[5] = new ButtonP(true, 200, 35, 110, 485, "EMPRÉSTIMOS", null);
+            btnAbas[5] = new ButtonP(true, 200, 35, 72, 525, "EMPRÉSTIMOS", null);
             btnAbas[5].Click += Btn_Emprestimos_Click;
 
-            btnAbas[6] = new ButtonP(true, 200, 35, 145, 485, "DespesasVariadas", null);
+            btnAbas[6] = new ButtonP(true, 200, 35, 107, 525, "DespesasVariadas", null);
             btnAbas[6].Click += Btn_Despesas_Click;
-            btnAbas[7] = new ButtonP(true, 200, 35, 180, 485, "Pagar Contas", null);
+            btnAbas[7] = new ButtonP(true, 200, 35, 142, 525, "Pagar Contas", null);
             btnAbas[7].Click += Btn_Pagar_Click;
 
-            btnAbas[8] = new ButtonP(true, 90, 50, 25, 600, "DRE", this);
+            btnAbas[8] = new ButtonP(true, 100, 25, 12, 625, "DRE", this);
             btnAbas[8].BringToFront();
             btnAbas[8].Click += Btn_DRE_Click;
         }

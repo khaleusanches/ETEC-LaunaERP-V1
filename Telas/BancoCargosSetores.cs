@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using CaixaDeFerramentasPerso;
 using Logica;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -35,16 +36,11 @@ namespace Telas
         {
             this.tela = tela;
             inicializarCargos();
-            // DIVISÃO
-            //
-            
             painel.Width = 1200;
             painel.Height = 5;
             painel.Top = 375;
             painel.BackColor = Color.DarkBlue;
             tela.Controls.Add( painel );
-            //
-            //
             this.inicializarSetores();
         }
 
@@ -55,8 +51,6 @@ namespace Telas
         //
         public void inicializarCargos()
         {
-            //LABEL CARGO
-            //
             tela.Width = 1200;
             container[0] = new PanelP(490, 200, 85, 20, Color.White, tela);
             labelPs[0] = new LabelP(100, 20, 100, 25, "CARGOS", tela);
@@ -64,8 +58,6 @@ namespace Telas
             labelPs[1] = new LabelP(30, 20, 135, 25, "ID:", tela);
             labelPs[2] = new LabelP(50, 20, 135, 115, "Nome:", tela);
             labelPs[3] = new LabelP(75, 20, 135, 250, "Descrição:", tela);
-            //
-            // TEXTBOX CARGO
             //
             textBoxPs[0] = new TextBoxP(50, 25, 135, 60, "", 3, tela);
             textBoxPs[0].Enabled = false;
@@ -75,20 +67,16 @@ namespace Telas
 
             textBoxPs[1].TextChanged += new EventHandler(BancoCargos_TextChanged);
             textBoxPs[2].TextChanged += new EventHandler(BancoCargos_TextChanged);
+
             //
-            // DATA GRID VIEW CARGO
-            //
-            
-            dgvCargo = new DataGridViewP(200, 200, 85, 700, dao.lerTabela("select * from cargos"), tela);
+            dgvCargo = new DataGridViewP(310, 200, 85, 700, dao.lerTabela("select * from cargos"), tela);
             dgvCargo.SelectionChanged += DgvCargo_SelectionChanged;
-            container[2] = new PanelP(220, 210, 85, 690, Color.FromArgb(99, 133, 199), tela);
+            container[2] = new PanelP(310, 200, 85, 690, Color.FromArgb(99, 133, 199), tela);
             //
-            // BOTÕES CARGO
-            //
+
             btnAddCargo = new ButtonP(true, 150, 50, 295, 25, "Adicionar Cargo", tela);
             btnAddCargo.Enabled = false;
             btnAddCargo.Click += new EventHandler(BtnAddCargo_Click);
-
             btnRemoveCargo = new ButtonP(true, 150, 50, 295, 185, "Remover Cargo", tela);
             btnRemoveCargo.Click += new EventHandler(BtnRemoveCargo_Click);
         }
@@ -139,29 +127,23 @@ namespace Telas
         public void inicializarSetores()
         {
             //
-            //LABEL STORES
-            //
             container[1] = new PanelP(350, 100, 405, 20, Color.White, tela);
             labelPs[4] = new LabelP(150, 20, 415, 25, "SETORES", tela);
             labelPs[4].Font = new Font("Arial", 12, FontStyle.Bold);
             labelPs[5] = new LabelP(30, 20, 460, 25, "ID:", tela);
             labelPs[6] = new LabelP(50, 20, 460, 115, "Nome:", tela);
-            //
-            // TEXTBOX SETORES
+
             //
             textBoxPs[3] = new TextBoxP(50, 25, 460, 60, "", 9, tela);
             textBoxPs[3].Enabled = false;
             textBoxPs[4] = new TextBoxP(75, 25, 460, 165, "", 9, tela);
             textBoxPs[4].TextChanged += new EventHandler(BancoSetores_TextChanged);
+
             //
-            // DATA GRID VIEW SETORES
+            dgvSetores = new DataGridViewP(215, 200, 405, 700, dao.lerTabela("select * from setores"), tela);
+            container[3] = new PanelP(215, 200, 405, 690, Color.FromArgb(99, 133, 199), tela);
             //
-            
-            dgvSetores = new DataGridViewP(200, 200, 405, 700, dao.lerTabela("select * from setores"), tela);
-            container[3] = new PanelP(220, 210, 405, 690, Color.FromArgb(99, 133, 199), tela);
-            //
-            // BOTÕES CARGO
-            //
+
             btnAddSetor = new ButtonP(true, 150, 50, 525, 25, "Adicionar Setor", tela);
             btnAddSetor.Enabled = false;
             btnAddSetor.Click += new EventHandler(BtnAddSetor_Click);

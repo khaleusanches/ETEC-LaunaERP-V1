@@ -1,6 +1,8 @@
 ﻿using CaixaDeFerramentasPerso;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Telas
 {
@@ -48,19 +50,19 @@ namespace Telas
 
             labelPs[2] = new LabelP(30, 20, 130, 35, "ID:", this);
             labelPs[3] = new LabelP(100, 20, 130, 75, "Nome:", this);
+
             labelPs[4] = new LabelP(100, 20, 130, 175, "Email:", this);
             labelPs[5] = new LabelP(100, 20, 130, 335, "Tel:", this);
             labelPs[6] = new LabelP(100, 20, 195, 35, "CEP:", this);
 
-            textBoxPs[0] = new TextBoxP(30, 25, 150, 35, "", 9, this);
+            textBoxPs[0] = new TextBoxP(30, 25, 150, 35, "", 9, this, true);
             textBoxPs[0].Enabled = false;
-
             textBoxPs[1] = new TextBoxP(90, 25, 150, 75, "", 64, this);
             textBoxPs[1].Enabled = false;
 
             textBoxPs[2] = new TextBoxP(150, 25, 150, 175, "", 100, this);
-            textBoxPs[3] = new TextBoxP(150, 25, 150, 335, "", 11, this);
-            textBoxPs[4] = new TextBoxP(150, 25, 215, 35, "", 200, this);
+            textBoxPs[3] = new TextBoxP(150, 25, 150, 335, "", 11, this, true);
+            textBoxPs[4] = new TextBoxP(150, 25, 215, 35, "", 200, this, true);
 
 
             container[1] = new PanelP(490, 165, 315, 20, Color.White, this);
@@ -71,12 +73,26 @@ namespace Telas
             labelPs[11] = new LabelP(100, 20, 360, 175, "Cargo:", this);
             labelPs[12] = new LabelP(100, 20, 360, 325, "Setores:", this);
 
+           
 
-            textBoxPs[5] = new TextBoxP(110, 25, 380, 35, "", 9, this);
+            textBoxPs[5] = new TextBoxP(110, 25, 380, 35, "", 9, this, true);
             cbCargos = new ComboBoxP(100, 25, 380, 175, listCargo, this);
             cbSetores = new ComboBoxP(130, 25, 380, 325, listSetores, this);
             this.ClientSize = new System.Drawing.Size(530, 720);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            btnUpdate = new ButtonP(true, 100, 40, 510, 215, "ATUALIZAR", this);
+            btnUpdate.Click += new EventHandler(Btn_Concluir_Click);
+            btnUpdate.Enabled = false;
+
+
+            cbCargos.SelectedIndexChanged += new EventHandler(atualizarFuncionarios_TextChanged);
+            cbSetores.SelectedIndexChanged += new EventHandler(atualizarFuncionarios_TextChanged);
+            foreach (TextBoxP t in textBoxPs)
+            {
+                t.TextChanged += new EventHandler(atualizarFuncionarios_TextChanged);
+            }
+            
         }
 
         #endregion
@@ -86,5 +102,6 @@ namespace Telas
         private ComboBoxP cbSetores;
         private ButtonP btnConcluir;
         private TextBoxP[] textBoxPs = new TextBoxP[6];
+        private ButtonP btnUpdate;
     }
 }

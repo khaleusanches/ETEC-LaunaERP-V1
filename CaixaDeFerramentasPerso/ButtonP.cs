@@ -14,6 +14,8 @@ namespace CaixaDeFerramentasPerso
         public bool atv;
         Form tela;
         public Panel p = new Panel();
+        private bool brilho;
+
         /// <summary>
         /// Adiciona um objeto Button da biblioteca Forms na tela desejada, left = 999 para centralizar.
         /// Button é uma classe da biblioteca Forms utilizada para criar botões.
@@ -32,6 +34,7 @@ namespace CaixaDeFerramentasPerso
             Height = height;
             Top = top;
             Left = left;
+
             Text = txt;
             this.tela = tela;
             FlatStyle = FlatStyle.Flat;
@@ -67,22 +70,23 @@ namespace CaixaDeFerramentasPerso
         }
         public void selecionado()
         {
-            p.Size = new Size(Width, 3);
-            p.Location = new Point(Location.X, Location.Y + Height + 13);
-            p.BackColor = Color.FromArgb(164, 190, 243);
-            p.Visible = true;
-            Font = new Font("Arial", 9, FontStyle.Bold);
-            ForeColor = Color.FromArgb(99, 133, 199);
-            tela.Controls.Add(p);
-            p.BringToFront();
+            if (brilho == true) { 
+                p.Size = new Size(Width, 3);
+                p.Location = new Point(Location.X, Location.Y + Height + 13);
+                p.BackColor = Color.FromArgb(164, 190, 243);
+                p.Visible = true;
+                Font = new Font("Arial", 9, FontStyle.Bold);
+                ForeColor = Color.FromArgb(99, 133, 199);
+                p.Visible = true;
+                p.BringToFront();
+            }
         }
         public void desselecionado()
         {
             ForeColor = Color.Black;
             Font = new Font("Arial", 9, FontStyle.Regular);
             ForeColor = Color.Black;
-
-            tela.Controls.Remove(p);
+            p.Visible = false;
         }
 
         public ButtonBorderStyle ButtonBorderStyle { get; }

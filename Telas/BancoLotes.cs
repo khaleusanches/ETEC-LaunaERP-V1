@@ -19,6 +19,7 @@ namespace Telas
         ButtonP btnAdd;
         ButtonP btnUpdate;
         DateTimePickerP[] dateTimePickerPs = new DateTimePickerP[4];
+        DateTime dataatual = DateTime.Now;
         string sqlTabela = "select lotes.id as 'Lote ID', lotes.notafiscal as 'Nota Fiscal', fornecedores.nome as 'Fornecedor Nome', produtos.nome as 'Produto', lotes.quantidade as 'Quantidade', lotes.valor, lotes.recebido, lotes.dataRecebimento as 'Data do Recebimento', lotes.fabricacao as 'Data de Fabricação', lotes.validade as 'Data de Validade' from lotes\r\ninner join fornecedores on lotes.idfornecedorfk = fornecedores.id\r\ninner join produtos on lotes.idprodutofk = produtos.id;";
         string[] lista;
         private string sql;
@@ -52,6 +53,8 @@ namespace Telas
             dateTimePickerPs[1] = new DateTimePickerP(235, 25, 420, 25, tela);
             dateTimePickerPs[2] = new DateTimePickerP(235, 25, 485, 25, tela);
             dateTimePickerPs[3] = new DateTimePickerP(235, 25, 550, 25, tela);
+            dateTimePickerPs[0].MaxDate = dataatual;
+            dateTimePickerPs[3].MinDate = dataatual;
 
             btnAdd = new ButtonP(true, 100, 50, 585, 25, "Cadastrar Lote", tela);
             btnAdd.Enabled = false;
@@ -68,10 +71,12 @@ namespace Telas
             {
                 comboBoxP.SelectedIndexChanged += new EventHandler(BancoLote_TextChanged);
             }
-            for (int i = 1; i < dateTimePickerPs.Length; i++)
+            for (int i = 0; i < dateTimePickerPs.Length; i++)
             {
                 dateTimePickerPs[i].Enabled = false;
+                dateTimePickerPs[i].ValueChanged += new EventHandler(BancoLote_TextChanged);
             }
+            dateTimePickerPs[0].Enabled = true;
             dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela(sqlTabela), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
         }
@@ -121,6 +126,8 @@ namespace Telas
                     dateTimePickerPs[i].Enabled = false;
                 }
             }
+            dateTimePickerPs[1].MinDate = dateTimePickerPs[0].Value;
+            dateTimePickerPs[2].MaxDate = dateTimePickerPs[0].Value;
         }
         private void Btn_add_Click(object sender, EventArgs e)
         {

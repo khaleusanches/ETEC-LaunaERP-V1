@@ -16,6 +16,7 @@ namespace Telas
     {
         InterfacesBanco[] abas = new InterfacesBanco[3];
         ButtonP[] btnAbas = new ButtonP[3];
+        
 
         public TelaSetorRH(Funcionario funcionario) : base (funcionario)
         {

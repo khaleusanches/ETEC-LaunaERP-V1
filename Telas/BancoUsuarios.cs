@@ -23,23 +23,23 @@ namespace Telas
         private ButtonP btnAdd;
         private DataGridViewP dgv;
         private ButtonP btnRemove;
-        private PanelP[] container = new PanelP[3];
+        private PanelP container;
         public override void exibir(TelaPadrao tela)
         {
-            tela.Width = 625;
-            container[0] = new PanelP(210, 210, 85, 25, Color.White, tela);
-            labelPs[4] = new LabelP(100, 20, 100, 45, "USUÁRIOS", tela);
-            labelPs[4].Font = new Font("Arial", 12, FontStyle.Bold);
-            labelPs[0] = new LabelP(30, 20, 125, 45, "ID:", tela);
-            labelPs[1] = new LabelP(120, 20, 125, 90, "ID Funcionario:", tela);
-            labelPs[2] = new LabelP(100, 20, 180, 45, "Login:", tela);
-            labelPs[3] = new LabelP(100, 20, 235, 45, "Senha:", tela);
 
-            textBoxPs[0] = new TextBoxP(30, 25, 145, 45, "", 9, tela);
+            container = new PanelP(215, 210, 85, 320, Color.White, tela);
+            labelPs[4] = new LabelP(100, 20, 100, 340, "USUÁRIOS", tela);
+            labelPs[4].Font = new Font("Arial", 12, FontStyle.Bold);
+            labelPs[0] = new LabelP(30, 20, 125, 340, "ID:", tela);
+            labelPs[1] = new LabelP(120, 20, 125, 385, "ID Funcionario:", tela);
+            labelPs[2] = new LabelP(100, 20, 180, 340, "Login:", tela);
+            labelPs[3] = new LabelP(100, 20, 235, 340, "Senha:", tela);
+
+            textBoxPs[0] = new TextBoxP(30, 25, 145, 340, "", 9, tela);
             textBoxPs[0].Enabled = false;
-            listUsers = new ComboBoxP(100, 25, 145, 90, teste(), tela);
-            textBoxPs[1] = new TextBoxP(150, 25, 200, 45, "", 64, tela);
-            textBoxPs[2] = new TextBoxP(150, 25, 255, 45, "", 64, tela);
+            listUsers = new ComboBoxP(100, 25, 145, 385, teste(), tela);
+            textBoxPs[1] = new TextBoxP(150, 25, 200, 340, "", 64, tela);
+            textBoxPs[2] = new TextBoxP(150, 25, 255, 340, "", 64, tela);
 
             foreach (TextBoxP t in textBoxPs)
             {
@@ -47,14 +47,14 @@ namespace Telas
             }
             listUsers.SelectedIndexChanged += new EventHandler(BancoUsuarios_TextChanged);
 
-            btnAdd = new ButtonP(true, 100, 40, 320, 25, "Cadastrar usuário", tela);
+            btnAdd = new ButtonP(true, 100, 40, 320, 320, "Cadastrar usuário", tela);
             btnAdd.Enabled = false;
             btnAdd.Click += new EventHandler(Btn_add_Click);
 
-            btnRemove = new ButtonP(true, 100, 40, 320, 140, "Remover usuário", tela);
+            btnRemove = new ButtonP(true, 100, 40, 320, 435, "Remover usuário", tela);
             btnRemove.Click += new EventHandler(BtnRemove_Click);
 
-            dgv = new DataGridViewP(300, 400, 85, 300, dao.lerTabela("select id, id_func, login from usuarios"), tela);
+            dgv = new DataGridViewP(300, 400, 85, 590, dao.lerTabela("select id, id_func, login from usuarios"), tela);
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Telas
             {
                 int i = int.Parse(dgv.SelectedCells[0].Value.ToString());
                 dao.updateInsertDelete($"DELETE from usuarios where id={i}");
-                dgv.DataSource = dao.lerTabela("select * from usuarios");
+                dgv.DataSource = dao.lerTabela("select id, id_func, login from usuarios");
             }
         }
 
@@ -88,7 +88,7 @@ namespace Telas
 
         public string[] teste()
         {
-            string sql = "select id from funcionarios";
+            string sql = "select id from funcionarios where demissao is null";
             dt = dao.lerTabela(sql);
             string[] listaUsuarios = new string[dt.Rows.Count];
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -108,6 +108,7 @@ namespace Telas
             {
                 tela.Controls.Remove(textBoxP);
             }
+            tela.Controls.Remove(container);
             tela.Controls.Remove(dgv);
             tela.Controls.Remove(btnAdd);
             tela.Controls.Remove(btnRemove);

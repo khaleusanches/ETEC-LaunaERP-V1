@@ -23,6 +23,7 @@ namespace CaixaDeFerramentasPerso
                 ReadOnly = true;
                 BackgroundColor = Color.White;
                 BorderStyle = BorderStyle.None;
+                Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
                 DataGridViewCellStyle a = new DataGridViewCellStyle();
                 a.BackColor = Color.FromArgb(99, 133, 199);
                 a.ForeColor = Color.Black;

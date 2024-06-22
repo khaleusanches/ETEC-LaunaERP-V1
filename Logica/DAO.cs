@@ -53,5 +53,22 @@ namespace Logica
             dr.Close();
             return dt;
         }
+
+        public string pegaID(string dado, string tabela, string where)
+        {
+            string sql = $"select {dado} from {tabela} {where}";
+            DataTable data = new DataTable();
+            data = lerTabela(sql);
+            string id;
+            if (data.Rows.Count >= 1)
+            {
+                id = data.Rows[0].ItemArray[0].ToString();
+            }
+            else
+            {
+                id = "";
+            }
+            return id;
+        }
     }
 }

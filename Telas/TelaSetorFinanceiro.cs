@@ -79,7 +79,11 @@ namespace Telas
                 btnContasMenu[1] = btnAbas[5];
                 btnContasMenu[2] = btnAbas[6];
                 btnContasMenu[3] = btnAbas[7];
-                menu = new MenuP(btnContasMenu, Color.LightSlateGray, 75, 485, 200, 60, this);
+                btnContasMenu[0].atv = false;
+                btnContasMenu[1].atv = false;
+                btnContasMenu[2].atv = false;
+                btnContasMenu[3].atv = false;
+                menu = new MenuP(btnContasMenu, Color.LightSlateGray, 37, 525, 200, 60, this);
                 menu.exibir(this);
                 btnContas.atv = false;
             }

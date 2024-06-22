@@ -22,7 +22,7 @@ namespace CaixaDeFerramentasPerso
         /// <param name="text"></param>
         /// <param name="maxTam"></param>
         /// <param name="tela"></param>
-        public TextBoxP(int width, int height, int top, int left, string text, int maxTam, Form tela)
+        public TextBoxP(int width, int height, int top, int left, string text, int maxTam, Form tela, bool isNum = false)
         {
 
             this.Font = new Font("Arial", 10);
@@ -43,6 +43,28 @@ namespace CaixaDeFerramentasPerso
             {
                 tela.Controls.Add(this);
                 BringToFront();
+            }
+            if(isNum == true)
+            {
+                this.KeyPress += is_Numeric_KeyPress;
+            }
+        }
+
+        private void is_Numeric_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                if (e.KeyChar == '.')
+                { 
+                    if(this.Text.IndexOf('.') > -1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else
+                {
+                    e.Handled = true;
+                }
             }
         }
     }

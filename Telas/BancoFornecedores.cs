@@ -2,6 +2,7 @@
 using Logica;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -9,40 +10,45 @@ namespace Telas
 {
     internal class BancoFornecedores : InterfacesBanco
     {
-        LabelP[] labelPs = new LabelP[5];
-        TextBoxP[] textBoxP = new TextBoxP[5];
+        LabelP[] labelPs = new LabelP[7];
+        TextBoxP[] textBoxP = new TextBoxP[6];
         DataTable dt;
         DAO dao = new DAO();
         DataGridViewP dgv;
         ButtonP btnAdd;
         ButtonP btnUpdate;
         Funcionario funcionario;
-
+        PanelP container;
         ButtonP btnRemove;
 
         public override void exibir(TelaPadrao tela)
         {
-            labelPs[0] = new LabelP(30, 20, 125, 25, "ID:", tela);
-            labelPs[1] = new LabelP(100, 20, 125, 90, "Nome:", tela);
-            labelPs[2] = new LabelP(100, 20, 180, 25, "CNPJ:", tela);
-            labelPs[3] = new LabelP(100, 20, 235, 25, "Endereco:", tela);
-            labelPs[4] = new LabelP(100, 20, 290, 25, "Email:", tela);
+            container = new PanelP(300, 325, 85, 20, Color.White, tela);
+            labelPs[0] = new LabelP(150, 20, 100, 35, "FORNECEDORES", tela);
+            labelPs[0].Font = new Font("Arial", 12, FontStyle.Bold);
+            labelPs[1] = new LabelP(30, 20, 135, 35, "ID:", tela);
+            labelPs[2] = new LabelP(100, 20, 135, 100, "Nome:", tela);
+            labelPs[3] = new LabelP(100, 20, 190, 35, "Razão Social:", tela);
+            labelPs[4] = new LabelP(100, 20, 245, 35, "CNPJ:", tela);
+            labelPs[5] = new LabelP(100, 20, 300, 35, "Endereco:", tela);
+            labelPs[6] = new LabelP(100, 20, 355, 35, "Email:", tela);
 
-            textBoxP[0] = new TextBoxP(30, 25, 145, 25, "", 9, tela);
+            textBoxP[0] = new TextBoxP(30, 25, 155, 35, "", 9, tela, true);
             textBoxP[0].Enabled = false;
-            textBoxP[1] = new TextBoxP(50, 25, 145, 90, "", 64, tela);
-            textBoxP[2] = new TextBoxP(150, 25, 200, 25, "", 18, tela);
-            textBoxP[3] = new TextBoxP(150, 25, 255, 25, "", 200, tela);
-            textBoxP[4] = new TextBoxP(150, 25, 310, 25, "", 80, tela);
+            textBoxP[1] = new TextBoxP(150, 25, 155, 100, "", 90, tela);
+            textBoxP[2] = new TextBoxP(150, 25, 210, 35, "", 255, tela, true);
+            textBoxP[3] = new TextBoxP(150, 25, 265, 35, "", 14, tela, true);
+            textBoxP[4] = new TextBoxP(150, 25, 320, 35, "", 255, tela);
+            textBoxP[5] = new TextBoxP(150, 25, 375, 35, "", 80, tela);
 
             
-            btnAdd = new ButtonP(true, 100, 50, 360, 25, "Cadastrar Fornecedor", tela);
+            btnAdd = new ButtonP(true, 100, 50, 420, 45, "Cadastrar Fornecedor", tela);
             btnAdd.Enabled = false;
             btnAdd.Click += new EventHandler(Btn_add_Click);
-            btnRemove = new ButtonP(true, 120, 50, 360, 150, "Remover Fornecedor", tela);
+            btnRemove = new ButtonP(true, 120, 50, 420, 170, "Remover Fornecedor", tela);
             btnRemove.Enabled = false;
             btnRemove.Click += new EventHandler(Btn_Remove_Click);
-            btnUpdate = new ButtonP(true, 100, 25, 435, 87, "Atualizar Fornecedor", tela);
+            btnUpdate = new ButtonP(true, 100, 25, 495, 107, "Atualizar Fornecedor", tela);
             btnUpdate.Click += new EventHandler(Btn_Update_Click);
             btnUpdate.Enabled = false;
 
@@ -52,13 +58,13 @@ namespace Telas
             }
 
 
-            dgv = new DataGridViewP(680, 500, 125, 285, dao.lerTabela("select * from Fornecedores"), tela);
+            dgv = new DataGridViewP(590, 500, 85, 350, dao.lerTabela("select * from Fornecedores"), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
         }
 
         private void Btn_Update_Click(object sender, EventArgs e)
         {
-            string sql = $"UPDATE fornecedores set nome = '{textBoxP[1].Text}', cnpj = '{textBoxP[2].Text}', endereco = '{textBoxP[3].Text}', email = '{textBoxP[4].Text}' where id = '{textBoxP[0].Text}';";
+            string sql = $"UPDATE fornecedores set nome = '{textBoxP[1].Text}', razaosocial = '{textBoxP[2].Text}', cnpj = '{textBoxP[3].Text}', endereco = '{textBoxP[4].Text}', email = '{textBoxP[5].Text}' where id = '{textBoxP[0].Text}';";
             dao.updateInsertDelete(sql);
             dgv.DataSource = dao.lerTabela("select * from fornecedores");
         }
@@ -76,16 +82,8 @@ namespace Telas
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            int i = dgv.SelectedRows[0].Index;
-            string sql = $"insert into fornecedores (nome, cnpj, endereco, email) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}')";
-            if (textBoxP[1].Text != dgv[0, i].Value.ToString() && textBoxP[2].Text != dgv[2, i].Value.ToString() && textBoxP[4].Text != dgv[4, i].Value.ToString())
-            {
-                dao.updateInsertDelete(sql);
-            }
-            else
-            {
-                MessageBox.Show("ja esta inserido na tabela");
-            }
+            string sql = $"insert into fornecedores (nome, razaosocial, cnpj, endereco, email) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}')";
+            dao.updateInsertDelete(sql);
             dgv.DataSource = dao.lerTabela("select * from fornecedores");
         }
 
@@ -100,7 +98,7 @@ namespace Telas
         }
         private void Dgv_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv.Rows.Count > 1 && dgv.SelectedCells.Count > 0)
+            if (dgv.Rows.Count > 1 && dgv.SelectedCells.Count > 0 && dgv.SelectedRows[0].Index < dgv.Rows.Count-1)
             {
                 int i = dgv.SelectedRows[0].Index;
                 for (int j = 0; j < textBoxP.Length; j++)
@@ -109,6 +107,11 @@ namespace Telas
                 }
                 btnRemove.Enabled = true;
                 btnUpdate.Enabled = true;
+            }
+            else
+            {
+                btnRemove.Enabled = false;
+                btnUpdate.Enabled = false;
             }
         }
 
@@ -128,6 +131,7 @@ namespace Telas
             tela.Controls.Remove(btnAdd);
             tela.Controls.Remove(btnUpdate);
             tela.Controls.Remove(btnRemove);
+            tela.Controls.Remove(container);
         }
     }
 }

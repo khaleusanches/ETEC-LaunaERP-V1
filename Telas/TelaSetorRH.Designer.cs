@@ -34,14 +34,9 @@ namespace Telas
         /// </summary>
         private void InitializeComponent()
         {
-            Bitmap hamburguer = new Bitmap("teste.png");
 
             this.components = new System.ComponentModel.Container();
             this.Text = "TelaSetorRH";
-            ButtonP menuBurguer = new ButtonP(true, 20, 20, 15, 25, "", this);
-            menuBurguer.BackgroundImage = hamburguer;
-            menuBurguer.BackgroundImageLayout = ImageLayout.Stretch;
-            menuBurguer.BringToFront();
 
             btnAbas[0] = new ButtonP(true, 100, 25, 12, 125, "Funcionários", this);
             btnAbas[0].BringToFront();
