@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Logica
 {
@@ -69,6 +70,27 @@ namespace Logica
                 id = "";
             }
             return id;
+        }
+
+        public string[] pegaIDLista(string dado, string tabela, string where)
+        {
+            string sql = $"select {dado} from {tabela} {where}";
+            DataTable data = new DataTable();
+            string[] lista;
+            data = lerTabela(sql);
+            if (data.Rows.Count >= 1)
+            {
+                lista = new string[data.Rows.Count];
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    lista[i] = data.Rows[i].ItemArray[0].ToString();
+                }
+            }
+            else
+            {
+                lista = new string[1] { "" };
+            }
+            return lista;
         }
     }
 }

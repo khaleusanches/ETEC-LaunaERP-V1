@@ -19,6 +19,7 @@ namespace Telas
         ButtonP btnUpdate;
         Funcionario funcionario;
         PanelP container;
+        PanelP container2;
         ButtonP btnRemove;
 
         public override void exibir(TelaPadrao tela)
@@ -36,7 +37,7 @@ namespace Telas
             textBoxP[0] = new TextBoxP(30, 25, 155, 35, "", 9, tela, true);
             textBoxP[0].Enabled = false;
             textBoxP[1] = new TextBoxP(150, 25, 155, 100, "", 90, tela);
-            textBoxP[2] = new TextBoxP(150, 25, 210, 35, "", 255, tela, true);
+            textBoxP[2] = new TextBoxP(150, 25, 210, 35, "", 255, tela);
             textBoxP[3] = new TextBoxP(150, 25, 265, 35, "", 14, tela, true);
             textBoxP[4] = new TextBoxP(150, 25, 320, 35, "", 255, tela);
             textBoxP[5] = new TextBoxP(150, 25, 375, 35, "", 80, tela);
@@ -58,8 +59,9 @@ namespace Telas
             }
 
 
-            dgv = new DataGridViewP(590, 500, 85, 350, dao.lerTabela("select * from Fornecedores"), tela);
+            dgv = new DataGridViewP(590, 500, 85, 400, dao.lerTabela("select * from Fornecedores"), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
+            container2 = new PanelP(610, 520, 85, 390, Color.FromArgb(99, 133, 199), tela);
         }
 
         private void Btn_Update_Click(object sender, EventArgs e)
@@ -132,6 +134,7 @@ namespace Telas
             tela.Controls.Remove(btnUpdate);
             tela.Controls.Remove(btnRemove);
             tela.Controls.Remove(container);
+            tela.Controls.Remove(container2);
         }
     }
 }

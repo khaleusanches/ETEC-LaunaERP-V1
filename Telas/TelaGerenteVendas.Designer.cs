@@ -9,7 +9,7 @@ namespace Telas
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private ButtonP[] btnAbas = new ButtonP[1];
+        private ButtonP[] btnAbas = new ButtonP[2];
 
         /// <summary>
         /// Clean up any resources being used.
@@ -34,12 +34,13 @@ namespace Telas
         {
             this.components = new System.ComponentModel.Container();
             this.Text = "TelaGerenteVendas";
-            btnAbas[0] = new ButtonP(true, 90, 50, 25, 25, "Gerenciar Produtos", this);
+            btnAbas[0] = new ButtonP(true, 150, 25, 12, 125, "Operações de caixa", this);
             btnAbas[0].BringToFront();
             btnAbas[0].Click += Btn_Operacoes_Click;
+            btnAbas[1] = new ButtonP(true, 150, 25, 12, 300, "Gerenciar Produtos", this);
+            btnAbas[1].BringToFront();
+            btnAbas[1].Click += Btn_Produtos_Click;
         }
-
-      
         #endregion
     }
 }

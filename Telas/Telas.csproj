@@ -64,7 +64,7 @@
     <Compile Include="BancoOperacoes.cs" />
     <Compile Include="BancoPagarContas.cs" />
     <Compile Include="BancoUsuarios.cs" />
-    <Compile Include="Caixas.cs">
+    <Compile Include="TelaPrincipalCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces.cs" />

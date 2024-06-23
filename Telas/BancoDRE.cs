@@ -15,11 +15,11 @@ namespace Telas
         DAO dao = new DAO();
         DateTime dataAtual = DateTime.Now;
         double dinheiro = 0;
-        double resultado = 0;
-
-        double caixa, fornecedores, contasVariadas, salarios, emprestimos;
         public override void exibir(TelaPadrao tela)
         {
+            
+            double resultado = 0;
+            double caixa, fornecedores, contasVariadas, salarios, emprestimos;
             int top = 165;
             int left = 45;
             caixa = pegaID("total", "operacoes", $"MONTH(dataehora)='{dataAtual.Month}'");
@@ -27,8 +27,6 @@ namespace Telas
             contasVariadas = 0 - pegaID("valorDespesa", "despesasVariadas", $"MONTH(dataPagamento)='{dataAtual.Month}'");
             salarios = 0 - pegaID("valorPagamentoSal", "pagamentosSalario", $"MONTH(dataPagamentoSal)='{dataAtual.Month}'");
             emprestimos = 0 - pegaID("valorPagamentoEmprestimo", "pagamentoEmprestimos", $"MONTH(dataPagamentoEmprestimo)='{dataAtual.Month}'");
-
-           
 
             resultado += caixa;
             labelPs[0] = new LabelP(300, 20, top, left, $"Faturamento : {resultado}", tela);
@@ -94,7 +92,7 @@ namespace Telas
             string sql = $"select {dado} from {tabela} where {where}";
             dt = dao.lerTabela(sql);
             dinheiro = 0;
-            if (dt.Rows.Count >= 1)
+            if (dt.Rows.Count > 0)
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
