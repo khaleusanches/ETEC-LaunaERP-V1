@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancooperacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\telas\\bancolotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancolotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancolotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Telas\\BancoLotes.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAgwEoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T17:45:32.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T17:45:32.784Z"
             },
             {
               "$type": "Document",

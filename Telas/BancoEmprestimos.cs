@@ -13,51 +13,60 @@ namespace Telas
 {
     internal class BancoEmprestimos : InterfacesBanco
     {
-        LabelP[] labelPs = new LabelP[7];
+        LabelP[] labelPs = new LabelP[8];
         TextBoxP[] textBoxPs = new TextBoxP[5];
         DateTimePickerP dtLiberacao;
         ComboBoxP cbContaBancaria;
         DataTable dt;
         DAO dao = new DAO();
         string[] lista;
+        DateTime dataatual = DateTime.Now;
         DataGridViewP dgv;
         ButtonP btnAdd;
+        private PanelP container;
+        string tabelasql = "select emprestimos.id as 'ID', ContasBancarias.NumeroConta as 'Conta do Banco', valor_emprestimo as 'Valor Empréstimo', " +
+            "data_liberacao as 'Data do Empréstimo', taxa_juros_anual as 'Taxa Anual', prazo_meses as 'Prazo em Meses', valor_pago as 'Valor Pago' from Emprestimos " +
+            "inner join ContasBancarias on emprestimos.idContaBancariafk = ContasBancarias.id";
 
         public override void exibir(TelaPadrao tela)
         {
-            int top = 165;
-            int left = 25;
+            int top = 100;
+            int left = 35;
             int incrementoTop = 40;
-
-            labelPs[0] = new LabelP(150, 20, top, left, "ID do Empréstimo:", tela);
+            container = new PanelP(340, 335, 85, 15, Color.White, tela);
+            labelPs[0] = new LabelP(150, 20, top, left, "EMPRÉSTIMOS", tela);
+            labelPs[0].Font = new Font("Arial", 12, FontStyle.Bold);
+            top += incrementoTop;
+            labelPs[1] = new LabelP(150, 20, top, left, "ID do Empréstimo:", tela);
             textBoxPs[0] = new TextBoxP(25, 20, top, left + 160, "", 10, tela);
             textBoxPs[0].Enabled = false;
             top += incrementoTop;
 
-            labelPs[1] = new LabelP(150, 20, top, left, "Conta Bancária:", tela);
+            labelPs[2] = new LabelP(150, 20, top, left, "Conta Bancária:", tela);
             cbContaBancaria = new ComboBoxP(50, 20, top, left+160, pegaID("NumeroConta","ContasBancarias"), tela);
             top += incrementoTop;
 
-            labelPs[2] = new LabelP(150, 20, top, left, "Valor do Empréstimo:", tela);
-            textBoxPs[1] = new TextBoxP(150, 20, top, left + 160, "", 20, tela);
+            labelPs[3] = new LabelP(150, 20, top, left, "Valor do Empréstimo:", tela);
+            textBoxPs[1] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, true);
             top += incrementoTop;
 
-            labelPs[3] = new LabelP(150, 20, top, left, "Data de Liberação:", tela);
+            labelPs[4] = new LabelP(150, 20, top, left, "Data de Liberação:", tela);
             dtLiberacao = new DateTimePickerP(150, 20, top, left+160, tela);
+            dtLiberacao.MaxDate = dataatual;
             top += incrementoTop;
 
-            labelPs[4] = new LabelP(150, 20, top, left, "Taxa de Juros (%):", tela);
-            textBoxPs[2] = new TextBoxP(100, 20, top, left + 160, "", 5, tela);
+            labelPs[5] = new LabelP(150, 20, top, left, "Taxa de Juros (%):", tela);
+            textBoxPs[2] = new TextBoxP(100, 20, top, left + 160, "", 5, tela, isQuant: true);
             top += incrementoTop;
 
-            labelPs[5] = new LabelP(150, 20, top, left, "Prazo (meses):", tela);
-            textBoxPs[3] = new TextBoxP(100, 20, top, left + 160, "", 3, tela);
+            labelPs[6] = new LabelP(150, 20, top, left, "Prazo (meses):", tela);
+            textBoxPs[3] = new TextBoxP(100, 20, top, left + 160, "", 3, tela, isQuant: true);
             top += incrementoTop;
 
-            labelPs[6] = new LabelP(150, 20, top, left, "Valor pago:", tela);
-            textBoxPs[4] = new TextBoxP(100, 20, top, left + 160, "", 3, tela);
+            labelPs[7] = new LabelP(150, 20, top, left, "Valor pago:", tela);
+            textBoxPs[4] = new TextBoxP(100, 20, top, left + 160, "", 3, tela, true);
             textBoxPs[4].Text = "00";
-            top += incrementoTop;
+            top += incrementoTop+20;
 
             btnAdd = new ButtonP(true, 120, 50, top, left, "Cadastrar empréstimo", tela);
             btnAdd.Enabled = false;
@@ -68,7 +77,7 @@ namespace Telas
                 textBoxPs[i].TextChanged += new EventHandler(BancoEmprestimos_TextChanged);
             }
 
-            dgv = new DataGridViewP(575, 500, 125, 375, dao.lerTabela("select * from Emprestimos"), tela);
+            dgv = new DataGridViewP(700, 500, 85, 400, dao.lerTabela(tabelasql), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
         }
         private void Dgv_SelectionChanged(object sender, EventArgs e)
@@ -80,7 +89,7 @@ namespace Telas
                 textBoxPs[1].Text = dgv[2, i].Value.ToString();
                 for (int j = 2; j < textBoxPs.Length; j++)
                 {
-                    textBoxPs[j].Text = dgv[j+2, i].Value.ToString();
+                    textBoxPs[j].Text = dgv[j+2, i].Value.ToString().Replace(",", ".");
                 }
             }
         }
@@ -89,7 +98,7 @@ namespace Telas
             string sql = $"insert into emprestimos(idContaBancariafk, valor_emprestimo, data_liberacao, taxa_juros_anual, prazo_meses, valor_pago) values('{cbContaBancaria.SelectedIndex+1}', " +
                 $"'{textBoxPs[1].Text}', '{dtLiberacao.pegarData()}', '{textBoxPs[2].Text}', '{textBoxPs[3].Text}', '{textBoxPs[4].Text}');";
             dao.updateInsertDelete(sql);
-            dgv.DataSource = dao.lerTabela("select * from Emprestimos");
+            dgv.DataSource = dao.lerTabela(tabelasql);
         }
 
         private void BancoEmprestimos_TextChanged(object sender, EventArgs e)
@@ -128,6 +137,7 @@ namespace Telas
             tela.Controls.Remove(btnAdd);
             tela.Controls.Remove(cbContaBancaria);
             tela.Controls.Remove(dtLiberacao);
+            tela.Controls.Remove(container);
             tela.Controls.Remove(dgv);
         }
     }

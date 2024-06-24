@@ -15,11 +15,12 @@ namespace Telas
 {
     public class TelaPrincipalCaixa : TelaPadrao
     {
+        private PanelP container;
         LabelP lb_Cod_prod;
         LabelP lb_Nome_prod;
         LabelP lb_Quantidade;
         LabelP lb_Total;
-        TextBoxP tb_cod_prod;
+        private ComboBoxP cb_cod_prod;
         TextBoxP tb_nome_prod;
         TextBoxP tb_quantidade;
         TextBoxP tb_total;
@@ -38,36 +39,38 @@ namespace Telas
         double total;
         public TelaPrincipalCaixa(Funcionario funcionario) : base(funcionario)
         {
-            lb_Cod_prod = new LabelP(150, 25, 135, 20, "Código do produto", this);
-            lb_Nome_prod = new LabelP(120, 25, 170, 20, "Nome do Produto", this);
-            lb_Quantidade = new LabelP(120, 25, 205, 20, "Quantidade", this);
-            lb_Total = new LabelP(120, 25, 240, 20, "Total a pagar", this);
+            container = new PanelP(420, 275, 85, 20, Color.White, this);
+            lb_Cod_prod = new LabelP(150, 25, 135, 35, "Código do produto", this);
+            lb_Nome_prod = new LabelP(120, 25, 170, 35, "Nome do Produto", this);
+            lb_Quantidade = new LabelP(120, 25, 205, 35, "Quantidade", this);
+            lb_Total = new LabelP(120, 25, 240, 35, "Total a pagar", this);
             labelPersos = new LabelP[] { lb_Cod_prod, lb_Cod_prod, lb_Quantidade, lb_Total };
 
-            tb_cod_prod = new TextBoxP(150, 25, 135, 190, "", 100, this);
-            tb_nome_prod = new TextBoxP(150, 25, 170, 190, "", 100, this);
-            tb_quantidade = new TextBoxP(150, 25, 205, 190, "1", 100, this);
-            tb_total = new TextBoxP(150, 25, 240, 190, "", 100, this);
-            textBoxPersos = new TextBoxP[] { tb_cod_prod, tb_nome_prod, tb_quantidade, tb_total };
+            cb_cod_prod = new ComboBoxP(150, 25, 135, 205, dao.pegaIDLista("id", "produtos", ""), this);
+            tb_nome_prod = new TextBoxP(150, 25, 170, 205, "", 100, this);
+            tb_quantidade = new TextBoxP(150, 25, 205, 205, "1", 100, this, isQuant:true);
+            tb_total = new TextBoxP(150, 25, 240, 205, "", 100, this);
+            textBoxPersos = new TextBoxP[] {tb_nome_prod, tb_quantidade, tb_total };
             tb_nome_prod.ReadOnly = true;
             tb_total.ReadOnly = true;
             tb_quantidade.KeyPress += quantidade_IsNumero;
 
-            adicionarProd = new ButtonP(true, 150, 50, 405, 105, "Adicionar Produto", this);
+            adicionarProd = new ButtonP(true, 150, 50, 405, 135, "Adicionar Produto", this);
             adicionarProd.Click += new EventHandler(adicionarProd_Click);
-            deletarProd = new ButtonP(true, 150, 50, 460, 105, "Deletar Produto", this);
+            deletarProd = new ButtonP(true, 150, 50, 460, 135, "Deletar Produto", this);
             deletarProd.Click += new EventHandler(deletarProd_Click);
-            finalizarCompra = new ButtonP(true, 150, 50, 515, 105, "Finalizar Compra", this);
+            finalizarCompra = new ButtonP(true, 150, 50, 515, 135, "Finalizar Compra", this);
             finalizarCompra.Click += new EventHandler(finalizarCompra_Click);
 
             this.funcionario = funcionario;
 
+            
             dtv_prod = new DataGridView();
             dtv_prod.BackColor = Color.DimGray;
             dtv_prod.Width = 500;
             dtv_prod.Height = 400;
-            dtv_prod.Top = 135;
-            dtv_prod.Left = 350;
+            dtv_prod.Top = 85;
+            dtv_prod.Left = 500;
             dtv_prod.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtv_prod.SelectionChanged += new EventHandler(Dtv_prod_SelectionChanged);
             dtv_prod.ReadOnly = true;
@@ -79,8 +82,8 @@ namespace Telas
             if (dtv_prod.SelectedRows.Count > 0 && dtv_prod.SelectedCells[0].Value != null && dtv_prod.SelectedRows[0].Index < dtv_prod.Rows.Count - 1)
             {
                 int linha = dtv_prod.SelectedRows[0].Index;
-                textBoxPersos[0].Text = lista[linha].ToString();
-                textBoxPersos[1].Text = dtv_prod.SelectedCells[0].Value.ToString();
+                cb_cod_prod.Text = lista[linha].ToString();
+                textBoxPersos[0].Text = dtv_prod.SelectedCells[0].Value.ToString();
             }
         }
 
@@ -96,9 +99,9 @@ namespace Telas
         {
             try
             {
-                for (int i = 0; i < int.Parse(textBoxPersos[2].Text); i++)
+                for (int i = 0; i < int.Parse(textBoxPersos[1].Text); i++)
                 {
-                    lista.Add(int.Parse(textBoxPersos[0].Text));
+                    lista.Add(int.Parse(cb_cod_prod.Text));
                 }
                 dtv_prod.DataSource = exibirCaixa(lista);
                 atualizarTotal();
@@ -107,11 +110,11 @@ namespace Telas
             {
             }
         }
-        private DataTable exibirCaixa(List<int> id)
+        private DataTable exibirCaixa(List<int> ids)
         {
             dt = new DataTable();
             dt.Clear();
-            foreach (int idItem in id)
+            foreach (int idItem in ids)
             {
                 dt.Merge(dao.lerTabela("select nome, valor from produtos where id =" + idItem + ";"), false, MissingSchemaAction.Add);
             }
@@ -130,7 +133,7 @@ namespace Telas
         private void finalizar(List<int> id)
         {
             string dataehora = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            sql = $"insert into operacoes(idfuncionariofk, total, dataehora) values('{funcionario.id}', '{double.Parse(textBoxPersos[3].Text)}', '{dataehora}')";
+            sql = $"insert into operacoes(idfuncionariofk, total, dataehora) values('{funcionario.id}', '{double.Parse(textBoxPersos[2].Text)}', '{dataehora}')";
             dao.updateInsertDelete(sql);
             dt = dao.lerTabela("select id from operacoes");
             int idoperacao = dt.Rows.Count;
@@ -162,7 +165,7 @@ namespace Telas
             {
                 total += double.Parse(dtv_prod.Rows[i].Cells[1].Value.ToString());
             }
-            textBoxPersos[3].Text = total.ToString();
+            textBoxPersos[2].Text = total.ToString();
         }
     }
 }

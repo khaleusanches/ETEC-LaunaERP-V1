@@ -13,17 +13,22 @@ namespace Telas
 {
     public partial class TelaGerenteVendas : TelaPadrao
     {
-        InterfacesBanco[] abas = new InterfacesBanco[1];
+        InterfacesBanco[] abas = new InterfacesBanco[2];
         public TelaGerenteVendas(Funcionario funcionario) : base(funcionario) 
         {
             this.funcionario = funcionario;
             InitializeComponent();
             abas[0] = new BancoOperacoes();
-            funcionario.FuncionariosSetor(this);
+            abas[1] = new BancoCatalogoProdutos();
         }
         private void Btn_Operacoes_Click(object sender, EventArgs e)
         {
             Abrir_Fechar_Abas(0);
+        }
+
+        private void Btn_Produtos_Click(object sender, EventArgs e)
+        {
+            Abrir_Fechar_Abas(1);
         }
 
         private void Abrir_Fechar_Abas(int nmr)

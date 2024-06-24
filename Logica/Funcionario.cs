@@ -25,7 +25,6 @@ namespace Logica
             this.cargo = cargo;
             b = new ButtonP(true, 0, 0, 0, 0, "", null);
         }
-        public virtual void FuncionariosSetor(Form tela) { }
         public virtual void desativarFuncionariosSetor() { }
     }
 }

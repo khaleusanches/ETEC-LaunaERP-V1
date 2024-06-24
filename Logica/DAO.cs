@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Logica
 {
     public class DAO
     {
-        CultureInfo newCulture = new CultureInfo("pt-BR");
         string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
         MySqlConnection con;
         MySqlCommand cmd;
@@ -22,8 +22,6 @@ namespace Logica
         {
             try
             {
-                CultureInfo.DefaultThreadCurrentCulture = newCulture;
-                CultureInfo.DefaultThreadCurrentUICulture = newCulture;
                 con = new MySqlConnection(strConnection);
                 con.Open();
             }
@@ -41,8 +39,10 @@ namespace Logica
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.ToString()); }
+            catch
+            {
+
+            }
         }
         public DataTable lerTabela(string sql)
         {
@@ -69,6 +69,27 @@ namespace Logica
                 id = "";
             }
             return id;
+        }
+
+        public string[] pegaIDLista(string dado, string tabela, string where)
+        {
+            string sql = $"select {dado} from {tabela} {where}";
+            DataTable data = new DataTable();
+            string[] lista;
+            data = lerTabela(sql);
+            if (data.Rows.Count >= 1)
+            {
+                lista = new string[data.Rows.Count];
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    lista[i] = data.Rows[i].ItemArray[0].ToString();
+                }
+            }
+            else
+            {
+                lista = new string[1] { "" };
+            }
+            return lista;
         }
     }
 }

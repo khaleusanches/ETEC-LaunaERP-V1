@@ -21,7 +21,6 @@ namespace Telas
             this.funcionario = funcionario;
             InitializeComponent();
             abas[0] = new BancoCatalogoProdutos();
-            funcionario.FuncionariosSetor(this);
         }
         private void Btn_Catalogo_Produtos_Click(object sender, EventArgs e)
         {

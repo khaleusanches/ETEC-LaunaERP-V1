@@ -1,15 +1,11 @@
-﻿using CaixaDeFerramentasPerso;
-using System;
-
-namespace Telas
+﻿namespace Telas
 {
-    partial class TelaGerenteVendas
+    partial class TelaAdministrador
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private ButtonP[] btnAbas = new ButtonP[2];
 
         /// <summary>
         /// Clean up any resources being used.
@@ -33,14 +29,11 @@ namespace Telas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Text = "TelaGerenteVendas";
-            btnAbas[0] = new ButtonP(true, 150, 25, 12, 125, "Operações de caixa", this);
-            btnAbas[0].BringToFront();
-            btnAbas[0].Click += Btn_Operacoes_Click;
-            btnAbas[1] = new ButtonP(true, 150, 25, 12, 300, "Gerenciar Produtos", this);
-            btnAbas[1].BringToFront();
-            btnAbas[1].Click += Btn_Produtos_Click;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "TelaAdministrador";
         }
+
         #endregion
     }
 }

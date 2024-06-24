@@ -17,13 +17,15 @@ namespace Telas
         private DAO dao = new DAO();
         private ButtonP btnAdd;
         private ButtonP btnRemove;
+        private PanelP container;
 
         public override void exibir(TelaPadrao tela)
         {
             int top = 165;
-            int left = 25;
-            labelPs[9] = new LabelP(100, 20, 125, 25, "CONTAS NOS BANCOS", tela);
-            labelPs[9].Font = new Font("Arial", 14);
+            int left = 35;
+            container = new PanelP(340, 430, 100, 25, Color.White, tela);
+            labelPs[9] = new LabelP(100, 20, 125, 35, "CONTAS NOS BANCOS", tela);
+            labelPs[9].Font = new Font("Arial", 12, FontStyle.Bold);
             labelPs[0] = new LabelP(150, 20, top, left, "ID da Conta Bancária:", tela);
             textBoxPs[0] = new TextBoxP(50, 20, top, left + 160, "", 10, tela);
             textBoxPs[0].ReadOnly = true;
@@ -34,32 +36,32 @@ namespace Telas
             top += incrementoTop;
 
             labelPs[2] = new LabelP(140, 20, top, left, "Número da Agência:", tela);
-            textBoxPs[2] = new TextBoxP(150, 20, top, left + 160, "", 10, tela);
+            textBoxPs[2] = new TextBoxP(150, 20, top, left + 160, "", 14, tela, isQuant:true);
             top += incrementoTop;
 
             labelPs[3] = new LabelP(140, 20, top, left, "Número da Conta:", tela);
-            textBoxPs[3] = new TextBoxP(150, 20, top, left + 160, "", 20, tela);
+            textBoxPs[3] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, isQuant:true);
             top += incrementoTop;
 
-            labelPs[4] = new LabelP(100, 20, top, left, "Tipo de Conta:", tela);
-            textBoxPs[4] = new TextBoxP(150, 20, top, left + 160, "", 15, tela);
+            labelPs[4] = new LabelP(150, 20, top, left, "Tipo de Conta:", tela);
+            textBoxPs[4] = new TextBoxP(150, 20, top, left + 160, "", 20, tela);
             top += incrementoTop;
 
             labelPs[5] = new LabelP(120, 20, top, left, "Nome do Titular:", tela);
-            textBoxPs[5] = new TextBoxP(150, 20, top, left + 160, "", 50, tela); 
+            textBoxPs[5] = new TextBoxP(150, 20, top, left + 160, "", 100, tela); 
             top += incrementoTop;
 
             labelPs[6] = new LabelP(160, 20, top, left, "CPF/CNPJ do Titular:", tela);
-            textBoxPs[6] = new TextBoxP(150, 20, top, left + 160, "", 20, tela); 
+            textBoxPs[6] = new TextBoxP(150, 20, top, left + 160, "", 14, tela, isQuant:true); 
             top += incrementoTop;
 
             labelPs[7] = new LabelP(160, 20, top, left, "Telefone do Banco:", tela);
-            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 15, tela); 
+            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 15, tela, isQuant:true); 
             top += incrementoTop;
 
             labelPs[8] = new LabelP(160, 20, top, left, "E-mail de Contato:", tela);
             textBoxPs[8] = new TextBoxP(150, 20, top, left + 160, "", 50, tela);
-            top += incrementoTop;
+            top += incrementoTop + 25;
 
             foreach (TextBoxP tbps in textBoxPs)
             {
@@ -71,7 +73,7 @@ namespace Telas
             btnRemove = new ButtonP(true, 150, 50, top, left+125, "Remover Conta", tela);
             btnRemove.Click += new EventHandler(BtnRemove_Click);
 
-            dgv = new DataGridViewP(575, 500, 125, 375, dao.lerTabela("select * from ContasBancarias"), tela);
+            dgv = new DataGridViewP(800, 500, 100, 375, dao.lerTabela("select * from ContasBancarias"), tela);
             dgv.SelectionChanged += Dgv_SelectionChanged;
 
         }
@@ -134,6 +136,7 @@ namespace Telas
             }
             tela.Controls.Remove(dgv);
             tela.Controls.Remove(btnAdd);
+            tela.Controls.Remove(container);
             tela.Controls.Remove(btnRemove);
         }
     }

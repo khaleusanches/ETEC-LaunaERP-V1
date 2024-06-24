@@ -39,8 +39,8 @@ namespace CaixaDeFerramentasPerso
             this.tela = tela;
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
-            BackColor = Color.White;
-            FlatAppearance.MouseOverBackColor = Color.White;
+            BackColor = Color.FromArgb(232, 228, 217);
+            FlatAppearance.MouseOverBackColor = Color.FromArgb(232, 228, 217);
             Font = new Font("Arial", 9);
             MouseHover += (sender, e) => ButtonP_MouseHover(sender, e);
             MouseLeave += (sender, e) => ButtonP_MouseLeave(sender, e);
@@ -70,7 +70,6 @@ namespace CaixaDeFerramentasPerso
         }
         public void selecionado()
         {
-            if (brilho == true) { 
                 p.Size = new Size(Width, 3);
                 p.Location = new Point(Location.X, Location.Y + Height + 13);
                 p.BackColor = Color.FromArgb(164, 190, 243);
@@ -79,7 +78,6 @@ namespace CaixaDeFerramentasPerso
                 ForeColor = Color.FromArgb(99, 133, 199);
                 p.Visible = true;
                 p.BringToFront();
-            }
         }
         public void desselecionado()
         {

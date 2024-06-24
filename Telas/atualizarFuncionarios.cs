@@ -23,6 +23,7 @@ namespace Telas
             {
                 textBoxPs[i].Text = teste[i];
             }
+            btnMenuBurguer.Visible = false;
         }
         private void Btn_Concluir_Click(object sender, EventArgs e)
         {
