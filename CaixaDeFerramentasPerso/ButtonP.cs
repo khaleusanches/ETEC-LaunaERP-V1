@@ -39,8 +39,8 @@ namespace CaixaDeFerramentasPerso
             this.tela = tela;
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
-            BackColor = Color.White;
-            FlatAppearance.MouseOverBackColor = Color.White;
+            BackColor = Color.FromArgb(232, 228, 217);
+            FlatAppearance.MouseOverBackColor = Color.FromArgb(232, 228, 217);
             Font = new Font("Arial", 9);
             MouseHover += (sender, e) => ButtonP_MouseHover(sender, e);
             MouseLeave += (sender, e) => ButtonP_MouseLeave(sender, e);

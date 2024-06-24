@@ -54,7 +54,7 @@ namespace Telas
             btnRemove = new ButtonP(true, 100, 40, 320, 435, "Remover usuário", tela);
             btnRemove.Click += new EventHandler(BtnRemove_Click);
 
-            dgv = new DataGridViewP(300, 400, 85, 590, dao.lerTabela("select id, id_func, login from usuarios"), tela);
+            dgv = new DataGridViewP(300, 400, 85, 590, dao.lerTabela("select id as 'ID', id_func as 'ID Funcionario', login as 'LOGIN' from usuarios"), tela);
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Telas
             {
                 int i = int.Parse(dgv.SelectedCells[0].Value.ToString());
                 dao.updateInsertDelete($"DELETE from usuarios where id={i}");
-                dgv.DataSource = dao.lerTabela("select id, id_func, login from usuarios");
+                dgv.DataSource = dao.lerTabela("select id as 'ID', id_func as 'ID Funcionario', login as 'LOGIN' from usuarios");
             }
         }
 
@@ -81,9 +81,9 @@ namespace Telas
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            string sql = $"insert into usuarios (login, senha, id_func) values ('{textBoxPs[1].Text}', '{textBoxPs[2].Text}', '{listUsers.SelectedIndex + 1}')";
+            string sql = $"insert into usuarios (login, senha, id_func) values ('{textBoxPs[1].Text}', '{textBoxPs[2].Text}', '{listUsers.Text}')";
             dao.updateInsertDelete(sql);
-            dgv.DataSource = dao.lerTabela("select id, id_func, login from usuarios");
+            dgv.DataSource = dao.lerTabela("select id as 'ID', id_func as 'ID Funcionario', login as 'LOGIN' from usuarios");
         }
 
         public string[] teste()

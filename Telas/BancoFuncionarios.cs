@@ -65,9 +65,9 @@ namespace Telas
             textBoxP[0].Enabled = false;
             textBoxP[1] = new TextBoxP(90, 25, 150, 75, "", 255, tela);
             textBoxP[2] = new TextBoxP(150, 25, 150, 175, "", 100, tela);
-            textBoxP[3] = new TextBoxP(150, 25, 150, 335, "", 11, tela, true);
-            textBoxP[4] = new TextBoxP(150, 25, 215, 35, "", 8, tela, true);
-            textBoxP[5] = new TextBoxP(150, 25, 215, 210, "", 9, tela, true);
+            textBoxP[3] = new TextBoxP(150, 25, 150, 335, "", 11, tela, isQuant: true);
+            textBoxP[4] = new TextBoxP(150, 25, 215, 35, "", 8, tela, isQuant: true);
+            textBoxP[5] = new TextBoxP(150, 25, 215, 210, "", 9, tela, isQuant: true);
             dtNascimento = new DateTimePickerP(100, 20, 215, 375, tela);
             
 
@@ -103,11 +103,13 @@ namespace Telas
                 btnUpdate = new ButtonP(true, 100, 40, 150, 1050, "ATUALIZAR DADOS", tela);
                 btnUpdate.Click += new EventHandler(Btn_Update_Click);
                 btnUpdate.Enabled = false;
+
+                btnRemove = new ButtonP(true, 100, 40, 205, 1050, "REMOVER FUNCIONÁRIO", tela);
+                btnRemove.Enabled = false;
+                btnRemove.Click += new EventHandler(BtnRemove_Click);
             }
 
-            btnRemove = new ButtonP(true, 100, 40, 205, 1050, "REMOVER FUNCIONÁRIO", tela);
-            btnRemove.Enabled = false;
-            btnRemove.Click += new EventHandler(BtnRemove_Click);
+            
 
             btnDemitidos = new ButtonP(true, 150, 40, 655, 500, "FUNCIONÁRIOS DEMITIDOS", tela);
             btnDemitidos.Click += new EventHandler(BtnDemitidos_Click);
@@ -201,13 +203,18 @@ namespace Telas
                 if (funcionario.cargo == "Gerente")
                 {
                     btnUpdate.Enabled = true;
+                    btnRemove.Enabled = true;
                 }
-                btnRemove.Enabled = true;
+                
             }
             else 
             {
-                btnRemove.Enabled = false;
-                btnUpdate.Enabled = false;
+                
+                if (funcionario.cargo == "Gerente")
+                {
+                    btnUpdate.Enabled = false;
+                    btnRemove.Enabled = false;
+                }
             }
         }
         private void Btn_Update_Click(object sender, EventArgs e)
@@ -226,7 +233,7 @@ namespace Telas
 
         private void Btn_add_Click(object sender, EventArgs e)
         {
-            string sql = $"insert into funcionarios (nome, email, tel, endereco, rg, nascimento, admissao, pis, salario, idsetorfk, idcargofk) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}', '{dtNascimento.pegarData()}', '{dtNascimento.pegarData()}', '{textBoxP[6].Text}', '{textBoxP[7].Text}', {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")}, {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")})";
+            string sql = $"insert into funcionarios (nome, email, tel, endereco, rg, nascimento, admissao, pis, salario, idsetorfk, idcargofk) values ('{textBoxP[1].Text}', '{textBoxP[2].Text}', '{textBoxP[3].Text}', '{textBoxP[4].Text}', '{textBoxP[5].Text}', '{dtNascimento.pegarData()}', '{dtNascimento.pegarData()}', '{textBoxP[6].Text}', '{textBoxP[7].Text}', {pegaID("id", "setores", $"where nome = '{cbSetores.Text}';")}, {pegaID("id", "cargos", $"where nome = '{cbCargos.Text}';")})";
             dao.updateInsertDelete(sql);
             dgv.ClearSelection();
             dgv.DataSource = dao.lerTabela(tabelasql);
@@ -258,7 +265,6 @@ namespace Telas
             tela.Controls.Remove(cbCargos);
             tela.Controls.Remove(cbSetores);
             tela.Controls.Remove(btnAdd);
-            tela.Controls.Remove(btnRemove);
             tela.Controls.Remove(teste);
             tela.Controls.Remove(dtNascimento);
             tela.Controls.Remove(dtAdmissao);
@@ -268,6 +274,7 @@ namespace Telas
             if (funcionario.cargo == "Gerente")
             {
                 tela.Controls.Remove(btnUpdate);
+                tela.Controls.Remove(btnRemove);
             }
         }
     }

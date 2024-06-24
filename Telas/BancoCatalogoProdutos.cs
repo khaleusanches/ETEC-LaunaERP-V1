@@ -39,7 +39,7 @@ namespace Telas
             textBoxPs[0].Enabled = false;
             textBoxPs[1] = new TextBoxP(50, 25, 145, 100, "", 9, tela);
             textBoxPs[2] = new TextBoxP(150, 25, 200, 35, "", 9, tela, true);
-            textBoxPs[3] = new TextBoxP(150, 25, 255, 35, "", 9, tela, true);
+            textBoxPs[3] = new TextBoxP(150, 25, 255, 35, "", 9, tela, isQuant:true);
             textBoxPs[4] = new TextBoxP(150, 50, 310, 35, "", 100, tela);
             textBoxPs[4].Multiline = true;
             cbDisponibilidade = new ComboBoxP(100, 25, 390, 35, disponibilidade, tela);

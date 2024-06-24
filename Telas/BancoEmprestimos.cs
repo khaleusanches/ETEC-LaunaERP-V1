@@ -56,11 +56,11 @@ namespace Telas
             top += incrementoTop;
 
             labelPs[5] = new LabelP(150, 20, top, left, "Taxa de Juros (%):", tela);
-            textBoxPs[2] = new TextBoxP(100, 20, top, left + 160, "", 5, tela, true);
+            textBoxPs[2] = new TextBoxP(100, 20, top, left + 160, "", 5, tela, isQuant: true);
             top += incrementoTop;
 
             labelPs[6] = new LabelP(150, 20, top, left, "Prazo (meses):", tela);
-            textBoxPs[3] = new TextBoxP(100, 20, top, left + 160, "", 3, tela, true);
+            textBoxPs[3] = new TextBoxP(100, 20, top, left + 160, "", 3, tela, isQuant: true);
             top += incrementoTop;
 
             labelPs[7] = new LabelP(150, 20, top, left, "Valor pago:", tela);

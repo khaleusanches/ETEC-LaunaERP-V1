@@ -41,7 +41,7 @@ namespace Telas
             DataTable dt = dao.lerTabela($"select * from usuarios where usuarios.login = '{tbUsername.Text}' and usuarios.senha = '{tbSenha.Text}';");
             if(dt.Rows.Count > 0 )
             {
-                dt = dao.lerTabela("select id funcionarios.nome, setores.nome, cargos.nome from usuarios " +
+                dt = dao.lerTabela("select funcionarios.id, funcionarios.nome, setores.nome, cargos.nome from usuarios " +
                     "left join funcionarios on usuarios.id_func = funcionarios.id " +
                     "left join setores on funcionarios.idsetorfk = setores.id " +
                     "inner join cargos on funcionarios.idcargofk = cargos.id " +
@@ -57,6 +57,8 @@ namespace Telas
                 switch (func.setor)
                 {
                     case "Administrativo":
+                        this.Hide();
+                        new TelaAdministrador(func).ShowDialog();
                         break;
 
                     case "Financeiro":
@@ -67,7 +69,7 @@ namespace Telas
                         this.Hide();
                         new TelaSetorRH(func).ShowDialog();
                         break;
-                    case "Logistica":
+                    case "Logístico":
                         this.Hide();
                         new TelaSetorLogistica(func).ShowDialog();
                         break;
@@ -79,16 +81,21 @@ namespace Telas
                         }
                         else
                         {
+                            this.Hide();
                             new TelaPrincipalCaixa(func).ShowDialog();
                         }
                         break;
                 }
             }
+            else if(tbUsername.Text == "administrador" && tbSenha.Text=="administrador")
+            {
+                func = new Gerente("0", "adm", "adm", "adm");
+                this.Hide();
+                new TelaAdministrador(func).ShowDialog();
+            }
             else
             {
-                func = new Gerente("1", "teste", "teste", "Logistica");
-                this.Hide();
-                new TelaSetorRH(func).ShowDialog();
+                MessageBox.Show("Login ou senha não encontrado");
             }
         }
     }

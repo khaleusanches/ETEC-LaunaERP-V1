@@ -14,7 +14,6 @@ namespace Logica
 {
     public class DAO
     {
-        CultureInfo newCulture = new CultureInfo("pt-BR");
         string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
         MySqlConnection con;
         MySqlCommand cmd;
@@ -23,8 +22,6 @@ namespace Logica
         {
             try
             {
-                CultureInfo.DefaultThreadCurrentCulture = newCulture;
-                CultureInfo.DefaultThreadCurrentUICulture = newCulture;
                 con = new MySqlConnection(strConnection);
                 con.Open();
             }
@@ -42,8 +39,10 @@ namespace Logica
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.ToString()); }
+            catch
+            {
+
+            }
         }
         public DataTable lerTabela(string sql)
         {

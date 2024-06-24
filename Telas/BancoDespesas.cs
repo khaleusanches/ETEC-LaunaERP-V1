@@ -43,7 +43,7 @@ namespace Telas
             top += incrementoTop;
 
             labelPs[3] = new LabelP(150, 20, top, left, "Valor da Despesa:", tela);
-            textBoxPs[1] = new TextBoxP(150, 20, top, left + 160, "", 20, tela);
+            textBoxPs[1] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, true);
             top += incrementoTop;
 
             

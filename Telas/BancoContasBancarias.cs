@@ -36,27 +36,27 @@ namespace Telas
             top += incrementoTop;
 
             labelPs[2] = new LabelP(140, 20, top, left, "Número da Agência:", tela);
-            textBoxPs[2] = new TextBoxP(150, 20, top, left + 160, "", 10, tela, true);
+            textBoxPs[2] = new TextBoxP(150, 20, top, left + 160, "", 14, tela, isQuant:true);
             top += incrementoTop;
 
             labelPs[3] = new LabelP(140, 20, top, left, "Número da Conta:", tela);
-            textBoxPs[3] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, true);
+            textBoxPs[3] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, isQuant:true);
             top += incrementoTop;
 
             labelPs[4] = new LabelP(150, 20, top, left, "Tipo de Conta:", tela);
-            textBoxPs[4] = new TextBoxP(150, 20, top, left + 160, "", 15, tela);
+            textBoxPs[4] = new TextBoxP(150, 20, top, left + 160, "", 20, tela);
             top += incrementoTop;
 
             labelPs[5] = new LabelP(120, 20, top, left, "Nome do Titular:", tela);
-            textBoxPs[5] = new TextBoxP(150, 20, top, left + 160, "", 50, tela); 
+            textBoxPs[5] = new TextBoxP(150, 20, top, left + 160, "", 100, tela); 
             top += incrementoTop;
 
             labelPs[6] = new LabelP(160, 20, top, left, "CPF/CNPJ do Titular:", tela);
-            textBoxPs[6] = new TextBoxP(150, 20, top, left + 160, "", 20, tela, true); 
+            textBoxPs[6] = new TextBoxP(150, 20, top, left + 160, "", 14, tela, isQuant:true); 
             top += incrementoTop;
 
             labelPs[7] = new LabelP(160, 20, top, left, "Telefone do Banco:", tela);
-            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 15, tela, true); 
+            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 15, tela, isQuant:true); 
             top += incrementoTop;
 
             labelPs[8] = new LabelP(160, 20, top, left, "E-mail de Contato:", tela);

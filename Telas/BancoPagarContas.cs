@@ -41,16 +41,16 @@ namespace Telas
             textBoxPs[0].Enabled = false;
             top += incrementoTop;
 
-            labelPs[2] = new LabelP(150, 20, top, left, "Sálarios ID:", tela);
+            labelPs[2] = new LabelP(150, 20, top, left, "ID Sálarios:", tela);
             comboBoxPs[0] = new ComboBoxP(50, 20, top, left + 160, pegaID("id", "pagamentosSalario", "statusPagamento = 'Pendente'"), tela);
             btnAddListaSalarioPende = new ButtonP(true, 50, 20, top, left+220, "Atualizar", tela);
             top += incrementoTop;
 
-            labelPs[3] = new LabelP(150, 20, top, left, "Empréstimos", tela);
+            labelPs[3] = new LabelP(150, 20, top, left, "ID Empréstimos", tela);
             comboBoxPs[1] = new ComboBoxP(50, 20, top, left + 160, pegaID("id", "emprestimos", "valor_emprestimo > valor_pago"), tela);
             top += incrementoTop;
 
-            labelPs[4] = new LabelP(150, 20, top, left, "Gastos Váriados", tela);
+            labelPs[4] = new LabelP(150, 20, top, left, "ID Gastos Váriados", tela);
             comboBoxPs[2] = new ComboBoxP(50, 20, top, left + 160, pegaID("id","despesasVariadas","status_pagamento = 'Pendente'"), tela);
             top += incrementoTop;
 
@@ -157,7 +157,7 @@ namespace Telas
             {
                 comboBoxPs[1].Enabled = false;
                 comboBoxPs[2].Enabled = false;
-                dgv.DataSource = dao.lerTabela("select pagamentosSalario.id, idfuncionariofk, funcionarios.nome, valorPagamentoSal, dataPagamentoSal, statusPagamento from pagamentosSalario\r\ninner join funcionarios on pagamentosSalario.idfuncionariofk = funcionarios.id;");
+                dgv.DataSource = dao.lerTabela("select pagamentosSalario.id as 'ID', idfuncionariofk as 'ID Funcionario', funcionarios.nome as 'Nome Funcionario', valorPagamentoSal, dataPagamentoSal as 'Data do Pagamento', statusPagamento as 'Status' from pagamentosSalario\r\ninner join funcionarios on pagamentosSalario.idfuncionariofk = funcionarios.id;");
                 dt = dao.lerTabela($"select valorPagamentoSal from pagamentosSalario where id = '{comboBoxPs[0].Text}'");
                 textBoxPs[1].Text = dt.Rows[0].ItemArray[0].ToString().Replace(",", ".");
             }
@@ -165,7 +165,10 @@ namespace Telas
             {
                 comboBoxPs[0].Enabled = false;
                 comboBoxPs[2].Enabled = false;
-                dgv.DataSource = dao.lerTabela("select * from Emprestimos where valor_emprestimo > valor_pago");
+                dgv.DataSource = dao.lerTabela("select emprestimos.id as 'ID', ContasBancarias.NumeroConta as 'Conta do Banco', valor_emprestimo as 'Valor Empréstimo', " +
+            "data_liberacao as 'Data do Empréstimo', taxa_juros_anual as 'Taxa Anual', prazo_meses as 'Prazo em Meses', valor_pago as 'Valor Pago' from Emprestimos " +
+            "inner join ContasBancarias on emprestimos.idContaBancariafk = ContasBancarias.id");
+
                 dt = dao.lerTabela($"select valor_emprestimo from emprestimos where id = '{comboBoxPs[1].Text}'");
                 if (textBoxPs[1].Text == "")
                 {
@@ -176,7 +179,8 @@ namespace Telas
             {
                 comboBoxPs[0].Enabled = false;
                 comboBoxPs[1].Enabled = false;
-                dgv.DataSource = dao.lerTabela("select * from despesasVariadas where status_pagamento = 'Pendente';");
+                dgv.DataSource = dao.lerTabela("select id as 'ID', descricaoDespesa as 'Descrição', valorDespesa as 'Valor', data_vencimento as 'Vencimento', status_pagamento as 'Pagamento', " +
+            "dataPagamento as 'Data Pagamento' from despesasVariadas where status_pagamento = 'Pendente';");
                 dt = dao.lerTabela($"select valorDespesa from despesasVariadas where id = '{comboBoxPs[2].Text}';");
                 textBoxPs[1].Text = dt.Rows[0].ItemArray[0].ToString().Replace(",", ".");
             }
@@ -203,7 +207,7 @@ namespace Telas
                 dao.updateInsertDelete(sql);
                 fechar(tela);
                 exibir(tela);
-                dgv.DataSource = dao.lerTabela("select pagamentosSalario.id, idfuncionariofk, funcionarios.nome, valorPagamentoSal, dataPagamentoSal, statusPagamento from pagamentosSalario inner join funcionarios on pagamentosSalario.idfuncionariofk = funcionarios.id;");
+                dgv.DataSource = dao.lerTabela("select pagamentosSalario.id as 'ID', idfuncionariofk as 'ID Funcionario', funcionarios.nome as 'Nome Funcionario', valorPagamentoSal, dataPagamentoSal as 'Data do Pagamento', statusPagamento as 'Status' from pagamentosSalario\r\ninner join funcionarios on pagamentosSalario.idfuncionariofk = funcionarios.id;");
             }
             else if (comboBoxPs[1].Enabled == true)
             {
@@ -212,7 +216,9 @@ namespace Telas
                 dao.updateInsertDelete($"update emprestimos set valor_pago = valor_pago + REPLACE(REPLACE('{textBoxPs[1].Text}', '.' ,''), ',', '.') where id = '{comboBoxPs[1].Text}';");
                 fechar(tela);
                 exibir(tela);
-                dgv.DataSource = dao.lerTabela("select * from Emprestimos where valor_emprestimo > valor_pago");
+                dgv.DataSource = dao.lerTabela("select emprestimos.id as 'ID', ContasBancarias.NumeroConta as 'Conta do Banco', valor_emprestimo as 'Valor Empréstimo', " +
+            "data_liberacao as 'Data do Empréstimo', taxa_juros_anual as 'Taxa Anual', prazo_meses as 'Prazo em Meses', valor_pago as 'Valor Pago' from Emprestimos " +
+            "inner join ContasBancarias on emprestimos.idContaBancariafk = ContasBancarias.id");
                 textBoxPs[1].Text = "";
             }
             else if (comboBoxPs[2].Enabled == true)

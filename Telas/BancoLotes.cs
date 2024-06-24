@@ -45,9 +45,10 @@ namespace Telas
 
             textBoxP[0] = new TextBoxP(30, 25, 145, 35, "", 9, tela);
             textBoxP[0].Enabled = false;
-            textBoxP[1] = new TextBoxP(100, 25, 255, 35, "", 9, tela, true);
-            textBoxP[2] = new TextBoxP(100, 25, 365, 35, "", 9, tela, true);
-            textBoxP[3] = new TextBoxP(100, 25, 255, 170, "", 9, tela);
+            textBoxP[1] = new TextBoxP(100, 25, 255, 35, "", 9, tela, isQuant:true);
+            textBoxP[2] = new TextBoxP(100, 25, 255, 170, "", 9, tela, true);
+            textBoxP[3] = new TextBoxP(100, 25, 365, 35, "", 9, tela, isQuant: true);
+            
 
             comboBoxPs[0] = new ComboBoxP(50, 25, 145, 100, pegaID("produtos"), tela);
             comboBoxPs[1] = new ComboBoxP(150, 25, 200, 35, pegaID("fornecedores"), tela);
@@ -94,7 +95,17 @@ namespace Telas
             {
                 int i = dgv.SelectedRows[0].Index;
                 textBoxP[0].Text = dgv[0,i].Value.ToString();
-                btnUpdate.Enabled = true;
+                int cont = 0;
+                for (int j = 1; j < textBoxP.Length; j++)
+                {
+                    if (textBoxP[j].Text == "") { cont++; }
+                }
+                if (comboBoxPs[0].SelectedIndex == -1 || comboBoxPs[1].SelectedIndex == -1) { cont++; }
+                if (cont == 0) {btnUpdate.Enabled = true; }
+                else
+                {
+                    btnUpdate.Enabled = false;
+                }
             }
         }
 
@@ -117,8 +128,11 @@ namespace Telas
                 if (textBoxP[i].Text == "") { cont++; }
             }
             if (comboBoxPs[0].SelectedIndex == -1 || comboBoxPs[1].SelectedIndex == -1){ cont++; }
-            else { btnAdd.Enabled = false; };
-            if (cont == 0) { btnAdd.Enabled = true; }
+            if (cont == 0) { btnAdd.Enabled = true; btnUpdate.Enabled = true; }
+            else
+            {
+                btnAdd.Enabled = false;
+            }
             if (comboBoxPs[2].Text == "sim")
             {
                 for(int i = 1; i < dateTimePickerPs.Length; i++)
@@ -141,12 +155,12 @@ namespace Telas
         {
             if (comboBoxPs[2].Text == "nao")
             {
-                sql = $"insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor) values('{comboBoxPs[0].Text}', '{textBoxP[1].Text}', '{comboBoxPs[1].Text}', '{dateTimePickerPs[0].pegarData()}', '{textBoxP[2].Text}', '{comboBoxPs[2].Text}', '{textBoxP[3].Text}');";
+                sql = $"insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor) values('{comboBoxPs[0].Text}', '{textBoxP[1].Text}', '{comboBoxPs[1].Text}', '{dateTimePickerPs[0].pegarData()}', '{textBoxP[3].Text}', '{comboBoxPs[2].Text}', '{textBoxP[2].Text}');";
             }
             else
             {
                 sql = $"insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor, dataRecebimento, fabricacao, validade)" +
-                    $"values('{comboBoxPs[0].Text}', '{textBoxP[1].Text}', '{comboBoxPs[1].Text}', '{dateTimePickerPs[0].pegarData()}', '{textBoxP[2].Text}', '{comboBoxPs[2].Text}', '{textBoxP[3].Text}', " +
+                    $"values('{comboBoxPs[0].Text}', '{textBoxP[1].Text}', '{comboBoxPs[1].Text}', '{dateTimePickerPs[0].pegarData()}', '{textBoxP[3].Text}', '{comboBoxPs[2].Text}', '{textBoxP[2].Text}', " +
                     $"'{dateTimePickerPs[1].pegarData()}', '{dateTimePickerPs[2].pegarData()}', '{dateTimePickerPs[3].pegarData()}');";
                 dao.updateInsertDelete($"UPDATE produtos set estoque = estoque + {textBoxP[1].Text} where id = '{comboBoxPs[0].Text}'");
             }
@@ -156,7 +170,7 @@ namespace Telas
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             string sql = $"UPDATE lotes set idprodutofk = '{comboBoxPs[0].Text}', quantidade = '{textBoxP[1].Text}', idfornecedorfk = '{comboBoxPs[1].Text}', " +
-                $"dataCompra = '{dateTimePickerPs[0].pegarData()}', notafiscal = '{textBoxP[2].Text}', recebido = '{comboBoxPs[2].Text}', valor = '{textBoxP[3].Text}', " +
+                $"dataCompra = '{dateTimePickerPs[0].pegarData()}', notafiscal = '{textBoxP[3].Text}', recebido = '{comboBoxPs[2].Text}', valor = '{textBoxP[2].Text}', " +
                 $"dataRecebimento = '{dateTimePickerPs[1].pegarData()}', fabricacao = '{dateTimePickerPs[2].pegarData()}', validade = '{dateTimePickerPs[3].pegarData()}' " +
                 $"where id = '{textBoxP[0].Text}';";
             dao.updateInsertDelete(sql);

@@ -48,7 +48,7 @@ namespace Telas
 
             cb_cod_prod = new ComboBoxP(150, 25, 135, 205, dao.pegaIDLista("id", "produtos", ""), this);
             tb_nome_prod = new TextBoxP(150, 25, 170, 205, "", 100, this);
-            tb_quantidade = new TextBoxP(150, 25, 205, 205, "1", 100, this);
+            tb_quantidade = new TextBoxP(150, 25, 205, 205, "1", 100, this, isQuant:true);
             tb_total = new TextBoxP(150, 25, 240, 205, "", 100, this);
             textBoxPersos = new TextBoxP[] {tb_nome_prod, tb_quantidade, tb_total };
             tb_nome_prod.ReadOnly = true;

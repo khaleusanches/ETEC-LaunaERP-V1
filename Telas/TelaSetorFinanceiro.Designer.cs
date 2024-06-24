@@ -48,14 +48,14 @@ namespace Telas
             btnContas.BringToFront();
             btnContas.Click += Btn_Menu_Click;
 
-            btnAbas[4] = new ButtonP(true, 200, 35, 37, 525, "Contas Bancarias", null);
+            btnAbas[4] = new ButtonP(true, 200, 35, 37, 525, "CONTAS BANCARÍAS", null);
             btnAbas[4].Click += Btn_Bancos_Click;
             btnAbas[5] = new ButtonP(true, 200, 35, 72, 525, "EMPRÉSTIMOS", null);
             btnAbas[5].Click += Btn_Emprestimos_Click;
 
-            btnAbas[6] = new ButtonP(true, 200, 35, 107, 525, "DespesasVariadas", null);
+            btnAbas[6] = new ButtonP(true, 200, 35, 107, 525, "DESPESAS VARIADAS", null);
             btnAbas[6].Click += Btn_Despesas_Click;
-            btnAbas[7] = new ButtonP(true, 200, 35, 142, 525, "Pagar Contas", null);
+            btnAbas[7] = new ButtonP(true, 200, 35, 142, 525, "PAGAR CONTAS", null);
             btnAbas[7].Click += Btn_Pagar_Click;
 
             btnAbas[8] = new ButtonP(true, 100, 25, 12, 625, "DRE", this);
