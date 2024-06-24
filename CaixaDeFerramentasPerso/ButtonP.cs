@@ -70,7 +70,6 @@ namespace CaixaDeFerramentasPerso
         }
         public void selecionado()
         {
-            if (brilho == true) { 
                 p.Size = new Size(Width, 3);
                 p.Location = new Point(Location.X, Location.Y + Height + 13);
                 p.BackColor = Color.FromArgb(164, 190, 243);
@@ -79,7 +78,6 @@ namespace CaixaDeFerramentasPerso
                 ForeColor = Color.FromArgb(99, 133, 199);
                 p.Visible = true;
                 p.BringToFront();
-            }
         }
         public void desselecionado()
         {
