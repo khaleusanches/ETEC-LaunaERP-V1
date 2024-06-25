@@ -63,7 +63,7 @@ namespace Telas
 
                     case "Financeiro":
                         this.Hide();
-                        new TelaSetorRH(func).ShowDialog();
+                        new TelaSetorFinanceiro(func).ShowDialog();
                         break;
                     case "Recursos Humanos":
                         this.Hide();

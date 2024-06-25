@@ -56,7 +56,7 @@ namespace Telas
             top += incrementoTop;
 
             labelPs[7] = new LabelP(160, 20, top, left, "Telefone do Banco:", tela);
-            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 15, tela, isQuant:true); 
+            textBoxPs[7] = new TextBoxP(150, 20, top, left + 160, "", 11, tela, isQuant:true); 
             top += incrementoTop;
 
             labelPs[8] = new LabelP(160, 20, top, left, "E-mail de Contato:", tela);

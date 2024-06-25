@@ -128,7 +128,7 @@ namespace Telas
                 if (textBoxP[i].Text == "") { cont++; }
             }
             if (comboBoxPs[0].SelectedIndex == -1 || comboBoxPs[1].SelectedIndex == -1){ cont++; }
-            if (cont == 0) { btnAdd.Enabled = true; btnUpdate.Enabled = true; }
+            if (cont == 0) { btnAdd.Enabled = true;}
             else
             {
                 btnAdd.Enabled = false;
@@ -149,7 +149,8 @@ namespace Telas
             }
 
             dateTimePickerPs[1].MinDate = dateTimePickerPs[0].Value;
-            dateTimePickerPs[2].MaxDate = dateTimePickerPs[0].Value;
+            dateTimePickerPs[1].MaxDate = dataatual;
+            dateTimePickerPs[2].MaxDate = dateTimePickerPs[1].Value;
             dateTimePickerPs[3].MinDate = dateTimePickerPs[2].Value;
         }
         private void Btn_add_Click(object sender, EventArgs e)
