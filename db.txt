@@ -178,17 +178,17 @@ insert into cargos(id, nome) values
   
 
 insert into funcionarios (nome, email, tel, rg, nascimento, pis, endereco, idcargofk, idsetorfk, admissao, salario, desconto, demissao) values
-('Ana Maria de Assis', 'ana.maria@empresa.com', '11999990001', '123456789', '1980-01-01', '12345678901', 'Endereço Fictício, 1', 1, 2, '2023-01-01', 3800.00, 0.80, null),
-('Fábio de Souza', 'fabio.souza@empresa.com', '11999990002', '123456790', '1985-02-02', '12345678902', 'Endereço Fictício, 2', 2, 3, '2023-02-01', 2450.00, 0.80, null),
-('Gustavo Almeida Ramos', 'gustavo.ramos@empresa.com', '11999990003', '123456791', '1990-03-03', '12345678903', 'Endereço Fictício, 3', 4, 4, '2023-03-01', 1600.00, 0.80, null),
-('Lizandra Alves Machado', 'lizandra.machado@empresa.com', '11999990004', '123456792', '1991-04-04', '12345678904', 'Endereço Fictício, 4', 4, 4, '2023-04-01', 1600.00, 0.80, null),
-('Eduardo Lima Oliveira', 'eduardo.oliveira@empresa.com', '11999990005', '123456793', '1992-05-05', '12345678905', 'Endereço Fictício, 5', 9, 5, '2023-05-01', 1685.00, 0.80, null),
-('João de Assis', 'joao.assis@empresa.com', '11999990006', '123456794', '1993-06-06', '12345678906', 'Endereço Fictício, 6', 9, 5, '2023-06-01', 1685.00, 0.80, null),
-('Juliana Guedes da Silva', 'juliana.silva@empresa.com', '11999990007', '123456795', '1994-07-07', '12345678907', 'Endereço Fictício, 7', 5, 4, '2023-07-01', 1400.00, 0.80, null),
-('Damiana da Silva Souza', 'damiana.souza@empresa.com', '11999990008', '123456796', '1995-08-08', '12345678908', 'Endereço Fictício, 8', 5, 4, '2023-08-01', 1400.00, 0.80, null),
-('Francisco Pinto Amaral', 'francisco.amaral@empresa.com', '11999990009', '123456797', '1996-09-09', '12345678909', 'Endereço Fictício, 9', 6, 5, '2023-09-01', 1355.00, 0.80, null),
-('Khaléu Sanches Mancini', 'khaleu.mancini@empresa.com', '11999990010', '123456798', '1997-10-10', '12345678910', 'Endereço Fictício, 10', 11, 6, '2023-10-01', 60.00, 0.80, null),
-('Clara Santana Araújo', 'clara.araujo@empresa.com', '11999990011', '123456799', '1998-11-11', '12345678911', 'Endereço Fictício, 11', 11, 6, '2023-11-01', 60.00, 0.80, null);
+('Ana Maria de Assis', 'ana.maria@empresa.com', '11999990001', '123456789', '1980-01-01', '12345678901', '56348120', 1, 2, '2023-01-01', 3800.00, 0.80, null),
+('Fábio de Souza', 'fabio.souza@empresa.com', '11999990002', '123456790', '1985-02-02', '12345678902', '56348120', 2, 3, '2023-02-01', 2450.00, 0.80, null),
+('Gustavo Almeida Ramos', 'gustavo.ramos@empresa.com', '11999990003', '123456791', '1990-03-03', '12345678903', '56348120', 4, 4, '2023-03-01', 1600.00, 0.80, null),
+('Lizandra Alves Machado', 'lizandra.machado@empresa.com', '11999990004', '123456792', '1991-04-04', '12345678904', '56348120', 4, 4, '2023-04-01', 1600.00, 0.80, null),
+('Eduardo Lima Oliveira', 'eduardo.oliveira@empresa.com', '11999990005', '123456793', '1992-05-05', '12345678905', '56348120', 9, 5, '2023-05-01', 1685.00, 0.80, null),
+('João de Assis', 'joao.assis@empresa.com', '11999990006', '123456794', '1993-06-06', '12345678906', '56348120', 9, 5, '2023-06-01', 1685.00, 0.80, null),
+('Juliana Guedes da Silva', 'juliana.silva@empresa.com', '11999990007', '123456795', '1994-07-07', '12345678907', '56348120', 5, 4, '2023-07-01', 1400.00, 0.80, null),
+('Damiana da Silva Souza', 'damiana.souza@empresa.com', '11999990008', '123456796', '1995-08-08', '12345678908', '56348120', 5, 4, '2023-08-01', 1400.00, 0.80, null),
+('Francisco Pinto Amaral', 'francisco.amaral@empresa.com', '11999990009', '123456797', '1996-09-09', '12345678909', '56348120', 6, 5, '2023-09-01', 1355.00, 0.80, null),
+('Khaléu Sanches Mancini', 'khaleu.mancini@empresa.com', '11999990010', '123456798', '1997-10-10', '12345678910', '56348120', 11, 6, '2023-10-01', 60.00, 0.80, null),
+('Clara Santana Araújo', 'clara.araujo@empresa.com', '11999990011', '123456799', '1998-11-11', '12345678911', '56348120', 11, 6, '2023-11-01', 60.00, 0.80, null);
 
 insert into fornecedores (nome, razaosocial, cnpj, endereco, email) values
 ('CORAL TINTAS', 'TINTAS CORAL LTDA', '57483034004008', 'Rua Henrique Burnier, 219 - Juiz de Fora - MG', 'contato@coraltintas.com.br'),
@@ -196,11 +196,97 @@ insert into fornecedores (nome, razaosocial, cnpj, endereco, email) values
 ('BONI MATERIAS DE CONSTRUÇÕES', 'BONI MATERIAS DE CONSTRUCAO LTDA', '00253662000173', 'Rua Alice Tibirica, 330 - Vila Da Penha, RJ', 'contato@bonimateriais.com.br');
 
 insert into produtos (nome, valor, estoque, descricao, disponivel) values
-('Coral Renova', 91.49, 0, 'Tinta Coral Renova', 's'),
-('Coralit Total', 61.00, 0, 'Tinta Coralit Total', 's'),
-('Coral Decora', 154.61, 0, 'Tinta Coral Decora', 's');
+('Coral Renova - Branco', 95.49, 5, 'Tinta Coral Renova - Branco', 's'),
+('Coral Renova - Preto', 95.49, 5, 'Tinta Coral Renova - Preto', 's'),
+('Coral Renova - Vermelho', 95.49, 5, 'Tinta Coral Renova - Vermelho', 's'),
+('Coral Renova - Azul', 95.49, 5, 'Tinta Coral Renova - Azul', 's'),
+('Coral Renova - Verde', 95.49, 5, 'Tinta Coral Renova - Verde', 's'),
+('Coral Renova - Amarelo', 95.49, 5, 'Tinta Coral Renova - Amarelo', 's'),
+('Coral Renova - Laranja', 95.49, 5, 'Tinta Coral Renova - Laranja', 's'),
+('Coral Renova - Rosa', 95.49, 5, 'Tinta Coral Renova - Rosa', 's'),
+('Coral Renova - Marrom', 95.49, 5, 'Tinta Coral Renova - Marrom', 's'),
+('Coral Renova - Cinza', 95.49, 5, 'Tinta Coral Renova - Cinza', 's'),
+('Coral Renova - Violeta', 95.49, 5, 'Tinta Coral Renova - Violeta', 's'),
+('Coral Renova - Bege', 95.49, 5, 'Tinta Coral Renova - Bege', 's');
+insert into produtos (nome, valor, estoque, descricao, disponivel) values
+('Coralit Total - Branco', 68.00, 5, 'Tinta Coralit Total - Branco', 's'),
+('Coralit Total - Preto', 68.00, 5, 'Tinta Coralit Total - Preto', 's'),
+('Coralit Total - Vermelho', 68.00, 5, 'Tinta Coralit Total - Vermelho', 's'),
+('Coralit Total - Azul', 68.00, 5, 'Tinta Coralit Total - Azul', 's'),
+('Coralit Total - Verde', 68.00, 5, 'Tinta Coralit Total - Verde', 's'),
+('Coralit Total - Amarelo', 68.00, 5, 'Tinta Coralit Total - Amarelo', 's'),
+('Coralit Total - Laranja', 68.00, 5, 'Tinta Coralit Total - Laranja', 's'),
+('Coralit Total - Rosa', 68.00, 5, 'Tinta Coralit Total - Rosa', 's'),
+('Coralit Total - Marrom', 68.00, 5, 'Tinta Coralit Total - Marrom', 's'),
+('Coralit Total - Cinza', 68.00, 5, 'Tinta Coralit Total - Cinza', 's'),
+('Coralit Total - Violeta', 68.00, 5, 'Tinta Coralit Total - Violeta', 's'),
+('Coralit Total - Bege', 68.00, 5, 'Tinta Coralit Total - Bege', 's');
+insert into produtos (nome, valor, estoque, descricao, disponivel) values
+('Coral Decora - Branco', 164.61, 5, 'Tinta Coral Decora - Branco', 's'),
+('Coral Decora - Preto', 164.61, 5, 'Tinta Coral Decora - Preto', 's'),
+('Coral Decora - Vermelho', 164.61, 5, 'Tinta Coral Decora - Vermelho', 's'),
+('Coral Decora - Azul', 164.61, 5, 'Tinta Coral Decora - Azul', 's'),
+('Coral Decora - Verde', 164.61, 5, 'Tinta Coral Decora - Verde', 's'),
+('Coral Decora - Amarelo', 164.61, 5, 'Tinta Coral Decora - Amarelo', 's'),
+('Coral Decora - Laranja', 164.61, 5, 'Tinta Coral Decora - Laranja', 's'),
+('Coral Decora - Rosa', 164.61, 5, 'Tinta Coral Decora - Rosa', 's'),
+('Coral Decora - Marrom', 164.61, 5, 'Tinta Coral Decora - Marrom', 's'),
+('Coral Decora - Cinza', 164.61, 5, 'Tinta Coral Decora - Cinza', 's'),
+('Coral Decora - Violeta', 164.61, 5, 'Tinta Coral Decora - Violeta', 's'),
+('Coral Decora - Bege', 164.61, 5, 'Tinta Coral Decora - Bege', 's');
 
 insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor, dataRecebimento, fabricacao, validade) values
-(1, 60, 1, CURDATE(), 123456, 'sim', 5489.40, CURDATE(), CURDATE(), DATE_ADD(CURDATE(), INTERVAL 2 YEAR)),
-(2, 60, 1, CURDATE(), 123457, 'sim', 3660.00, CURDATE(), CURDATE(), DATE_ADD(CURDATE(), INTERVAL 2 YEAR)),
-(3, 60, 1, CURDATE(), 123458, 'sim', 9276.60, CURDATE(), CURDATE(), DATE_ADD(CURDATE(), INTERVAL 2 YEAR));
+(1, 5, 1, '2024-06-22', 1001, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(2, 5, 1, '2024-06-22', 1002, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(3, 5, 1, '2024-06-22', 1003, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(4, 5, 1, '2024-06-22', 1004, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(5, 5, 1, '2024-06-22', 1005, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(6, 5, 1, '2024-06-22', 1006, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(7, 5, 1, '2024-06-22', 1007, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(8, 5, 1, '2024-06-22', 1008, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(9, 5, 1, '2024-06-22', 1009, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(10, 5, 1, '2024-06-22', 1010, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(11, 5, 1, '2024-06-22', 1011, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22'),
+(12, 5, 1, '2024-06-22', 1012, 'sim', 457.45, '2024-06-22', '2024-05-22', '2025-06-22');
+
+-- Lotes for Coralit Total
+insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor, dataRecebimento, fabricacao, validade) values
+(13, 5, 1, '2024-06-22', 1013, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(14, 5, 1, '2024-06-22', 1014, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(15, 5, 1, '2024-06-22', 1015, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(16, 5, 1, '2024-06-22', 1016, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(17, 5, 1, '2024-06-22', 1017, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(18, 5, 1, '2024-06-22', 1018, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(19, 5, 1, '2024-06-22', 1019, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(20, 5, 1, '2024-06-22', 1020, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(21, 5, 1, '2024-06-22', 1021, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(22, 5, 1, '2024-06-22', 1022, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(23, 5, 1, '2024-06-22', 1023, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22'),
+(24, 5, 1, '2024-06-22', 1024, 'sim', 305.00, '2024-06-22', '2024-05-22', '2025-06-22');
+
+-- Lotes for Coral Decora
+insert into lotes (idprodutofk, quantidade, idfornecedorfk, dataCompra, notafiscal, recebido, valor, dataRecebimento, fabricacao, validade) values
+(25, 5, 1, '2024-06-22', 1025, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(26, 5, 1, '2024-06-22', 1026, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(27, 5, 1, '2024-06-22', 1027, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(28, 5, 1, '2024-06-22', 1028, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(29, 5, 1, '2024-06-22', 1029, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(30, 5, 1, '2024-06-22', 1030, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(31, 5, 1, '2024-06-22', 1031, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(32, 5, 1, '2024-06-22', 1032, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(33, 5, 1, '2024-06-22', 1033, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(34, 5, 1, '2024-06-22', 1034, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(35, 5, 1, '2024-06-22', 1035, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22'),
+(36, 5, 1, '2024-06-22', 1036, 'sim', 773.05, '2024-06-22', '2024-05-22', '2025-06-22');
+
+
+insert into despesasVariadas (descricaoDespesa, valorDespesa, data_vencimento, status_pagamento, dataPagamento) values
+('Mesa para computador ou escritório, quantidade: 3', 867.15, '2024-06-22', 'Realizado', '2024-06-22'),
+('Cadeiras para Escritório, quantidade: 3', 751.00, '2024-06-22', 'Realizado', '2024-06-22'),
+('Kit tinta EPSON T544 para EcoTank preto, ciano, magenta e amarelo, quantidade: 1', 255.00, '2024-06-22', 'Realizado', '2024-06-22'),
+('Folha A4 CHAMEX OFFICE 2500 folhas, quantidade: 2', 380.00, '2024-06-22', 'Realizado', '2024-06-22');
+insert into despesasVariadas (descricaoDespesa, valorDespesa, data_vencimento, status_pagamento, dataPagamento) values
+('Telefone normal, quantidade: 2', 250.00, '2024-06-22', 'Pendente', NULL),
+('Multifuncional EPSON Eco Tank L3250-Tanque de tinta colorida, wi-fi, direct, USB,bivolt, quantidade: 1', 1234.00, '2024-06-22', 'Pendente', NULL),
+('Prateleiras para guardar materiais de construções, quantidade: 5', 566.24, '2024-06-22', 'Pendente', NULL),
+('Câmera Intelbras VH, quantidade: 3', 285.00, '2024-06-22', 'Pendente', NULL);

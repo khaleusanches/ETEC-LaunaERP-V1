@@ -150,6 +150,7 @@ namespace Telas
 
             dateTimePickerPs[1].MinDate = dateTimePickerPs[0].Value;
             dateTimePickerPs[2].MaxDate = dateTimePickerPs[0].Value;
+            dateTimePickerPs[3].MinDate = dateTimePickerPs[2].Value;
         }
         private void Btn_add_Click(object sender, EventArgs e)
         {

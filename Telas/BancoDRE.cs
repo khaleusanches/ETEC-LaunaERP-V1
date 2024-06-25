@@ -36,12 +36,10 @@ namespace Telas
             left = 45;
             this.tela = tela;
             cbMes = new ComboBoxP(100, 25, 90, 475, new string[]{"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", "1° Semestre", "2° Semestre"}, tela);
-            cbMes.SelectedIndex = 0;
             cbMes.SelectedIndexChanged += CbMes_SelectedIndexChanged;
             cbTipoDeExibicao = new ComboBoxP(100, 25, 90, 625, new string[] { "Texto", "Gráfico" }, tela);
             cbTipoDeExibicao.SelectedIndex = 1;
             cbTipoDeExibicao.SelectedIndexChanged += CbMes_SelectedIndexChanged;
-            exibirMensal();
         }
 
         private void CbMes_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,7 +60,6 @@ namespace Telas
             {
                 graficoMensal.Legends.Clear();
                 graficoMensal.Series.Clear();
-                
                 graficoMensal.ChartAreas.Clear();
                 graficoMensal.ChartAreas.Remove(chartArea1);
                 fechar(tela);

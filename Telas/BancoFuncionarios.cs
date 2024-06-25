@@ -40,6 +40,7 @@ namespace Telas
             + " where demissao is null order by funcionarios.nome";
 
         DateTimePickerP dtNascimento, dtAdmissao;
+        DateTime dtAtual = DateTime.Now;
 
         PanelP[] container = new PanelP[2];
         PanelP teste;
@@ -69,7 +70,8 @@ namespace Telas
             textBoxP[4] = new TextBoxP(150, 25, 215, 35, "", 8, tela, isQuant: true);
             textBoxP[5] = new TextBoxP(150, 25, 215, 210, "", 9, tela, isQuant: true);
             dtNascimento = new DateTimePickerP(100, 20, 215, 375, tela);
-            
+            dtNascimento.MaxDate = dtAtual.AddYears(-16);
+            dtNascimento.ValueChanged += new EventHandler(BancoFuncionarios_TextChanged);
 
             container[1] = new PanelP(490, 165, 85, 535, Color.White, tela);
             labelPs[13] = new LabelP(250, 20, 100, 540, "OUTROS DADOS", tela);
@@ -81,6 +83,8 @@ namespace Telas
             labelPs[11] = new LabelP(100, 20, 195, 660, "Setores:", tela);
 
             dtAdmissao = new DateTimePickerP(100, 20, 150, 550, tela);
+            dtAdmissao.MaxDate = dtAtual;
+            dtAdmissao.ValueChanged += new EventHandler(BancoFuncionarios_TextChanged);
             textBoxP[6] = new TextBoxP(100, 25, 150, 670, "", 11, tela, true);
             textBoxP[7] = new TextBoxP(100, 25, 150, 790, "", 10, tela, true);
             cbCargos = new ComboBoxP(100, 25, 215, 550, pegaIDLista("nome", "cargos", ""), tela);
@@ -104,7 +108,7 @@ namespace Telas
                 btnUpdate.Click += new EventHandler(Btn_Update_Click);
                 btnUpdate.Enabled = false;
 
-                btnRemove = new ButtonP(true, 100, 40, 205, 1050, "REMOVER FUNCIONÁRIO", tela);
+                btnRemove = new ButtonP(true, 100, 40, 205, 1050, "DEMITIR FUNCIONÁRIO", tela);
                 btnRemove.Enabled = false;
                 btnRemove.Click += new EventHandler(BtnRemove_Click);
             }
@@ -158,6 +162,7 @@ namespace Telas
         {
             DateTime data = DateTime.Now;
             dao.updateInsertDelete($"UPDATE funcionarios set demissao = '{data.Year+"/"+data.Month+"/"+data.Day}' where id = {dgv.Rows[verificaID].Cells[1].Value}");
+            dao.updateInsertDelete($"DELETE from usuarios where id_func = {dgv.Rows[verificaID].Cells[1].Value}");
             dgv.DataSource = dao.lerTabela(tabelasql);
         }
 
@@ -249,6 +254,7 @@ namespace Telas
             if(cbCargos.SelectedIndex == -1 || cbSetores.SelectedIndex == -1) { cont++; };
             if(cont== 0) { btnAdd.Enabled = true; }
             else { btnAdd.Enabled = false; }
+            dtAdmissao.MinDate = dtNascimento.Value.AddYears(16);
         }
 
         public override void fechar(TelaPadrao tela)

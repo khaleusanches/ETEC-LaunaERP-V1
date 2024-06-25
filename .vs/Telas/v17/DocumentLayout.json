@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\telas\\bancooperacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancooperacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\telas\\bancodre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancodre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancolotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancolotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancoemprestimos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancoemprestimos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\telas\\bancofuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancofuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancofornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|c:\\users\\khaleu\\desktop\\etec\\ds\\atividade1csharp\\telas\\bancooperacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancooperacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancoemprestimos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\bancoemprestimos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\bancocargossetores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{46EE6A46-A2EA-439E-BCAA-703DF0884310}|Telas\\Telas.csproj|solutionrelative:telas\\telasetorrh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,43 +71,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BancoOperacoes.cs",
-              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoOperacoes.cs",
-              "RelativeDocumentMoniker": "Telas\\BancoOperacoes.cs",
-              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoOperacoes.cs",
-              "RelativeToolTip": "Telas\\BancoOperacoes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "BancoDRE.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoDRE.cs",
+              "RelativeDocumentMoniker": "Telas\\BancoDRE.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoDRE.cs",
+              "RelativeToolTip": "Telas\\BancoDRE.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwCgAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T19:32:13.201Z",
+              "WhenOpened": "2024-06-25T03:43:57.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BancoLotes.cs",
-              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoLotes.cs",
-              "RelativeDocumentMoniker": "Telas\\BancoLotes.cs",
-              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoLotes.cs",
-              "RelativeToolTip": "Telas\\BancoLotes.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAgwEoAAAAMAAAA",
+              "DocumentIndex": 2,
+              "Title": "BancoFuncionarios.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoFuncionarios.cs",
+              "RelativeDocumentMoniker": "Telas\\BancoFuncionarios.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoFuncionarios.cs",
+              "RelativeToolTip": "Telas\\BancoFuncionarios.cs",
+              "ViewState": "AQIAAOUAAAAAAAAAAAAawPYAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T17:45:32.784Z"
+              "WhenOpened": "2024-06-24T23:16:55.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BancoFornecedores.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoFornecedores.cs",
               "RelativeDocumentMoniker": "Telas\\BancoFornecedores.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoFornecedores.cs",
               "RelativeToolTip": "Telas\\BancoFornecedores.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAswDwAAAAnAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAswDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T16:41:24.304Z"
+              "WhenOpened": "2024-06-22T16:41:24.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "TelaSetorFinanceiro.Designer.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorFinanceiro.Designer.cs",
               "RelativeDocumentMoniker": "Telas\\TelaSetorFinanceiro.Designer.cs",
@@ -111,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "TelaSetorFinanceiro.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorFinanceiro.cs",
               "RelativeDocumentMoniker": "Telas\\TelaSetorFinanceiro.cs",
@@ -123,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "TelaSetorRH.Designer.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorRH.Designer.cs",
               "RelativeDocumentMoniker": "Telas\\TelaSetorRH.Designer.cs",
@@ -131,11 +141,12 @@
               "RelativeToolTip": "Telas\\TelaSetorRH.Designer.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAiwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T16:05:35.406Z"
+              "WhenOpened": "2024-06-22T16:05:35.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "TelaPadrao.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaPadrao.cs",
               "RelativeDocumentMoniker": "Telas\\TelaPadrao.cs",
@@ -147,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "TelaSetorRH.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorRH.cs",
               "RelativeDocumentMoniker": "Telas\\TelaSetorRH.cs",
@@ -155,22 +166,63 @@
               "RelativeToolTip": "Telas\\TelaSetorRH.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T16:05:27.44Z"
+              "WhenOpened": "2024-06-22T16:05:27.44Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "TelaSetorRH.cs [Design]",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorRH.cs",
               "RelativeDocumentMoniker": "Telas\\TelaSetorRH.cs",
               "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\TelaSetorRH.cs [Design]",
               "RelativeToolTip": "Telas\\TelaSetorRH.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T16:05:25.613Z"
+              "WhenOpened": "2024-06-22T16:05:25.613Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BancoLotes.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoLotes.cs",
+              "RelativeDocumentMoniker": "Telas\\BancoLotes.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoLotes.cs",
+              "RelativeToolTip": "Telas\\BancoLotes.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T17:45:32.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BancoOperacoes.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoOperacoes.cs",
+              "RelativeDocumentMoniker": "Telas\\BancoOperacoes.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoOperacoes.cs",
+              "RelativeToolTip": "Telas\\BancoOperacoes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T19:32:13.201Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "BancoUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoUsuarios.cs",
+              "RelativeDocumentMoniker": "Telas\\BancoUsuarios.cs",
+              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoUsuarios.cs",
+              "RelativeToolTip": "Telas\\BancoUsuarios.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T13:55:57.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "BancoCargosSetores.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoCargosSetores.cs",
               "RelativeDocumentMoniker": "Telas\\BancoCargosSetores.cs",
@@ -182,19 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BancoUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoUsuarios.cs",
-              "RelativeDocumentMoniker": "Telas\\BancoUsuarios.cs",
-              "ToolTip": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoUsuarios.cs",
-              "RelativeToolTip": "Telas\\BancoUsuarios.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T13:55:57.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "BancoEmprestimos.cs",
               "DocumentMoniker": "C:\\Users\\khaleu\\Desktop\\Etec\\DS\\atividade1CSharp\\Telas\\BancoEmprestimos.cs",
               "RelativeDocumentMoniker": "Telas\\BancoEmprestimos.cs",
