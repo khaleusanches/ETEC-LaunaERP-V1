@@ -123,7 +123,7 @@ namespace Telas
             dt = dao.lerTabela($"select id from funcionarios");
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                dao.updateInsertDelete($"insert into pagamentosSalario(idfuncionariofk, valorPagamentoSal, dataVencimento) values('{dt.Rows[i].ItemArray[0]}', (select funcionarios.salario from funcionarios where funcionarios.id = '{dt.Rows[i].ItemArray[0]}'), '{dataAtual.Year}/{dataAtual.Month}/{28}');");
+                dao.updateInsertDelete($"insert into pagamentosSalario(idfuncionariofk, valorPagamentoSal, dataVencimento) values('{dt.Rows[i].ItemArray[0]}', (select funcionarios.salario from funcionarios where funcionarios.id = '{dt.Rows[i].ItemArray[0]}' and funcionarios.demissao = null), '{dataAtual.Year}/{dataAtual.Month}/{28}');");
             }
             fechar(tela);
             exibir(tela);
