@@ -14,7 +14,7 @@ namespace Logica
 {
     public class DAO
     {
-        string strConnection = "server=localhost;user=root;database=atividade1csharp;port=3306";
+        string strConnection = "server=localhost;user=root;database=atividadecsharp;port=3306;pwd=123";
         MySqlConnection con;
         MySqlCommand cmd;
         MySqlDataReader dr;
@@ -27,8 +27,7 @@ namespace Logica
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.ReadKey();
+                MessageBox.Show(ex.Message);
             }
         }
 
