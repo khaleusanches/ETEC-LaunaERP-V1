@@ -27,3 +27,5 @@ frequencia de cada cliente, o cadastro de categorias de produtos, produtos, forn
 ## Integrantes:
 - Clara Santana Araujo
 - Khaléu Sanches Mancini
+- Bruna Sampaio de Oliveira
+- LARISSA SILVA MELO
